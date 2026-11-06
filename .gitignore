@@ -1,0 +1,5 @@
+tiles/
+dist/
+fotos/originale/
+__pycache__/
+.DS_Store

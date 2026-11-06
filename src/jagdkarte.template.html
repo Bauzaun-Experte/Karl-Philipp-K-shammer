@@ -1,0 +1,814 @@
+<title>Jagdkarte Parrig</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one-screen app. Kopfzeile oben, links eine 340px-Werkzeugleiste, rechts die Karte.
+   Auf dem Handy wird die Werkzeugleiste zu einer Schublade über der Karte. */
+:root{
+  --bg:#ece9dc; --panel:#f8f6ee; --panel-2:#e9e6d7; --fg:#1d261c; --muted:#5e6858; --line:#cfccbb;
+  --accent:#4a6a2b; --accent-fg:#ffffff; --accent-soft:#dde7cc;
+  --photo:#b0601c; --photo-soft:#f4e3ce;
+  --danger:#a1352a; --warn:#b4871c; --water:#2f6f9f; --ok:#3f7a3a;
+  --font-display:"Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:"Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --shadow:0 2px 12px rgba(25,35,15,.18);
+  --radius:8px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111610; --panel:#1a221a; --panel-2:#232d22; --fg:#e9e7d8; --muted:#9ea796; --line:#34402f;
+    --accent:#97bb5e; --accent-fg:#0f160a; --accent-soft:#2c3a21;
+    --photo:#e0a263; --photo-soft:#3e2d1a;
+    --danger:#e3796b; --warn:#dbb24c; --water:#74add8; --ok:#86c07e;
+    --shadow:0 2px 14px rgba(0,0,0,.55); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111610; --panel:#1a221a; --panel-2:#232d22; --fg:#e9e7d8; --muted:#9ea796; --line:#34402f;
+  --accent:#97bb5e; --accent-fg:#0f160a; --accent-soft:#2c3a21;
+  --photo:#e0a263; --photo-soft:#3e2d1a;
+  --danger:#e3796b; --warn:#dbb24c; --water:#74add8; --ok:#86c07e;
+  --shadow:0 2px 14px rgba(0,0,0,.55); color-scheme:dark;
+}
+
+/*__LEAFLET_CSS__*/
+
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.4;overflow:hidden}
+*,*::before,*::after{box-sizing:border-box}
+button,input,select,textarea{font:inherit;color:inherit}
+#app{height:100%;display:grid;grid-template-rows:auto 1fr;grid-template-columns:340px 1fr;grid-template-areas:"top top" "panel map";min-height:0}
+#top{grid-area:top;display:flex;align-items:center;gap:14px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background:var(--panel);border-bottom:1px solid var(--line);min-width:0}
+.brand{min-width:0;flex:1 1 auto}
+.brand h1{font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1.1;margin:0;letter-spacing:-.01em;text-wrap:balance;font-variation-settings:"opsz" 40}
+.brand .sub{font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sun{display:flex;gap:10px;font-family:var(--font-mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.sun b{color:var(--fg);font-weight:500}
+.coords{font-family:var(--font-mono);font-size:12px;color:var(--muted);white-space:nowrap;text-align:right;min-width:0}
+.iconbtn{display:none;border:1px solid var(--line);background:var(--panel-2);border-radius:var(--radius);width:40px;height:36px;cursor:pointer;font-size:18px;line-height:1}
+#panel{grid-area:panel;overflow:auto;background:var(--panel);border-right:1px solid var(--line);padding-block:10px 24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:12px;min-height:0}
+#map{grid-area:map;min-height:0;background:#8f9b84}
+section.block{border-bottom:1px solid var(--line);padding:10px 0 12px}
+section.block:last-child{border-bottom:0}
+section.block h2{font-family:var(--font-display);font-size:15px;font-weight:700;margin:0 0 8px;letter-spacing:.01em;display:flex;align-items:center;justify-content:space-between;gap:8px}
+section.block h2 small{font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.opt{display:flex;align-items:center;gap:7px;font-size:14px;cursor:pointer;padding:2px 0}
+.opt input{margin:0;accent-color:var(--accent)}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;border:1px solid rgba(0,0,0,.25);flex:none}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tool{display:flex;flex-direction:column;align-items:center;gap:4px;padding:7px 4px 6px;border:1px solid var(--line);background:var(--panel-2);border-radius:var(--radius);cursor:pointer;font-size:11.5px;line-height:1.15;text-align:center;min-width:0}
+.tool:hover{border-color:var(--accent)}
+.tool.active{outline:2px solid var(--accent);outline-offset:-1px;background:var(--accent-soft)}
+.tool .glyph{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:11px;font-family:var(--font-mono);box-shadow:0 0 0 2px #fff,0 1px 3px rgba(0,0,0,.35)}
+.tool .glyph.line{border-radius:3px;height:8px;width:26px;box-shadow:none;margin-block:9px}
+.tool .glyph.poly{border-radius:4px;opacity:.85;box-shadow:none}
+.btn{border:1px solid var(--line);background:var(--panel-2);border-radius:var(--radius);padding:6px 10px;cursor:pointer;font-size:13.5px;font-weight:600;display:inline-flex;align-items:center;gap:6px;min-height:34px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.btn.danger{color:var(--danger);border-color:var(--danger)}
+.btn:focus-visible,.tool:focus-visible,.opt input:focus-visible,.iconbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stack{display:flex;flex-direction:column;gap:8px}
+.hint{font-size:12.5px;color:var(--muted);margin:4px 0 0}
+.status{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--warn)}
+.status .dot.ok{background:var(--ok)}
+.status .dot.cloud{background:var(--water)}
+.dropzone{border:2px dashed var(--line);border-radius:var(--radius);padding:12px;text-align:center;cursor:pointer;background:var(--panel-2);font-size:13.5px}
+.dropzone:hover,.dropzone.over{border-color:var(--photo);background:var(--photo-soft)}
+.dropzone input{display:none}
+.photolist{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow:auto;padding-right:2px}
+.pitem{display:grid;grid-template-columns:48px 1fr auto;gap:8px;align-items:center;padding:4px;border:1px solid var(--line);border-radius:6px;background:var(--panel-2);min-width:0}
+.pitem img{width:48px;height:48px;object-fit:cover;border-radius:4px;background:#999}
+.pitem .ph{width:48px;height:48px;border-radius:4px;background:var(--photo-soft);display:grid;place-items:center;font-size:18px}
+.pitem .meta{min-width:0;font-size:12.5px;line-height:1.25}
+.pitem .meta b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.pitem .meta span{color:var(--muted)}
+.badge{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:999px;background:var(--accent-soft);color:var(--fg);margin-left:4px;vertical-align:1px}
+.badge.no{background:var(--panel);border:1px solid var(--line);color:var(--muted)}
+.pitem .acts{display:flex;flex-direction:column;gap:3px}
+.pitem .acts button{border:0;background:none;cursor:pointer;font-size:12px;color:var(--accent);padding:2px 4px;text-align:right}
+.pitem .acts button.del{color:var(--danger)}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;font-size:12.5px}
+.legend div{display:flex;align-items:center;gap:6px;min-width:0}
+.legend .ln{width:22px;height:0;border-top:3px solid;flex:none}
+.legend .ar{width:18px;height:12px;flex:none;border:1.5px solid;opacity:.9}
+.sources{font-size:11.5px;color:var(--muted);line-height:1.45}
+.sources a{color:var(--accent)}
+.kbd{font-family:var(--font-mono);font-size:11.5px;background:var(--panel-2);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+
+/* Karten-Marker */
+.poi-pin{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:var(--font-mono);font-weight:700;font-size:11px;box-shadow:0 0 0 2px #fff,0 2px 4px rgba(0,0,0,.45);letter-spacing:-.02em}
+.poi-pin.sel{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--photo)}
+.photo-pin{width:38px;height:38px;border-radius:7px;overflow:hidden;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--photo),0 2px 5px rgba(0,0,0,.45);background:#777}
+.photo-pin img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-pin.out{opacity:.55;filter:grayscale(.4)}
+.me-pin{width:16px;height:16px;border-radius:50%;background:var(--water);border:3px solid #fff;box-shadow:0 0 0 2px var(--water),0 2px 6px rgba(0,0,0,.4)}
+.leaflet-container{font-family:var(--font-body);font-size:13.5px}
+.leaflet-popup-content-wrapper{background:var(--panel);color:var(--fg);border-radius:var(--radius);box-shadow:var(--shadow)}
+.leaflet-popup-tip{background:var(--panel)}
+.leaflet-popup-content{margin:12px 14px;line-height:1.4;min-width:200px}
+.leaflet-popup-content h3{margin:0 0 4px;font-family:var(--font-display);font-size:16px;font-weight:700}
+.leaflet-popup-content .cat{font-size:12px;color:var(--muted);margin-bottom:6px}
+.leaflet-popup-content .mono{font-family:var(--font-mono);font-size:11.5px;color:var(--muted)}
+.leaflet-popup-content .pbtns{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.leaflet-popup-content .pbtns button{border:1px solid var(--line);background:var(--panel-2);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:12.5px}
+.leaflet-popup-content .pbtns button.del{color:var(--danger)}
+.leaflet-popup-content img.big{width:100%;max-height:240px;object-fit:contain;border-radius:6px;background:#222;display:block;margin-bottom:6px}
+.leaflet-popup-content a.close-link{color:var(--accent)}
+.leaflet-tooltip.jb-label{background:rgba(255,255,255,.88);color:#5a1b14;border:1px solid #8c2d22;font-weight:600;font-size:12px;border-radius:4px}
+.leaflet-tooltip.len-label{background:var(--panel);color:var(--fg);border:1px solid var(--line);font-family:var(--font-mono);font-size:12px;border-radius:4px}
+.leaflet-control-attribution{background:rgba(255,255,255,.75)!important;color:#333!important;font-size:10.5px}
+.leaflet-control-attribution a{color:#2a4a1b!important}
+.leaflet-bar a{background:var(--panel);color:var(--fg);border-bottom-color:var(--line)}
+.leaflet-bar a:hover{background:var(--panel-2)}
+.leaflet-control-scale-line{background:rgba(255,255,255,.7);color:#222;border-color:#444}
+.leaflet-container .leaflet-control-zoom{margin-right:max(10px,env(safe-area-inset-right,0px))}
+.leaflet-container.drawing{cursor:crosshair}
+
+/* Zeichenleiste, Dialog, Toast */
+#drawbar{position:absolute;left:50%;transform:translateX(-50%);top:calc(10px + env(safe-area-inset-top,0px));z-index:1000;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:8px 10px;display:flex;gap:8px;align-items:center;max-width:calc(100% - 32px);flex-wrap:wrap;justify-content:center}
+#drawbar .txt{font-size:13px}
+#mapwrap{position:relative;min-height:0;grid-area:map;display:grid}
+#mapwrap > #map{grid-area:auto}
+#dialog{position:absolute;inset:0;z-index:1100;background:rgba(10,15,8,.45);display:grid;place-items:center;padding:16px}
+#dialog .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);width:min(440px,100%);padding:16px;max-height:100%;overflow:auto}
+#dialog h3{margin:0 0 10px;font-family:var(--font-display);font-size:18px}
+#dialog label{display:block;font-size:12.5px;color:var(--muted);margin:8px 0 3px}
+#dialog input,#dialog select,#dialog textarea{width:100%;border:1px solid var(--line);background:var(--panel-2);border-radius:6px;padding:7px 9px}
+#dialog textarea{min-height:70px;resize:vertical}
+#dialog .dbtns{display:flex;gap:8px;margin-top:14px;justify-content:flex-end;flex-wrap:wrap}
+#toast{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(28px + env(safe-area-inset-bottom,0px));z-index:1200;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:999px;font-size:13.5px;box-shadow:var(--shadow);max-width:calc(100% - 32px);text-align:center}
+#drop{position:absolute;inset:0;z-index:1150;background:rgba(176,96,28,.35);border:4px dashed var(--photo);display:grid;place-items:center;font-family:var(--font-display);font-size:26px;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.6);pointer-events:none}
+.exportbox{width:100%;min-height:120px;font-family:var(--font-mono);font-size:11px;border:1px solid var(--line);border-radius:6px;background:var(--panel-2);padding:6px}
+.backdrop{display:none}
+@media (max-width:900px){
+  #app{grid-template-columns:1fr;grid-template-areas:"top" "map"}
+  .iconbtn{display:inline-grid;place-items:center}
+  #panel{position:absolute;z-index:1050;top:0;bottom:0;left:0;width:min(86vw,340px);transform:translateX(-105%);transition:transform .2s ease;box-shadow:var(--shadow);border-right:1px solid var(--line)}
+  #panel.open{transform:none}
+  .backdrop{display:block;position:absolute;inset:0;z-index:1040;background:rgba(0,0,0,.35)}
+  .backdrop[hidden]{display:none}
+  .sun{display:none}
+  .coords{display:none}
+  .brand h1{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){ #panel{transition:none} }
+</style>
+<!--__BODY__-->
+<div id="app">
+  <header id="top">
+    <button id="menuBtn" class="iconbtn" aria-label="Werkzeuge ein- oder ausblenden" aria-controls="panel">☰</button>
+    <div class="brand">
+      <h1>Jagdkarte Parrig</h1>
+      <div class="sub">EJB Kerpener Parrig · NSG Parrig (BM-004) · Kerpen, Rhein-Erft-Kreis</div>
+    </div>
+    <div id="sun" class="sun" title="Sonnenzeiten heute am Parrig (bürgerliche Dämmerung bis Sonnenaufgang / Sonnenuntergang bis Dämmerungsende)"></div>
+    <div id="coords" class="coords">–</div>
+  </header>
+
+  <aside id="panel" aria-label="Werkzeuge">
+    <section class="block">
+      <h2>Grundkarte</h2>
+      <div class="row" id="basemaps"></div>
+    </section>
+
+    <section class="block">
+      <h2>Ebenen</h2>
+      <div class="stack" id="overlays"></div>
+    </section>
+
+    <section class="block">
+      <h2>Eintragen <small>Werkzeug wählen, dann in die Karte tippen</small></h2>
+      <div class="tools" id="tools"></div>
+      <div class="row" style="margin-top:8px">
+        <button class="btn" id="measureBtn" type="button">📏 Messen</button>
+        <button class="btn" id="locateBtn" type="button">◎ Mein Standort</button>
+        <button class="btn" id="homeBtn" type="button">⌂ Zum Parrig</button>
+      </div>
+      <p class="hint">Linien und Flächen: Punkte nacheinander setzen, dann oben „Fertig“. Bestehende Einträge über ihr Pop-up bearbeiten oder löschen.</p>
+    </section>
+
+    <section class="block">
+      <h2>Fotos <small id="photoCount"></small></h2>
+      <div class="stack">
+        <label class="dropzone" id="dropzone">
+          <input type="file" id="photoInput" multiple accept="image/*,.heic,.heif,.jpg,.jpeg,.png,.tif,.tiff">
+          📷 Fotos hierher ziehen oder antippen zum Auswählen<br><span class="hint">Der Aufnahmeort wird aus den EXIF-Daten gelesen (HEIC, JPEG, PNG, TIFF).</span>
+        </label>
+        <label class="opt"><input type="checkbox" id="onlyParrig"> Nur Fotos mit Standort im Parrig zeigen</label>
+        <div class="photolist" id="photolist"></div>
+        <details>
+          <summary class="hint" style="cursor:pointer">Aus Apple Fotos exportieren</summary>
+          <p class="hint">Fotos-App → Suche „Parrig“ (oder Orte-Ansicht, Kartenausschnitt Parrig) → alle markieren → Ablage → Exportieren → „Unverändertes Original exportieren“ oder bei „Exportieren“ unter „Einschließen“ den Haken bei <b>Ortsinformationen</b> setzen. Die Dateien dann hier ablegen. Automatisiert: <span class="kbd">tools/export_parrig_fotos.sh</span> im Repository.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Daten</h2>
+      <div class="stack">
+        <div class="status" id="storeStatus"><span class="dot"></span><span>Speicher wird vorbereitet …</span></div>
+        <div class="row">
+          <label class="btn" for="importInput">⇪ Importieren (GPX / GeoJSON / Sicherung)</label>
+          <input type="file" id="importInput" accept=".gpx,.geojson,.json,application/gpx+xml,application/geo+json,application/json" hidden>
+        </div>
+        <div class="row">
+          <button class="btn" id="exportGeo" type="button">⇩ GeoJSON</button>
+          <button class="btn" id="exportGpx" type="button">⇩ GPX</button>
+          <button class="btn" id="exportBackup" type="button">⇩ Sicherung</button>
+        </div>
+        <div id="exportArea" hidden>
+          <textarea class="exportbox" id="exportText" readonly></textarea>
+          <div class="row" style="margin-top:6px"><button class="btn" id="copyExport" type="button">Kopieren</button><button class="btn" id="closeExport" type="button">Schließen</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Legende</h2>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <section class="block">
+      <h2>Quellen</h2>
+      <div class="sources">
+        Luftbild (DOP), Topographische Karte (DTK) und Flurstücke (ALKIS): © <a href="https://www.geobasis.nrw.de" target="_blank" rel="noopener">Geobasis NRW</a>, <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank" rel="noopener">dl-de/by-2-0</a>.
+        Jagdbezirke und Teilverpachtungen: Jagdbezirkskarte des <a href="https://www.rhein-erft-kreis.de/infrastruktur/bauen/inhaltsseiten/geodaten-portale.php" target="_blank" rel="noopener">Rhein-Erft-Kreises</a> (Stand der Abfrage siehe Repository, ohne Gewähr).
+        Schutzgebiete (NSG, FFH): LANUV NRW, LINFOS-WFS. Umriss „Parrig“: © OpenStreetMap-Mitwirkende, ODbL.
+        Karte: Leaflet. EXIF: exifr. Sonnenzeiten: berechnet für 50,893° N / 6,707° O.
+      </div>
+    </section>
+  </aside>
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <div id="mapwrap">
+    <div id="map" role="application" aria-label="Karte des Parrig"></div>
+    <div id="drawbar" hidden>
+      <span class="txt" id="drawText"></span>
+      <button class="btn" id="drawUndo" type="button">↶ Zurück</button>
+      <button class="btn primary" id="drawDone" type="button">✓ Fertig</button>
+      <button class="btn" id="drawCancel" type="button">✕ Abbrechen</button>
+    </div>
+    <div id="drop" hidden>Fotos hier ablegen</div>
+    <div id="toast" hidden></div>
+    <div id="dialog" hidden>
+      <form class="card" id="poiForm" autocomplete="off">
+        <h3 id="dlgTitle">Eintrag</h3>
+        <label for="fCat">Art</label>
+        <select id="fCat"></select>
+        <label for="fName">Bezeichnung</label>
+        <input id="fName" maxlength="80" placeholder="z. B. Kanzel am Erftdamm">
+        <label for="fDate">Datum</label>
+        <input id="fDate" type="date">
+        <label for="fNotes">Notiz</label>
+        <textarea id="fNotes" maxlength="1000" placeholder="Zustand, Zugang, Schussrichtung, letzte Beobachtung …"></textarea>
+        <div class="mono hint" id="fPos"></div>
+        <div class="dbtns">
+          <button class="btn danger" id="fDelete" type="button" hidden>Löschen</button>
+          <button class="btn" id="fCancel" type="button">Abbrechen</button>
+          <button class="btn primary" id="fSave" type="submit">Speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exifr@7.1.3/dist/full.umd.js"></script>
+<script>
+(function(){
+'use strict';
+const CONFIG = /*__CONFIG__*/{};
+const DATA = /*__DATA__*/{};
+
+/* ---------- Stammdaten ---------- */
+const PARRIG = CONFIG.center || [50.8934, 6.7072];
+const CATS = [
+  {id:'hochsitz', label:'Hochsitz / Leiter', geom:'point', color:'#4a6a2b', abbr:'HS'},
+  {id:'kanzel', label:'Kanzel (geschlossen)', geom:'point', color:'#2f4d1c', abbr:'KZ'},
+  {id:'bock', label:'Drückjagdbock', geom:'point', color:'#6f9440', abbr:'DB'},
+  {id:'kirrung', label:'Kirrung', geom:'point', color:'#b0601c', abbr:'KI'},
+  {id:'salz', label:'Salzlecke', geom:'point', color:'#8a7a58', abbr:'SL'},
+  {id:'kamera', label:'Wildkamera', geom:'point', color:'#444a44', abbr:'WK'},
+  {id:'suhle', label:'Suhle / Wasser', geom:'point', color:'#2f6f9f', abbr:'SU'},
+  {id:'sammel', label:'Sammelplatz', geom:'point', color:'#7a3f9c', abbr:'TP'},
+  {id:'park', label:'Parkplatz / Zufahrt', geom:'point', color:'#35495c', abbr:'P'},
+  {id:'gefahr', label:'Gefahrenstelle', geom:'point', color:'#a1352a', abbr:'!'},
+  {id:'unfall', label:'Wildunfall-Punkt', geom:'point', color:'#b4871c', abbr:'WU'},
+  {id:'notiz', label:'Notiz / Sonstiges', geom:'point', color:'#5e6858', abbr:'N'},
+  {id:'wechsel', label:'Wildwechsel', geom:'line', color:'#b0601c', abbr:'WW', dash:'7 6'},
+  {id:'pirsch', label:'Pirschpfad', geom:'line', color:'#4a6a2b', abbr:'PP', dash:'1 7'},
+  {id:'grenze', label:'Reviergrenze (eigen)', geom:'line', color:'#a1352a', abbr:'RG', dash:'12 6 2 6'},
+  {id:'einstand', label:'Einstand / Dickung', geom:'polygon', color:'#2f5d2a', abbr:'ES'},
+  {id:'wildacker', label:'Wildacker / Äsung', geom:'polygon', color:'#9a9a2a', abbr:'WA'},
+  {id:'treiben', label:'Treiben (Drückjagd)', geom:'polygon', color:'#c0392b', abbr:'TR'}
+];
+const CAT = Object.fromEntries(CATS.map(c => [c.id, c]));
+
+/* ---------- Hilfsfunktionen ---------- */
+const $ = sel => document.querySelector(sel);
+const uid = () => 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtLL = (lat, lon) => lat.toFixed(5) + ', ' + lon.toFixed(5);
+const fmtDate = iso => { if (!iso) return ''; const d = new Date(iso); return isNaN(d) ? String(iso) : d.toLocaleDateString('de-DE', {day:'2-digit', month:'2-digit', year:'numeric'}) + (iso.length > 10 ? ' ' + d.toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'}) : ''); };
+const fmtLen = m => m >= 1000 ? (m/1000).toFixed(2) + ' km' : Math.round(m) + ' m';
+const fmtArea = m2 => m2 >= 10000 ? (m2/10000).toFixed(2) + ' ha' : Math.round(m2) + ' m²';
+
+function toUTM(lat, lon){ // ETRS89/UTM Zone 32N (ETRS89 und WGS84 liegen hier unter 1 m auseinander)
+  const a = 6378137, f = 1/298.257223563, k0 = 0.9996, zone = 32, lon0 = 9;
+  const e2 = f*(2-f), ep2 = e2/(1-e2), rad = Math.PI/180;
+  const phi = lat*rad, lam = (lon-lon0)*rad;
+  const N = a/Math.sqrt(1-e2*Math.sin(phi)**2), T = Math.tan(phi)**2, C = ep2*Math.cos(phi)**2, A = Math.cos(phi)*lam;
+  const M = a*((1-e2/4-3*e2*e2/64-5*e2**3/256)*phi - (3*e2/8+3*e2*e2/32+45*e2**3/1024)*Math.sin(2*phi) + (15*e2*e2/256+45*e2**3/1024)*Math.sin(4*phi) - (35*e2**3/3072)*Math.sin(6*phi));
+  const x = k0*N*(A + (1-T+C)*A**3/6 + (5-18*T+T*T+72*C-58*ep2)*A**5/120) + 500000;
+  const y = k0*(M + N*Math.tan(phi)*(A*A/2 + (5-T+9*C+4*C*C)*A**4/24 + (61-58*T+T*T+600*C-330*ep2)*A**6/720));
+  return {zone, e: Math.round(x), n: Math.round(y)};
+}
+function sunTimes(date, lat, lon){ // nach den NOAA-Näherungen (wie SunCalc)
+  const rad = Math.PI/180, dayMs = 86400000, J1970 = 2440588, J2000 = 2451545;
+  const toJulian = d => d.valueOf()/dayMs - 0.5 + J1970, fromJulian = j => new Date((j + 0.5 - J1970)*dayMs);
+  const d = toJulian(date) - J2000, lw = rad*-lon, phi = rad*lat, e = rad*23.4397;
+  const n = Math.round(d - 0.0009 - lw/(2*Math.PI)), ds = 0.0009 + lw/(2*Math.PI) + n;
+  const M = rad*(357.5291 + 0.98560028*ds);
+  const C = rad*(1.9148*Math.sin(M) + 0.02*Math.sin(2*M) + 0.0003*Math.sin(3*M));
+  const L = M + C + rad*102.9372 + Math.PI;
+  const dec = Math.asin(Math.sin(L)*Math.sin(e));
+  const Jnoon = J2000 + ds + 0.0053*Math.sin(M) - 0.0069*Math.sin(2*L);
+  const pair = h => { const w = Math.acos((Math.sin(h) - Math.sin(phi)*Math.sin(dec))/(Math.cos(phi)*Math.cos(dec))); const Jset = J2000 + 0.0009 + (w + lw)/(2*Math.PI) + n + 0.0053*Math.sin(M) - 0.0069*Math.sin(2*L); return [fromJulian(Jnoon - (Jset - Jnoon)), fromJulian(Jset)]; };
+  const [sunrise, sunset] = pair(-0.833*rad), [dawn, dusk] = pair(-6*rad);
+  return {sunrise, sunset, dawn, dusk};
+}
+function pointInRing(pt, ring){ // pt = [lon, lat]
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++){
+    const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+    if (((yi > pt[1]) !== (yj > pt[1])) && (pt[0] < (xj - xi)*(pt[1] - yi)/(yj - yi) + xi)) inside = !inside;
+  }
+  return inside;
+}
+function pointInGeom(pt, geom){
+  if (!geom) return false;
+  const polys = geom.type === 'Polygon' ? [geom.coordinates] : geom.type === 'MultiPolygon' ? geom.coordinates : [];
+  return polys.some(rings => pointInRing(pt, rings[0]) && !rings.slice(1).some(r => pointInRing(pt, r)));
+}
+function featuresByKennung(fc, kennung){ return (fc && fc.features || []).filter(f => (f.properties || {}).kennung === kennung); }
+const parrigGeoms = [].concat(
+  featuresByKennung(DATA.schutzgebiete, 'BM-004').map(f => f.geometry),
+  ((DATA.parrig_osm || {}).features || []).map(f => f.geometry),
+  ((DATA.jagdbezirke || {}).features || []).filter(f => /Parrig/i.test((f.properties || {}).NAME || '')).map(f => f.geometry)
+);
+const inParrig = (lat, lon) => parrigGeoms.some(g => pointInGeom([lon, lat], g));
+
+let toastTimer = null;
+function toast(msg, ms){ const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, ms || 3200); }
+
+/* ---------- Karte ---------- */
+const map = L.map('map', {zoomControl:false, maxZoom:20, minZoom:CONFIG.mode === 'local' ? 12 : 6, doubleClickZoom:true});
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.control.scale({imperial:false, position:'bottomleft'}).addTo(map);
+map.attributionControl.setPrefix('');
+const bounds = L.latLngBounds(CONFIG.bounds || [[50.880, 6.680], [50.918, 6.730]]);
+map.setView(PARRIG, CONFIG.zoom || 15);
+if (CONFIG.mode === 'local') map.setMaxBounds(bounds.pad(0.6));
+
+const ATTR_NRW = 'Luftbild/Karte: © <a href="https://www.geobasis.nrw.de" target="_blank" rel="noopener">Geobasis NRW</a> (dl-de/by-2-0)';
+const basemaps = {};
+if (CONFIG.mode === 'local'){
+  basemaps.dop = {label:'Luftbild', layer:L.tileLayer(CONFIG.tilesBase + 'dop/{z}/{x}/{y}.jpg', {tileSize:1024, zoomOffset:-2, minNativeZoom:14, maxNativeZoom:18, maxZoom:20, bounds:bounds, noWrap:true, attribution:ATTR_NRW})};
+  basemaps.dtk = {label:'Topographische Karte', layer:L.tileLayer(CONFIG.tilesBase + 'dtk/{z}/{x}/{y}.jpg', {tileSize:1024, zoomOffset:-2, minNativeZoom:14, maxNativeZoom:17, maxZoom:20, bounds:bounds, noWrap:true, attribution:ATTR_NRW})};
+} else {
+  basemaps.dop = {label:'Luftbild', layer:L.tileLayer.wms('https://www.wms.nrw.de/geobasis/wms_nw_dop', {layers:'nw_dop_rgb', format:'image/jpeg', version:'1.3.0', maxZoom:20, attribution:ATTR_NRW})};
+  basemaps.dtk = {label:'Topographische Karte', layer:L.tileLayer.wms('https://www.wms.nrw.de/geobasis/wms_nw_dtk', {layers:'nw_dtk_col', format:'image/png', version:'1.3.0', maxZoom:20, attribution:ATTR_NRW})};
+  basemaps.osm = {label:'OpenStreetMap', layer:L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:20, maxNativeZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>-Mitwirkende'})};
+}
+let currentBase = null;
+function setBase(id){
+  if (currentBase) map.removeLayer(basemaps[currentBase].layer);
+  currentBase = id; basemaps[id].layer.addTo(map); basemaps[id].layer.bringToBack();
+  try { localStorage.setItem('jk-base', id); } catch(e){}
+}
+(function buildBasemaps(){
+  const wrap = $('#basemaps'); let saved = 'dop';
+  try { saved = localStorage.getItem('jk-base') || 'dop'; } catch(e){}
+  if (!basemaps[saved]) saved = 'dop';
+  Object.entries(basemaps).forEach(([id, b]) => {
+    const l = document.createElement('label'); l.className = 'opt';
+    l.innerHTML = '<input type="radio" name="base" id="base-' + id + '" value="' + id + '"' + (id === saved ? ' checked' : '') + '> ' + esc(b.label);
+    l.querySelector('input').addEventListener('change', () => setBase(id));
+    wrap.appendChild(l);
+  });
+  setBase(saved);
+})();
+
+/* Overlays */
+const overlays = [];
+function addOverlay(id, label, layer, on, swatch){
+  overlays.push({id, label, layer, swatch});
+  const wrap = $('#overlays');
+  const l = document.createElement('label'); l.className = 'opt';
+  l.innerHTML = '<input type="checkbox" id="ov-' + id + '"> <span class="sw" style="' + (swatch || '') + '"></span> ' + esc(label);
+  const cb = l.querySelector('input');
+  let saved = null; try { saved = localStorage.getItem('jk-ov-' + id); } catch(e){}
+  cb.checked = saved == null ? !!on : saved === '1';
+  if (cb.checked) layer.addTo(map);
+  cb.addEventListener('change', () => { if (cb.checked) layer.addTo(map); else map.removeLayer(layer); try { localStorage.setItem('jk-ov-' + id, cb.checked ? '1' : '0'); } catch(e){} });
+  wrap.appendChild(l);
+}
+function propsTable(props, keys){
+  return '<table class="mono" style="border-collapse:collapse">' + keys.filter(k => props[k] != null && props[k] !== '').map(k => '<tr><td style="padding:1px 8px 1px 0;color:var(--muted)">' + esc(k) + '</td><td style="padding:1px 0">' + esc(props[k]) + '</td></tr>').join('') + '</table>';
+}
+if (DATA.jagdbezirke){
+  const jb = L.geoJSON(DATA.jagdbezirke, {
+    style: f => /Parrig/i.test(f.properties.NAME || '') ? {color:'#8c2d22', weight:3.5, fillColor:'#c0392b', fillOpacity:0.10, dashArray:null} : {color:'#8c2d22', weight:1.6, fillOpacity:0.02, fillColor:'#c0392b', dashArray:'8 5'},
+    onEachFeature: (f, l) => {
+      const p = f.properties || {};
+      l.bindTooltip(p.NAME || 'Jagdbezirk', {className:'jb-label', sticky:true});
+      l.bindPopup('<h3>' + esc(p.NAME || 'Jagdbezirk') + '</h3><div class="cat">Jagdbezirk laut Jagdbezirkskarte Rhein-Erft-Kreis' + (p.Shape_Area ? ' · ' + fmtArea(p.Shape_Area) : '') + '</div>' + propsTable(p, ['TSN_NEU', 'TSN_REV_NR', 'lfdNr', 'DAT_ERST']));
+    }
+  });
+  addOverlay('jagdbezirke', 'Jagdbezirke (Rhein-Erft-Kreis)', jb, true, 'border-color:#8c2d22;background:rgba(192,57,43,.15)');
+}
+if (DATA.teilverpachtungen && DATA.teilverpachtungen.features.length){
+  const tv = L.geoJSON(DATA.teilverpachtungen, {style:{color:'#7a3f9c', weight:1.5, dashArray:'3 4', fillColor:'#7a3f9c', fillOpacity:0.08}, onEachFeature:(f, l) => { const p = f.properties || {}; l.bindPopup('<h3>Teilverpachtung</h3>' + propsTable(p, ['NAME', 'SONSTIGES', 'TVP_AN', 'Beschriftung'])); }});
+  addOverlay('teilverpachtungen', 'Teilverpachtungen (Kreis)', tv, false, 'border-color:#7a3f9c;background:rgba(122,63,156,.15)');
+}
+if (DATA.schutzgebiete){
+  const nsgParrig = L.geoJSON({type:'FeatureCollection', features:featuresByKennung(DATA.schutzgebiete, 'BM-004')}, {style:{color:'#2f7a3a', weight:2.5, dashArray:'10 6', fillColor:'#3f9a4a', fillOpacity:0.08}, onEachFeature:(f, l) => l.bindPopup('<h3>' + esc(f.properties.name) + '</h3><div class="cat">Naturschutzgebiet ' + esc(f.properties.kennung) + ' · LANUV NRW</div>')});
+  addOverlay('nsg-parrig', 'NSG Parrig (BM-004)', nsgParrig, true, 'border-color:#2f7a3a;background:rgba(63,154,74,.2)');
+  const ffh = L.geoJSON({type:'FeatureCollection', features:(DATA.schutzgebiete.features || []).filter(f => f.properties.typ === 'FFH')}, {style:{color:'#2f6f9f', weight:2, dashArray:'2 5', fillColor:'#2f6f9f', fillOpacity:0.05}, onEachFeature:(f, l) => l.bindPopup('<h3>' + esc(f.properties.name) + '</h3><div class="cat">FFH-Gebiet ' + esc(f.properties.kennung) + ' · Natura 2000</div>')});
+  addOverlay('ffh', 'FFH-Gebiete (Natura 2000)', ffh, false, 'border-color:#2f6f9f;background:rgba(47,111,159,.15)');
+  const nsgOther = L.geoJSON({type:'FeatureCollection', features:(DATA.schutzgebiete.features || []).filter(f => f.properties.typ === 'NSG' && f.properties.kennung !== 'BM-004')}, {style:{color:'#2f7a3a', weight:1.5, dashArray:'6 5', fillColor:'#3f9a4a', fillOpacity:0.04}, onEachFeature:(f, l) => l.bindPopup('<h3>' + esc(f.properties.name) + '</h3><div class="cat">Naturschutzgebiet ' + esc(f.properties.kennung) + '</div>')});
+  addOverlay('nsg-other', 'Weitere NSG der Umgebung', nsgOther, false, 'border-color:#2f7a3a;background:rgba(63,154,74,.08)');
+}
+if (DATA.parrig_osm){
+  const po = L.geoJSON(DATA.parrig_osm, {style:{color:'#6b8e3a', weight:1.5, dashArray:'1 4', fill:false}, onEachFeature:(f, l) => l.bindPopup('<h3>Parrig</h3><div class="cat">Umriss aus OpenStreetMap (leisure=nature_reserve)</div>')});
+  addOverlay('parrig-osm', 'Parrig – Umriss OpenStreetMap', po, false, 'border-color:#6b8e3a;background:transparent');
+}
+{
+  const alkis = CONFIG.mode === 'local'
+    ? L.tileLayer(CONFIG.tilesBase + 'alkis/{z}/{x}/{y}.png', {tileSize:1024, zoomOffset:-2, minNativeZoom:17, maxNativeZoom:18, minZoom:16, maxZoom:20, bounds:bounds, noWrap:true, opacity:0.9})
+    : L.tileLayer.wms('https://www.wms.nrw.de/geobasis/wms_nw_alkis', {layers:'adv_alkis_flurstuecke', format:'image/png', transparent:true, version:'1.3.0', minZoom:16, maxZoom:20, opacity:0.9});
+  addOverlay('alkis', 'Flurstücke (ALKIS, ab Zoom 16)', alkis, false, 'border-color:#555;background:repeating-linear-gradient(45deg,#999 0 2px,transparent 2px 5px)');
+}
+const poiLayer = L.layerGroup(); addOverlay('pois', 'Eigene Einträge', poiLayer, true, 'border-color:#4a6a2b;background:#4a6a2b');
+const photoLayer = L.layerGroup(); addOverlay('photos', 'Fotos', photoLayer, true, 'border-color:#b0601c;background:#b0601c');
+
+/* Koordinatenanzeige + Sonnenzeiten */
+function showCoords(ll){ const u = toUTM(ll.lat, ll.lng); $('#coords').innerHTML = esc(fmtLL(ll.lat, ll.lng)) + '<br>UTM ' + u.zone + ' ' + u.e + ' E ' + u.n + ' N'; }
+map.on('mousemove', e => showCoords(e.latlng));
+(function showSun(){
+  const t = sunTimes(new Date(), PARRIG[0], PARRIG[1]); const f = d => isNaN(d) ? '–' : d.toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'});
+  $('#sun').innerHTML = '<span title="Bürgerliche Dämmerung (morgens)">Dämm. <b>' + f(t.dawn) + '</b></span><span>SA <b>' + f(t.sunrise) + '</b></span><span>SU <b>' + f(t.sunset) + '</b></span><span title="Bürgerliche Dämmerung (abends)">Dämm. <b>' + f(t.dusk) + '</b></span>';
+})();
+
+/* ---------- Datenhaltung: Cloud (claude db/assets) oder lokal ---------- */
+const state = {pois:new Map(), photos:new Map()};
+const Store = {
+  mode:'local', db:null, assets:null, downloads:null, ready:false,
+  async init(){
+    if (window.claude && typeof window.claude.use === 'function'){
+      try { this.db = await window.claude.use('db'); } catch(e){ this.db = null; }
+      if (this.db){
+        this.mode = 'cloud';
+        try { this.assets = await window.claude.use('assets'); } catch(e){ this.assets = null; }
+        try { this.downloads = await window.claude.use('downloads'); } catch(e){ this.downloads = null; }
+      }
+    }
+    if (this.mode === 'cloud') this.subscribe(); else this.loadLocal();
+    this.ready = true; renderStatus();
+  },
+  subscribe(){
+    const timer = setTimeout(() => toast('Cloud-Speicher antwortet noch nicht – Daten können veraltet sein.'), 10000);
+    const apply = (snap, kind) => {
+      snap.docChanges().forEach(ch => {
+        const d = ch.doc.data(); const id = ch.doc.id;
+        if (ch.type === 'removed'){ state[kind].delete(id); kind === 'pois' ? removePoiLayer(id) : removePhotoLayer(id); }
+        else { const obj = Object.assign({}, d, {id}); state[kind].set(id, obj); kind === 'pois' ? renderPoi(obj) : renderPhoto(obj); }
+      });
+      if (!snap.metadata.fromCache) clearTimeout(timer);
+      renderPhotoList(); renderStatus();
+    };
+    const err = e => { clearTimeout(timer); toast('Cloud-Speicher nicht erreichbar (' + (e && e.code || 'Fehler') + ').'); };
+    this.db.collection('pois').onSnapshot(s => apply(s, 'pois'), err);
+    this.db.collection('photos').onSnapshot(s => apply(s, 'photos'), err);
+  },
+  loadLocal(){
+    try {
+      const raw = localStorage.getItem('jagdkarte-parrig'); if (!raw) return;
+      const d = JSON.parse(raw);
+      (d.pois || []).forEach(p => { state.pois.set(p.id, p); renderPoi(p); });
+      (d.photos || []).forEach(p => { state.photos.set(p.id, p); renderPhoto(p); });
+      renderPhotoList();
+    } catch(e){ console.warn('localStorage', e); }
+  },
+  saveLocal(){
+    try { localStorage.setItem('jagdkarte-parrig', JSON.stringify({pois:[...state.pois.values()], photos:[...state.photos.values()], saved:new Date().toISOString()})); return true; }
+    catch(e){ toast('Lokaler Speicher voll oder gesperrt – bitte Sicherung exportieren.', 5000); return false; }
+  },
+  async savePoi(p){ state.pois.set(p.id, p); renderPoi(p); if (this.mode === 'cloud'){ const {id, ...body} = p; await this.db.collection('pois').doc(id).set(body); } else this.saveLocal(); },
+  async deletePoi(id){ state.pois.delete(id); removePoiLayer(id); if (this.mode === 'cloud') await this.db.collection('pois').doc(id).delete(); else this.saveLocal(); },
+  async savePhoto(p){ state.photos.set(p.id, p); renderPhoto(p); renderPhotoList(); if (this.mode === 'cloud'){ const {id, ...body} = p; await this.db.collection('photos').doc(id).set(body); } else this.saveLocal(); },
+  async deletePhoto(id){ const p = state.photos.get(id); state.photos.delete(id); removePhotoLayer(id); renderPhotoList(); if (this.mode === 'cloud'){ await this.db.collection('photos').doc(id).delete(); if (p && p.asset && this.assets){ try { await this.assets.delete(p.asset); } catch(e){} } } else this.saveLocal(); }
+};
+function renderStatus(){
+  const el = $('#storeStatus'); const n = state.pois.size, m = state.photos.size;
+  if (Store.mode === 'cloud') el.innerHTML = '<span class="dot cloud"></span><span>Gespeichert in diesem Artefakt (für alle Geräte). ' + n + ' Einträge, ' + m + ' Fotos.</span>';
+  else el.innerHTML = '<span class="dot ok"></span><span>Gespeichert in diesem Browser. ' + n + ' Einträge, ' + m + ' Fotos. Für andere Geräte: Sicherung exportieren.</span>';
+}
+
+/* ---------- Einträge (POIs) ---------- */
+const poiLayers = new Map();
+function removePoiLayer(id){ const l = poiLayers.get(id); if (l){ poiLayer.removeLayer(l); poiLayers.delete(id); } }
+function pinIcon(cat, sel){ return L.divIcon({className:'', html:'<div class="poi-pin' + (sel ? ' sel' : '') + '" style="background:' + cat.color + '">' + esc(cat.abbr) + '</div>', iconSize:[28, 28], iconAnchor:[14, 14], popupAnchor:[0, -14]}); }
+function geomLength(coords){ let s = 0; for (let i = 1; i < coords.length; i++) s += map.distance(coords[i-1], coords[i]); return s; }
+function ringArea(coords){ // Shoelace in Metern (lokale Näherung)
+  const R = 6378137, rad = Math.PI/180; let a = 0; const n = coords.length;
+  for (let i = 0; i < n; i++){ const p = coords[i], q = coords[(i+1)%n]; a += (q[1]-p[1])*rad * (2 + Math.sin(p[0]*rad) + Math.sin(q[0]*rad)); }
+  return Math.abs(a*R*R/2);
+}
+function poiPopup(p){
+  const cat = CAT[p.cat] || CAT.notiz; let geo = '';
+  if (p.geom.type === 'Point') geo = fmtLL(p.geom.coords[0], p.geom.coords[1]) + ' · UTM ' + (u => u.e + ' / ' + u.n)(toUTM(p.geom.coords[0], p.geom.coords[1]));
+  else if (p.geom.type === 'LineString') geo = 'Länge ' + fmtLen(geomLength(p.geom.coords));
+  else geo = 'Fläche ' + fmtArea(ringArea(p.geom.coords)) + ' · Umfang ' + fmtLen(geomLength(p.geom.coords.concat([p.geom.coords[0]])));
+  return '<h3>' + esc(p.name || cat.label) + '</h3><div class="cat">' + esc(cat.label) + (p.date ? ' · ' + esc(fmtDate(p.date)) : '') + '</div>' + (p.notes ? '<div>' + esc(p.notes).replace(/\n/g, '<br>') + '</div>' : '') + '<div class="mono">' + esc(geo) + '</div><div class="pbtns"><button data-act="edit" data-id="' + p.id + '">Bearbeiten</button><button data-act="del" data-id="' + p.id + '" class="del">Löschen</button></div>';
+}
+function renderPoi(p){
+  removePoiLayer(p.id); const cat = CAT[p.cat] || CAT.notiz; let l;
+  if (p.geom.type === 'Point') l = L.marker(p.geom.coords, {icon:pinIcon(cat), title:p.name || cat.label});
+  else if (p.geom.type === 'LineString') l = L.polyline(p.geom.coords, {color:cat.color, weight:4, dashArray:cat.dash || null, opacity:0.9});
+  else l = L.polygon(p.geom.coords, {color:cat.color, weight:2.5, fillColor:cat.color, fillOpacity:0.18, dashArray:cat.dash || null});
+  if (p.geom.type !== 'Point' && p.name) l.bindTooltip(p.name, {permanent:false, direction:'center', className:'len-label'});
+  l.bindPopup(() => poiPopup(state.pois.get(p.id) || p));
+  poiLayer.addLayer(l); poiLayers.set(p.id, l);
+}
+
+/* Dialog */
+let dlgCtx = null;
+function openDialog(p, isNew){
+  dlgCtx = {p, isNew}; const cat = CAT[p.cat] || CAT.notiz;
+  const sel = $('#fCat'); sel.innerHTML = CATS.filter(c => c.geom === cat.geom).map(c => '<option value="' + c.id + '"' + (c.id === p.cat ? ' selected' : '') + '>' + esc(c.label) + '</option>').join('');
+  $('#dlgTitle').textContent = isNew ? 'Neuer Eintrag: ' + cat.label : 'Eintrag bearbeiten';
+  $('#fName').value = p.name || ''; $('#fDate').value = (p.date || '').slice(0, 10); $('#fNotes').value = p.notes || '';
+  $('#fPos').textContent = p.geom.type === 'Point' ? fmtLL(p.geom.coords[0], p.geom.coords[1]) : (p.geom.type === 'LineString' ? 'Linie mit ' + p.geom.coords.length + ' Punkten, ' + fmtLen(geomLength(p.geom.coords)) : 'Fläche mit ' + p.geom.coords.length + ' Punkten, ' + fmtArea(ringArea(p.geom.coords)));
+  $('#fDelete').hidden = !!isNew; $('#dialog').hidden = false; setTimeout(() => $('#fName').focus(), 50);
+}
+function closeDialog(){ $('#dialog').hidden = true; dlgCtx = null; }
+$('#poiForm').addEventListener('submit', async e => {
+  e.preventDefault(); if (!dlgCtx) return;
+  const p = Object.assign({}, dlgCtx.p, {cat:$('#fCat').value, name:$('#fName').value.trim(), date:$('#fDate').value || null, notes:$('#fNotes').value.trim(), updated:new Date().toISOString()});
+  if (!p.created) p.created = p.updated;
+  closeDialog();
+  try { await Store.savePoi(p); toast('Gespeichert: ' + (p.name || CAT[p.cat].label)); } catch(err){ toast('Speichern fehlgeschlagen: ' + (err && err.code || err)); }
+  renderStatus();
+});
+$('#fCancel').addEventListener('click', closeDialog);
+$('#fDelete').addEventListener('click', async () => { if (!dlgCtx) return; const id = dlgCtx.p.id; closeDialog(); try { await Store.deletePoi(id); toast('Eintrag gelöscht'); } catch(err){ toast('Löschen fehlgeschlagen'); } renderStatus(); });
+$('#dialog').addEventListener('click', e => { if (e.target === $('#dialog')) closeDialog(); });
+
+/* Pop-up-Schaltflächen (Einträge und Fotos) */
+map.on('popupopen', e => {
+  const el = e.popup.getElement(); if (!el) return;
+  el.querySelectorAll('button[data-act]').forEach(b => b.addEventListener('click', async () => {
+    const id = b.dataset.id, act = b.dataset.act;
+    if (act === 'edit'){ const p = state.pois.get(id); if (p){ map.closePopup(); openDialog(JSON.parse(JSON.stringify(p)), false); } }
+    else if (act === 'del'){ if (b.dataset.sure !== '1'){ b.dataset.sure = '1'; b.textContent = 'Wirklich löschen?'; return; } map.closePopup(); try { await Store.deletePoi(id); toast('Eintrag gelöscht'); } catch(err){ toast('Löschen fehlgeschlagen'); } renderStatus(); }
+    else if (act === 'pdel'){ if (b.dataset.sure !== '1'){ b.dataset.sure = '1'; b.textContent = 'Wirklich löschen?'; return; } map.closePopup(); try { await Store.deletePhoto(id); toast('Foto entfernt'); } catch(err){ toast('Entfernen fehlgeschlagen'); } renderStatus(); }
+    else if (act === 'pplace'){ map.closePopup(); startPlacePhoto(id); }
+  }));
+});
+
+/* ---------- Zeichnen / Werkzeuge ---------- */
+const draw = {tool:null, pts:[], temp:null, measure:false, placePhoto:null};
+const drawbar = $('#drawbar');
+function setTool(id){
+  draw.tool = id; draw.pts = []; clearTemp(); draw.measure = false; draw.placePhoto = null;
+  document.querySelectorAll('.tool').forEach(b => b.classList.toggle('active', b.dataset.cat === id));
+  $('#measureBtn').classList.toggle('active', false);
+  const cat = id && CAT[id];
+  map.getContainer().classList.toggle('drawing', !!id);
+  if (cat && cat.geom !== 'point'){ drawbar.hidden = false; $('#drawText').textContent = cat.label + ': Punkte setzen'; map.doubleClickZoom.disable(); }
+  else { drawbar.hidden = true; map.doubleClickZoom.enable(); }
+  if (cat && window.innerWidth <= 900) closePanel();
+}
+function clearTemp(){ if (draw.temp){ map.removeLayer(draw.temp); draw.temp = null; } }
+function updateTemp(){
+  clearTemp(); if (!draw.pts.length) return;
+  const cat = draw.measure ? null : CAT[draw.tool];
+  const g = L.featureGroup();
+  draw.pts.forEach(pt => g.addLayer(L.circleMarker(pt, {radius:5, color:'#fff', weight:2, fillColor:cat ? cat.color : '#2f6f9f', fillOpacity:1})));
+  if (draw.pts.length > 1){
+    const line = (cat && cat.geom === 'polygon') ? L.polygon(draw.pts, {color:cat.color, weight:2.5, dashArray:'6 4', fillOpacity:0.15}) : L.polyline(draw.pts, {color:cat ? cat.color : '#2f6f9f', weight:3, dashArray:'6 4'});
+    g.addLayer(line);
+    const len = geomLength(draw.pts);
+    const txt = (cat && cat.geom === 'polygon') ? fmtArea(ringArea(draw.pts)) + ' · Umfang ' + fmtLen(len + map.distance(draw.pts[draw.pts.length-1], draw.pts[0])) : fmtLen(len);
+    line.bindTooltip(txt, {permanent:true, direction:'top', className:'len-label'}).openTooltip();
+    $('#drawText').textContent = (cat ? cat.label : 'Messen') + ': ' + txt;
+  }
+  draw.temp = g.addTo(map);
+}
+map.on('click', e => {
+  const ll = [+e.latlng.lat.toFixed(6), +e.latlng.lng.toFixed(6)];
+  if (draw.placePhoto){ const p = state.photos.get(draw.placePhoto); draw.placePhoto = null; map.getContainer().classList.remove('drawing'); drawbar.hidden = true;
+    if (p){ p.lat = ll[0]; p.lon = ll[1]; p.inParrig = inParrig(p.lat, p.lon); p.manual = true; Store.savePhoto(p).then(() => toast('Foto platziert' + (p.inParrig ? ' – im Parrig' : ''))).catch(() => toast('Speichern fehlgeschlagen')); }
+    return; }
+  if (draw.measure){ draw.pts.push(ll); updateTemp(); return; }
+  if (!draw.tool){ showCoords(e.latlng); return; }
+  const cat = CAT[draw.tool];
+  if (cat.geom === 'point'){ openDialog({id:uid(), cat:cat.id, name:'', date:new Date().toISOString().slice(0, 10), notes:'', geom:{type:'Point', coords:ll}}, true); setTool(null); }
+  else { draw.pts.push(ll); updateTemp(); }
+});
+$('#drawUndo').addEventListener('click', () => { draw.pts.pop(); updateTemp(); });
+$('#drawCancel').addEventListener('click', () => { if (draw.measure) stopMeasure(); else if (draw.placePhoto){ draw.placePhoto = null; drawbar.hidden = true; map.getContainer().classList.remove('drawing'); } else setTool(null); });
+$('#drawDone').addEventListener('click', () => {
+  if (draw.measure){ stopMeasure(); return; }
+  const cat = CAT[draw.tool]; if (!cat) return;
+  const need = cat.geom === 'polygon' ? 3 : 2;
+  if (draw.pts.length < need){ toast('Mindestens ' + need + ' Punkte setzen'); return; }
+  const p = {id:uid(), cat:cat.id, name:'', date:new Date().toISOString().slice(0, 10), notes:'', geom:{type:cat.geom === 'polygon' ? 'Polygon' : 'LineString', coords:draw.pts.slice()}};
+  setTool(null); openDialog(p, true);
+});
+function startMeasure(){ setTool(null); draw.measure = true; draw.pts = []; map.getContainer().classList.add('drawing'); drawbar.hidden = false; $('#drawText').textContent = 'Messen: Punkte setzen'; $('#measureBtn').classList.add('active'); map.doubleClickZoom.disable(); if (window.innerWidth <= 900) closePanel(); }
+function stopMeasure(){ draw.measure = false; draw.pts = []; clearTemp(); map.getContainer().classList.remove('drawing'); drawbar.hidden = true; $('#measureBtn').classList.remove('active'); map.doubleClickZoom.enable(); }
+$('#measureBtn').addEventListener('click', () => draw.measure ? stopMeasure() : startMeasure());
+function startPlacePhoto(id){ setTool(null); draw.placePhoto = id; map.getContainer().classList.add('drawing'); drawbar.hidden = false; $('#drawText').textContent = 'Foto platzieren: Aufnahmeort in der Karte antippen'; if (window.innerWidth <= 900) closePanel(); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape'){ if (!$('#dialog').hidden) closeDialog(); else if (draw.measure) stopMeasure(); else if (draw.tool || draw.placePhoto){ draw.placePhoto = null; setTool(null); } } });
+
+(function buildTools(){
+  const wrap = $('#tools');
+  CATS.forEach(c => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'tool'; b.dataset.cat = c.id;
+    const cls = c.geom === 'line' ? 'glyph line' : c.geom === 'polygon' ? 'glyph poly' : 'glyph';
+    b.innerHTML = '<span class="' + cls + '" style="background:' + c.color + '">' + (c.geom === 'point' ? esc(c.abbr) : '') + '</span><span>' + esc(c.label) + '</span>';
+    b.addEventListener('click', () => setTool(draw.tool === c.id ? null : c.id));
+    wrap.appendChild(b);
+  });
+  const lg = $('#legend');
+  CATS.forEach(c => { const d = document.createElement('div'); d.innerHTML = c.geom === 'point' ? '<span class="poi-pin" style="background:' + c.color + ';width:20px;height:20px;font-size:9px">' + esc(c.abbr) + '</span><span>' + esc(c.label) + '</span>' : c.geom === 'line' ? '<span class="ln" style="border-color:' + c.color + '"></span><span>' + esc(c.label) + '</span>' : '<span class="ar" style="border-color:' + c.color + ';background:' + c.color + '33"></span><span>' + esc(c.label) + '</span>'; lg.appendChild(d); });
+  [['#8c2d22', 'Jagdbezirk (Kreis)', 'ar'], ['#2f7a3a', 'NSG Parrig', 'ar'], ['#2f6f9f', 'FFH-Gebiet', 'ar'], ['#b0601c', 'Foto mit Aufnahmeort', 'ar']].forEach(([col, lab, k]) => { const d = document.createElement('div'); d.innerHTML = '<span class="' + k + '" style="border-color:' + col + ';background:' + col + '22"></span><span>' + esc(lab) + '</span>'; lg.appendChild(d); });
+})();
+
+/* Standort */
+let meLayer = null;
+$('#locateBtn').addEventListener('click', () => {
+  if (!navigator.geolocation){ toast('Standortbestimmung hier nicht verfügbar'); return; }
+  toast('Standort wird ermittelt …');
+  navigator.geolocation.getCurrentPosition(pos => {
+    const ll = [pos.coords.latitude, pos.coords.longitude];
+    if (meLayer) map.removeLayer(meLayer);
+    meLayer = L.layerGroup([L.circle(ll, {radius:pos.coords.accuracy || 20, color:'#2f6f9f', weight:1, fillOpacity:0.12}), L.marker(ll, {icon:L.divIcon({className:'', html:'<div class="me-pin"></div>', iconSize:[16, 16], iconAnchor:[8, 8]})}).bindPopup('<h3>Mein Standort</h3><div class="mono">' + esc(fmtLL(ll[0], ll[1])) + ' · ±' + Math.round(pos.coords.accuracy || 0) + ' m</div>')]).addTo(map);
+    map.setView(ll, Math.max(map.getZoom(), 16)); showCoords(L.latLng(ll));
+    toast(inParrig(ll[0], ll[1]) ? 'Sie befinden sich im Parrig' : 'Standort außerhalb des Parrig');
+  }, err => toast('Standort nicht verfügbar (' + (err && err.message || 'abgelehnt') + ')'), {enableHighAccuracy:true, timeout:12000, maximumAge:30000});
+});
+$('#homeBtn').addEventListener('click', () => map.flyToBounds(L.latLngBounds([[50.8800, 6.6960], [50.9015, 6.7125]]), {padding:[20, 20]}));
+
+/* ---------- Fotos ---------- */
+const photoLayers = new Map();
+function removePhotoLayer(id){ const l = photoLayers.get(id); if (l){ photoLayer.removeLayer(l); photoLayers.delete(id); } }
+function photoSrc(p, big){ if (big && p.asset) return '/_blob/' + p.asset; if (big && p.web) return p.web; return p.thumb || p.web || ''; }
+function photoPopup(p){
+  const src = photoSrc(p, true);
+  return (src ? '<img class="big" src="' + esc(src) + '" alt="">' : '') + '<h3>' + esc(p.name || 'Foto') + '</h3><div class="cat">' + (p.date ? esc(fmtDate(p.date)) + ' · ' : '') + (p.lat != null ? (p.inParrig ? '<span class="badge">im Parrig</span>' : '<span class="badge no">außerhalb</span>') : '<span class="badge no">ohne Standort</span>') + (p.manual ? ' · manuell platziert' : '') + '</div>' + (p.lat != null ? '<div class="mono">' + esc(fmtLL(p.lat, p.lon)) + ' · UTM ' + (u => u.e + ' / ' + u.n)(toUTM(p.lat, p.lon)) + '</div>' : '') + '<div class="pbtns"><button data-act="pplace" data-id="' + p.id + '">Neu platzieren</button><button data-act="pdel" data-id="' + p.id + '" class="del">Entfernen</button></div>';
+}
+function photoVisible(p){ return p.lat != null && (!$('#onlyParrig').checked || p.inParrig); }
+function renderPhoto(p){
+  removePhotoLayer(p.id); if (!photoVisible(p)) return;
+  const icon = L.divIcon({className:'', html:'<div class="photo-pin' + (p.inParrig ? '' : ' out') + '">' + (p.thumb ? '<img src="' + esc(p.thumb) + '" alt="">' : '') + '</div>', iconSize:[38, 38], iconAnchor:[19, 19], popupAnchor:[0, -18]});
+  const m = L.marker([p.lat, p.lon], {icon, title:p.name || 'Foto'}); m.bindPopup(() => photoPopup(state.photos.get(p.id) || p), {maxWidth:320});
+  photoLayer.addLayer(m); photoLayers.set(p.id, m);
+}
+function renderPhotoList(){
+  const list = $('#photolist'); const only = $('#onlyParrig').checked;
+  const all = [...state.photos.values()].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
+  const shown = all.filter(p => !only || p.inParrig);
+  $('#photoCount').textContent = all.length ? (shown.length + ' von ' + all.length + ' · ' + all.filter(p => p.inParrig).length + ' im Parrig') : '';
+  list.innerHTML = shown.length ? '' : '<p class="hint">' + (all.length ? 'Keine Fotos im Parrig.' : 'Noch keine Fotos. Fotos mit Aufnahmeort hier ablegen – sie erscheinen als Bildmarker in der Karte.') + '</p>';
+  shown.forEach(p => {
+    const d = document.createElement('div'); d.className = 'pitem';
+    d.innerHTML = (p.thumb ? '<img src="' + esc(p.thumb) + '" alt="">' : '<div class="ph">📷</div>') + '<div class="meta"><b title="' + esc(p.name) + '">' + esc(p.name || 'Foto') + '</b><span>' + esc(fmtDate(p.date) || 'ohne Datum') + '</span>' + (p.lat != null ? (p.inParrig ? '<span class="badge">im Parrig</span>' : '<span class="badge no">außerhalb</span>') : '<span class="badge no">kein Standort</span>') + '</div><div class="acts">' + (p.lat != null ? '<button data-a="show">Zeigen</button>' : '<button data-a="place">Platzieren</button>') + '<button data-a="del" class="del">Entfernen</button></div>';
+    d.querySelector('[data-a="show"],[data-a="place"]').addEventListener('click', ev => { if (ev.target.dataset.a === 'show'){ map.setView([p.lat, p.lon], Math.max(map.getZoom(), 17)); const l = photoLayers.get(p.id); if (l) l.openPopup(); if (window.innerWidth <= 900) closePanel(); } else startPlacePhoto(p.id); });
+    d.querySelector('[data-a="del"]').addEventListener('click', async ev => { const b = ev.target; if (b.dataset.sure !== '1'){ b.dataset.sure = '1'; b.textContent = 'Sicher?'; return; } try { await Store.deletePhoto(p.id); } catch(e){ toast('Entfernen fehlgeschlagen'); } renderStatus(); });
+    list.appendChild(d);
+  });
+}
+$('#onlyParrig').addEventListener('change', () => { state.photos.forEach(renderPhoto); renderPhotoList(); });
+
+async function bitmapFrom(file){
+  try { return await createImageBitmap(file, {imageOrientation:'from-image'}); } catch(e){}
+  try { return await createImageBitmap(file); } catch(e){}
+  return null;
+}
+async function scaled(file, maxPx, quality){
+  let bmp = await bitmapFrom(file);
+  if (!bmp && window.exifr){ try { const t = await exifr.thumbnail(file); if (t) bmp = await createImageBitmap(new Blob([t], {type:'image/jpeg'})); } catch(e){} }
+  if (!bmp) return null;
+  const s = Math.min(1, maxPx/Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas'); c.width = Math.max(1, Math.round(bmp.width*s)); c.height = Math.max(1, Math.round(bmp.height*s));
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height); bmp.close && bmp.close();
+  return c;
+}
+function canvasBlob(c, q){ return new Promise(res => c.toBlob(b => res(b), 'image/jpeg', q)); }
+function exifDate(meta){ const d = meta && (meta.DateTimeOriginal || meta.CreateDate || meta.ModifyDate); if (!d) return null; if (d instanceof Date && !isNaN(d)){ const p = n => String(n).padStart(2, '0'); return d.getFullYear() + '-' + p(d.getMonth()+1) + '-' + p(d.getDate()) + 'T' + p(d.getHours()) + ':' + p(d.getMinutes()); } return String(d); }
+async function importPhotos(files){
+  const list = [...files].filter(f => /^image\//.test(f.type) || /\.(heic|heif|jpe?g|png|tiff?)$/i.test(f.name));
+  if (!list.length){ toast('Keine Bilddateien erkannt'); return; }
+  let n = 0, inP = 0, noGps = 0;
+  for (const f of list){
+    toast('Foto ' + (n+1) + ' von ' + list.length + ' wird gelesen …', 60000);
+    let gps = null, meta = null;
+    if (window.exifr){ try { gps = await exifr.gps(f); } catch(e){} try { meta = await exifr.parse(f, {pick:['DateTimeOriginal', 'CreateDate', 'ModifyDate']}); } catch(e){} }
+    const p = {id:uid(), name:f.name, size:f.size, date:exifDate(meta) || (f.lastModified ? new Date(f.lastModified).toISOString().slice(0, 16) : null), lat:null, lon:null, inParrig:false, thumb:null, created:new Date().toISOString()};
+    if (gps && isFinite(gps.latitude) && isFinite(gps.longitude)){ p.lat = +gps.latitude.toFixed(6); p.lon = +gps.longitude.toFixed(6); p.inParrig = inParrig(p.lat, p.lon); } else noGps++;
+    const tc = await scaled(f, 240); if (tc) p.thumb = tc.toDataURL('image/jpeg', 0.72);
+    if (Store.mode === 'cloud' && Store.assets){
+      try { const bc = await scaled(f, 1600); const blob = bc ? await canvasBlob(bc, 0.85) : (/^image\/(jpeg|png|webp|gif)$/.test(f.type) && f.size <= 20*1024*1024 ? f : null); if (blob){ const r = await Store.assets.upload(blob, {type:blob.type || 'image/jpeg'}); p.asset = r.id; } }
+      catch(e){ console.warn('upload', e); toast('Bild konnte nicht hochgeladen werden (' + (e && e.code || 'Fehler') + '), nur Vorschau gespeichert.', 4000); }
+    }
+    try { await Store.savePhoto(p); n++; if (p.inParrig) inP++; } catch(e){ toast('Speichern fehlgeschlagen: ' + (e && e.code || e)); }
+  }
+  renderStatus();
+  toast(n + ' Foto(s) übernommen · ' + inP + ' im Parrig' + (noGps ? ' · ' + noGps + ' ohne Standort (im Foto-Bereich „Platzieren“)' : ''), 6000);
+  if (inP){ const pts = [...state.photos.values()].filter(p => p.lat != null && p.inParrig).map(p => [p.lat, p.lon]); if (pts.length) map.fitBounds(L.latLngBounds(pts).pad(0.2), {maxZoom:17}); }
+}
+$('#photoInput').addEventListener('change', e => { importPhotos(e.target.files); e.target.value = ''; });
+const dz = $('#dropzone');
+['dragenter', 'dragover'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('over'); }));
+['dragleave', 'drop'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('over'); }));
+dz.addEventListener('drop', e => importPhotos(e.dataTransfer.files));
+let dragDepth = 0; const mw = $('#mapwrap');
+mw.addEventListener('dragenter', e => { if ([...e.dataTransfer.types].includes('Files')){ e.preventDefault(); dragDepth++; $('#drop').hidden = false; } });
+mw.addEventListener('dragover', e => { if ([...e.dataTransfer.types].includes('Files')) e.preventDefault(); });
+mw.addEventListener('dragleave', () => { dragDepth = Math.max(0, dragDepth-1); if (!dragDepth) $('#drop').hidden = true; });
+mw.addEventListener('drop', e => { e.preventDefault(); dragDepth = 0; $('#drop').hidden = true; importPhotos(e.dataTransfer.files); });
+(DATA.fotos && DATA.fotos.features || []).forEach(f => { const p = f.properties || {}; const c = f.geometry && f.geometry.coordinates; if (!c) return; const ph = {id:'archiv-' + (p.id || uid()), name:p.name || 'Foto', date:p.date || null, lat:c[1], lon:c[0], inParrig:inParrig(c[1], c[0]), thumb:p.thumb || null, web:p.web || null, archiv:true}; if (!state.photos.has(ph.id)){ state.photos.set(ph.id, ph); renderPhoto(ph); } });
+
+/* ---------- Import / Export ---------- */
+function toGeoJSON(){
+  const feats = [];
+  state.pois.forEach(p => { const g = p.geom.type === 'Point' ? {type:'Point', coordinates:[p.geom.coords[1], p.geom.coords[0]]} : p.geom.type === 'LineString' ? {type:'LineString', coordinates:p.geom.coords.map(c => [c[1], c[0]])} : {type:'Polygon', coordinates:[p.geom.coords.concat([p.geom.coords[0]]).map(c => [c[1], c[0]])]}; feats.push({type:'Feature', id:p.id, properties:{art:p.cat, bezeichnung:p.name || '', datum:p.date || null, notiz:p.notes || '', kategorie:(CAT[p.cat] || CAT.notiz).label}, geometry:g}); });
+  state.photos.forEach(p => { if (p.lat == null) return; feats.push({type:'Feature', id:p.id, properties:{art:'foto', bezeichnung:p.name || '', datum:p.date || null, im_parrig:!!p.inParrig, bild:p.asset ? '/_blob/' + p.asset : (p.web || null)}, geometry:{type:'Point', coordinates:[p.lon, p.lat]}}); });
+  return {type:'FeatureCollection', name:'Jagdkarte Parrig', crs:{type:'name', properties:{name:'urn:ogc:def:crs:OGC:1.3:CRS84'}}, features:feats};
+}
+function toGPX(){
+  const x = esc; let out = '<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Jagdkarte Parrig" xmlns="http://www.topografix.com/GPX/1/1">\n<metadata><name>Jagdkarte Parrig</name><time>' + new Date().toISOString() + '</time></metadata>\n';
+  state.pois.forEach(p => { const cat = CAT[p.cat] || CAT.notiz; if (p.geom.type === 'Point') out += '<wpt lat="' + p.geom.coords[0] + '" lon="' + p.geom.coords[1] + '"><name>' + x(p.name || cat.label) + '</name><desc>' + x(p.notes || '') + '</desc><type>' + x(cat.label) + '</type>' + (p.date ? '<time>' + x(new Date(p.date).toISOString()) + '</time>' : '') + '</wpt>\n'; });
+  state.photos.forEach(p => { if (p.lat == null) return; out += '<wpt lat="' + p.lat + '" lon="' + p.lon + '"><name>' + x(p.name || 'Foto') + '</name><type>Foto</type>' + (p.date ? '<time>' + x(new Date(p.date).toISOString()) + '</time>' : '') + '</wpt>\n'; });
+  state.pois.forEach(p => { const cat = CAT[p.cat] || CAT.notiz; if (p.geom.type === 'Point') return; const pts = p.geom.type === 'Polygon' ? p.geom.coords.concat([p.geom.coords[0]]) : p.geom.coords; out += '<trk><name>' + x(p.name || cat.label) + '</name><type>' + x(cat.label) + '</type><desc>' + x(p.notes || '') + '</desc><trkseg>' + pts.map(c => '<trkpt lat="' + c[0] + '" lon="' + c[1] + '"></trkpt>').join('') + '</trkseg></trk>\n'; });
+  return out + '</gpx>\n';
+}
+function toBackup(){ return JSON.stringify({app:'jagdkarte-parrig', version:1, exported:new Date().toISOString(), pois:[...state.pois.values()], photos:[...state.photos.values()].filter(p => !p.archiv)}, null, 1); }
+async function offerFile(name, text, mime){
+  if (Store.downloads){ try { await Store.downloads.save({filename:name, data:text}); toast('Gespeichert: ' + name); return; } catch(e){ if (e && e.code === 'declined') return; } }
+  if (!(window.claude && window.claude.use)){
+    try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], {type:mime})); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000); toast('Download gestartet: ' + name); return; } catch(e){}
+  }
+  $('#exportArea').hidden = false; $('#exportText').value = text; toast('Export unten zum Kopieren bereit');
+}
+$('#exportGeo').addEventListener('click', () => offerFile('jagdkarte-parrig.geojson', JSON.stringify(toGeoJSON(), null, 1), 'application/geo+json'));
+$('#exportGpx').addEventListener('click', () => offerFile('jagdkarte-parrig.gpx', toGPX(), 'application/gpx+xml'));
+$('#exportBackup').addEventListener('click', () => offerFile('jagdkarte-parrig-sicherung.json', toBackup(), 'application/json'));
+$('#copyExport').addEventListener('click', () => { const t = $('#exportText'); const done = () => toast('In die Zwischenablage kopiert'); if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t.value).then(done).catch(() => { t.select(); toast('Bitte mit Strg/Cmd+C kopieren'); }); else { t.select(); toast('Bitte mit Strg/Cmd+C kopieren'); } });
+$('#closeExport').addEventListener('click', () => { $('#exportArea').hidden = true; });
+
+function catFromName(name, type){ const n = (name || '').toLowerCase(); if (type === 'line') return /grenze/.test(n) ? 'grenze' : /wechsel/.test(n) ? 'wechsel' : 'pirsch'; if (type === 'polygon') return /acker|äsung|wiese/.test(n) ? 'wildacker' : /treib/.test(n) ? 'treiben' : 'einstand'; return /kanzel/.test(n) ? 'kanzel' : /hochsitz|leiter|ansitz/.test(n) ? 'hochsitz' : /bock/.test(n) ? 'bock' : /kirr/.test(n) ? 'kirrung' : /salz/.test(n) ? 'salz' : /kamera/.test(n) ? 'kamera' : /suhle|tränke|wasser/.test(n) ? 'suhle' : /park/.test(n) ? 'park' : /treff|sammel/.test(n) ? 'sammel' : 'notiz'; }
+async function importText(name, text){
+  let added = 0;
+  const save = async p => { try { await Store.savePoi(p); added++; } catch(e){} };
+  if (/^\s*</.test(text)){ // GPX
+    const doc = new DOMParser().parseFromString(text, 'application/xml');
+    for (const w of doc.getElementsByTagName('wpt')){ const nm = (w.getElementsByTagName('name')[0] || {}).textContent || ''; const ds = (w.getElementsByTagName('desc')[0] || {}).textContent || ''; const tm = (w.getElementsByTagName('time')[0] || {}).textContent || ''; await save({id:uid(), cat:catFromName(nm + ' ' + ((w.getElementsByTagName('type')[0] || {}).textContent || ''), 'point'), name:nm, notes:ds, date:tm ? tm.slice(0, 10) : null, geom:{type:'Point', coords:[+w.getAttribute('lat'), +w.getAttribute('lon')]}, created:new Date().toISOString()}); }
+    for (const t of [...doc.getElementsByTagName('trk'), ...doc.getElementsByTagName('rte')]){ const nm = (t.getElementsByTagName('name')[0] || {}).textContent || ''; const pts = [...t.getElementsByTagName('trkpt'), ...t.getElementsByTagName('rtept')].map(p => [+p.getAttribute('lat'), +p.getAttribute('lon')]); if (pts.length > 1) await save({id:uid(), cat:catFromName(nm, 'line'), name:nm, notes:(t.getElementsByTagName('desc')[0] || {}).textContent || '', date:null, geom:{type:'LineString', coords:pts}, created:new Date().toISOString()}); }
+  } else {
+    const d = JSON.parse(text);
+    if (d && d.app === 'jagdkarte-parrig'){ for (const p of d.pois || []) await save(p); for (const p of d.photos || []){ try { await Store.savePhoto(p); added++; } catch(e){} } }
+    else if (d && d.type === 'FeatureCollection'){
+      for (const f of d.features || []){ const g = f.geometry, pr = f.properties || {}; if (!g) continue; const nm = pr.bezeichnung || pr.name || pr.Name || pr.NAME || ''; const base = {id:(typeof f.id === 'string' && f.id) || uid(), name:nm, notes:pr.notiz || pr.desc || pr.description || '', date:pr.datum || null, created:new Date().toISOString()};
+        if (pr.art === 'foto') continue;
+        if (g.type === 'Point') await save(Object.assign(base, {cat:CAT[pr.art] ? pr.art : catFromName(nm, 'point'), geom:{type:'Point', coords:[g.coordinates[1], g.coordinates[0]]}}));
+        else if (g.type === 'LineString') await save(Object.assign(base, {cat:CAT[pr.art] ? pr.art : catFromName(nm, 'line'), geom:{type:'LineString', coords:g.coordinates.map(c => [c[1], c[0]])}}));
+        else if (g.type === 'Polygon'){ const ring = g.coordinates[0].map(c => [c[1], c[0]]); if (ring.length > 3 && ring[0][0] === ring[ring.length-1][0] && ring[0][1] === ring[ring.length-1][1]) ring.pop(); await save(Object.assign(base, {cat:CAT[pr.art] ? pr.art : catFromName(nm, 'polygon'), geom:{type:'Polygon', coords:ring}})); }
+        else if (g.type === 'MultiPolygon'){ for (const poly of g.coordinates){ const ring = poly[0].map(c => [c[1], c[0]]); ring.pop(); await save(Object.assign({}, base, {id:uid(), cat:CAT[pr.art] ? pr.art : catFromName(nm, 'polygon'), geom:{type:'Polygon', coords:ring}})); } }
+      }
+    } else throw new Error('Unbekanntes Format');
+  }
+  renderPhotoList(); renderStatus(); toast(added + ' Objekt(e) importiert aus ' + name, 5000);
+}
+$('#importInput').addEventListener('change', async e => { const f = e.target.files[0]; e.target.value = ''; if (!f) return; try { await importText(f.name, await f.text()); } catch(err){ toast('Import fehlgeschlagen: ' + (err && err.message || err), 5000); } });
+
+/* ---------- Mobile Schublade ---------- */
+function openPanel(){ $('#panel').classList.add('open'); $('#backdrop').hidden = false; }
+function closePanel(){ $('#panel').classList.remove('open'); $('#backdrop').hidden = true; }
+$('#menuBtn').addEventListener('click', () => $('#panel').classList.contains('open') ? closePanel() : openPanel());
+$('#backdrop').addEventListener('click', closePanel);
+
+/* ---------- Start ---------- */
+Store.init();
+setTimeout(() => map.invalidateSize(), 200);
+window.addEventListener('resize', () => map.invalidateSize());
+})();
+</script>
