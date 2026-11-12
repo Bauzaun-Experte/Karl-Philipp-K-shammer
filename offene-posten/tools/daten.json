@@ -1,0 +1,150 @@
+{
+  "stand_immocloud": "07.11.2026",
+  "erstellt": "12.11.2026",
+  "gesellschaften": [
+    {
+      "name": "Käshammer und Penkhues Immobilien eGbR",
+      "kurz": "eGbR",
+      "objekte": [
+        {"objekt": "MFH Adenau Haus 17", "adresse": "Lohmühlenstr. 17, 53518 Adenau", "konto": "…4404", "einheiten": [
+          {"einheit": "EG lks", "mieter": "Leerstand", "status": "Leerstand", "saldo": null}
+        ]},
+        {"objekt": "MFH Adenau Haus 19", "adresse": "Lohmühlenstr. 19, 53518 Adenau", "konto": "…4404", "einheiten": [
+          {"einheit": "1.OG", "mieter": "Bastian Nelles", "status": "Vermietet", "saldo": -500.00, "soll": 500.00, "nov_status": "Offen", "nov_offen": 500.00, "nov_faellig": true},
+          {"einheit": "DG", "mieter": "Leerstand", "status": "Leerstand", "saldo": null},
+          {"einheit": "EG rts", "mieter": "Peter Wagener", "status": "Vermietet", "saldo": -55.00, "soll": 470.00, "nov_status": "Teilbezahlt", "nov_offen": 5.00, "nov_faellig": true},
+          {"einheit": "Garage 1", "mieter": "Leerstand", "status": "Leerstand", "saldo": null},
+          {"einheit": "Garage 2", "mieter": "Gerhard Weber", "status": "Vermietet", "saldo": -120.00, "soll": 60.00, "nov_status": "Offen", "nov_offen": 60.00, "nov_faellig": true},
+          {"einheit": "Garage 3", "mieter": "Gerhard Weber", "status": "Vermietet", "saldo": -60.00, "soll": 30.00, "nov_status": "Offen", "nov_offen": 30.00, "nov_faellig": true},
+          {"einheit": "Stellplatz", "mieter": "Bastian Nelles", "status": "Vermietet", "saldo": -20.00, "soll": 20.00, "nov_status": "Offen", "nov_offen": 20.00, "nov_faellig": true}
+        ]},
+        {"objekt": "MFH Gelsenkirchen Breilstr 16", "adresse": "Breilstraße 16, 45886 Gelsenkirchen", "konto": "…4402", "einheiten": [
+          {"einheit": "WE 1.OG", "mieter": "Safwan Ibrahim Alkhalil, Layla Ahmad", "status": "Vermietet", "saldo": 90.00},
+          {"einheit": "WE 2.OG", "mieter": "Firas Rahmoun", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "WE DG", "mieter": "Jennifer Doenmez", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "WE EG lks", "mieter": "Szabolcs Norbert Bella", "status": "Vermietet", "saldo": -900.00, "soll": 450.00, "nov_status": "Offen", "nov_offen": 450.00, "nov_faellig": true,
+           "hinweis": "Juli- und Novembermiete offen (Zahlungen 11.08., 11.09., 10.10.2026 je 450 €). Mahnung vom 13.11.2026 über 905 € inkl. 5 € Mahngebühr, Frist 26.11.2026."},
+          {"einheit": "WE EG rts", "mieter": "Roni Osman", "status": "Vermietet", "saldo": -1560.00, "soll": 765.00, "nov_status": "Offen", "nov_offen": 765.00, "nov_faellig": true,
+           "hinweis": "Soll lt. Mietvertrag vom 16.10.2025: 475 € Kaltmiete + 135 € HK-VZ + 155 € BK-VZ = 765 €. Zusammensetzung des Rückstands im OP-Projekt noch ungeklärt; NKA 2025 lt. J. Penkhues (06.11.2026) in Bearbeitung."}
+        ]},
+        {"objekt": "MFH Gymnich 2", "adresse": "Kerpener Str. 35, 50374 Erftstadt-Gymnich", "konto": "…4400", "einheiten": [
+          {"einheit": "DG", "mieter": "Leerstand", "status": "Leerstand", "saldo": null, "hinweis": "Vormieter Heinrichs/Vanhoefen bis 30.09.2026"},
+          {"einheit": "EG", "mieter": "Ion Petrovic", "status": "Vermietet", "saldo": -50.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "Garage", "mieter": "Werner Stenzel", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "OG", "mieter": "Werner Stenzel", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Stellplatz 1", "mieter": "Leerstand", "status": "Leerstand", "saldo": null},
+          {"einheit": "Stellplatz 2", "mieter": "Britta Peters", "status": "Vermietet", "saldo": 0.00}
+        ]},
+        {"objekt": "MFH Gymnich 3", "adresse": "Alter Burgweg 14, 50374 Erftstadt-Gymnich", "konto": "…4403", "einheiten": [
+          {"einheit": "DG", "mieter": "Britta Peters", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "EG hinten", "mieter": "Jan Breuer", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "EG vorne", "mieter": "Marco di Bari", "status": "Vermietet", "saldo": -10.00, "soll": 795.00, "nov_status": "Teilbezahlt", "nov_offen": 10.00, "nov_faellig": true, "hinweis": "Soll ab 11/2026 795 € (vorher 785 €), Differenz 10 € offen"},
+          {"einheit": "OG hinten", "mieter": "Maximilian Fox", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "OG vorne", "mieter": "Markus Wemmer", "status": "Vermietet", "saldo": -20.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "Stellplatz 1", "mieter": "Marco di Bari", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Stellplatz 2", "mieter": "Jan Breuer", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Stellplatz 3", "mieter": "Markus Wemmer", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Stellplatz 4", "mieter": "Maximilian Fox", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Stellplatz 5", "mieter": "Britta Peters", "status": "Vermietet", "saldo": 0.00}
+        ]},
+        {"objekt": "MFH Velbert Haus 17", "adresse": "Bonsfelder Str. 17, 42555 Velbert", "konto": "…4401", "einheiten": [
+          {"einheit": "DG", "mieter": "Angelika Meschede", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "EG", "mieter": "Rolf Weiler", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Surterrain", "mieter": "Hubert Ewald Gatzka", "status": "Vermietet", "saldo": -15.00, "soll": 440.00, "nov_status": "Teilbezahlt", "nov_offen": 5.00, "nov_faellig": true}
+        ]},
+        {"objekt": "MFH Velbert Haus 19", "adresse": "Bonsfelder Str. 19, 42555 Velbert", "konto": "…4401", "einheiten": [
+          {"einheit": "1.OG", "mieter": "Mathias Siehl", "status": "Vermietet", "saldo": -59.00, "soll": 674.00, "nov_status": "Teilbezahlt", "nov_offen": 4.00, "nov_faellig": true},
+          {"einheit": "DG", "mieter": "Braun", "status": "Vermietet", "saldo": 0.00, "hinweis": "Familie Braun ab 01.08.2026"},
+          {"einheit": "EG", "mieter": "Surinder Singh", "status": "Vermietet", "saldo": 8.60, "hinweis": "Gewerbe"},
+          {"einheit": "EG hinten", "mieter": "Marion Blömer", "status": "Vermietet", "saldo": 0.00}
+        ]}
+      ]
+    },
+    {
+      "name": "KPK Grundbesitz GmbH",
+      "kurz": "KPK Grundbesitz",
+      "objekte": [
+        {"objekt": "MFH Duisburg Wilhelmstr 4", "adresse": "Wilhelmstr. 4, 47198 Duisburg-Homberg", "konto": "…4700", "einheiten": [
+          {"einheit": "WE 01 EG rts Haupthaus", "mieter": "Lisa Hartmann", "status": "Vermietet", "saldo": 975.00},
+          {"einheit": "WE 02 EG Anbau", "mieter": "Cornelia Ignatovic", "status": "Vermietet", "saldo": 280.00, "soll": 465.00, "nov_status": "Erwartet", "nov_offen": 465.00, "nov_faellig": false},
+          {"einheit": "WE 03 - 04 EG Anbau", "mieter": "Ralf Franzolet", "status": "Vermietet", "saldo": -180.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "WE 05a Gewerbe EG rts Seitenhaus", "mieter": "Frauke Borgards-Zwering", "status": "Gekündigt", "saldo": -110.00, "soll": 915.00, "nov_status": "Teilbezahlt", "nov_offen": 10.00, "nov_faellig": true, "hinweis": "Mietverhältnis gekündigt (Gewerbe)"},
+          {"einheit": "WE 05b EG lks Seitenhaus", "mieter": "Vera Hübeker", "status": "Vermietet", "saldo": -545.00, "soll": 665.00, "nov_status": "Offen", "nov_offen": 665.00, "nov_faellig": true},
+          {"einheit": "WE 06 - 1.OG rts Haupthaus", "mieter": "Daniel Tresp", "status": "Vermietet", "saldo": 236.00, "soll": 616.25, "nov_status": "Teilbezahlt", "nov_offen": 10.00, "nov_faellig": true},
+          {"einheit": "WE 07 - 1.OG lks Haupthaus", "mieter": "Olaf Plüm", "status": "Vermietet", "saldo": 0.00, "hinweis": "Mieter seit 04/2026. Kaution lt. NAS-Mietaufstellung 06/2026: 900 € Soll, 0 € erhalten (nicht in dieser Liste enthalten)"},
+          {"einheit": "WE 08 - 1.OG lks Seitenhaus", "mieter": "Frank Skotz", "status": "Vermietet", "saldo": 0.00, "hinweis": "Mieterwechsel 10/2026 (vorher Specht)"},
+          {"einheit": "WE 09 - 1.OG rts Seitenhaus", "mieter": "Mutlu Üzmez", "status": "Vermietet", "saldo": 0.00, "soll": 770.00, "nov_status": "Erwartet", "nov_offen": 770.00, "nov_faellig": false, "hinweis": "NAS-Mietaufstellung 06/2026 nennt noch ‚Huth‘; Mieterwechsel im NAS nicht belegt"},
+          {"einheit": "WE 10 - 2.OG rts Haupthaus", "mieter": "Mariusz Filipek", "status": "Vermietet", "saldo": -530.00, "soll": 450.00, "nov_status": "Offen", "nov_offen": 450.00, "nov_faellig": true, "hinweis": "Kaution lt. NAS 06/2026: 820 € Soll, 540 € erhalten (280 € offen, nicht in dieser Liste enthalten)"},
+          {"einheit": "WE 11 - 2.OG lks Haupthaus", "mieter": "Lukas Kozlowski", "status": "Vermietet", "saldo": -13.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "WE 12 - 2.OG lks Seitenhaus", "mieter": "Michelle Oppenberg", "status": "Vermietet", "saldo": -3222.50, "soll": 1122.50, "nov_status": "Teilbezahlt", "nov_offen": 672.50, "nov_faellig": true},
+          {"einheit": "WE 13 - 2.OG rts Seitenhaus", "mieter": "Bastian Klingbeil", "status": "Vermietet", "saldo": -400.00, "soll": 400.00, "nov_status": "Offen", "nov_offen": 400.00, "nov_faellig": true}
+        ]},
+        {"objekt": "MFH Gelsenkirchen Lenaustr 10", "adresse": "Lenaustr. 10, 45889 Gelsenkirchen", "konto": "…4702", "einheiten": [
+          {"einheit": "WE 01 EG lks", "mieter": "Ina Ranker", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "WE 02 EG rts", "mieter": "Dirk Mönnig", "status": "Vermietet", "saldo": 10.00, "hinweis": "In Immocloud als ‚Monnig‘ geführt"},
+          {"einheit": "WE 03 - 1.OG lks", "mieter": "Andrija Tomas", "status": "Vermietet", "saldo": -60.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "WE 04 - 1.OG rts", "mieter": "Andrija Tomas", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "WE 05 - DG lks Maisonette", "mieter": "Andrija Tomas", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "WE 06 - DG rts Maisonette", "mieter": "Udo Schwarz", "status": "Vermietet", "saldo": 47.85, "hinweis": "Kaution lt. NAS: keine erhalten"},
+          {"einheit": "WE 07 - Wintergarten Hinterhof", "mieter": "Nour Malla", "status": "Vermietet", "saldo": -1350.00, "soll": 475.00, "nov_status": "Offen", "nov_offen": 475.00, "nov_faellig": true}
+        ]},
+        {"objekt": "MFH Gelsenkirchen Lenaustr 12", "adresse": "Lenaustr. 12, 45889 Gelsenkirchen", "konto": "…4702", "einheiten": [
+          {"einheit": "WE 01 EG lks", "mieter": "Bindewald Michels", "status": "Vermietet", "saldo": 0.00, "hinweis": "Kaution lt. NAS: keine erhalten"},
+          {"einheit": "WE 02 EG rts", "mieter": "Bindewald Linka", "status": "Vermietet", "saldo": 0.00, "hinweis": "Kaution lt. NAS: keine erhalten"},
+          {"einheit": "WE 03 - 1.OG lks", "mieter": "Cornelia Kleiblomer", "status": "Vermietet", "saldo": 0.00, "hinweis": "Kaution lt. NAS: keine erhalten"},
+          {"einheit": "WE 04 - 1.OG rts", "mieter": "Ullrich Schultz", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "WE 05 - DG lks", "mieter": "Abdalla Mansour", "status": "Vermietet", "saldo": -1640.00, "soll": 660.00, "nov_status": "Teilbezahlt", "nov_offen": 25.00, "nov_faellig": true},
+          {"einheit": "WE 06 - DG rts Maisonette", "mieter": "Ayhan Baytekin", "status": "Vermietet", "saldo": -20.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt. Kaution lt. NAS: keine erhalten"}
+        ]}
+      ]
+    },
+    {
+      "name": "PK Immo Verwaltungs GmbH",
+      "kurz": "PK Immo",
+      "objekte": [
+        {"objekt": "MFH Gelsenkirchen Bickernstr 102", "adresse": "Bickernstr. 102, 45889 Gelsenkirchen", "konto": "…5001", "einheiten": [
+          {"einheit": "1.OG", "mieter": "Shevali Murodov", "status": "Vermietet", "saldo": -3230.00, "soll": 1605.00, "nov_status": "Teilbezahlt", "nov_offen": 100.00, "nov_faellig": true},
+          {"einheit": "2.OG lks", "mieter": "Sunita Suleymani", "status": "Vermietet", "saldo": -838.47, "soll": 788.47, "nov_status": "Teilbezahlt", "nov_offen": 30.00, "nov_faellig": true},
+          {"einheit": "2.OG rts", "mieter": "David Dahms", "status": "Vermietet", "saldo": 181.00},
+          {"einheit": "DG Hof", "mieter": "Sabri Stefanov", "status": "Vermietet", "saldo": -415.00, "soll": 415.00, "nov_status": "Offen", "nov_offen": 415.00, "nov_faellig": true},
+          {"einheit": "DG lks", "mieter": "Ishan Koraman", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "DG rts", "mieter": "Herbert Serowiak", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "EG Gewerbe", "mieter": "Maik Keller", "status": "Vermietet", "saldo": -357.00, "soll": 1636.25, "nov_status": "Erwartet", "nov_offen": 1636.25, "nov_faellig": false, "hinweis": "Gewerbe (Beträge inkl. USt)"},
+          {"einheit": "Fläche Hauswand Plakatwerbung 1", "mieter": "Ströer Superposter", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Fläche Hauswand Plakatwerbung 2", "mieter": "DPW Deutsche Plakat Werbung GmbH & Co. KG", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 1", "mieter": "Jörg Keller", "status": "Vermietet", "saldo": -265.50, "soll": 89.25, "nov_status": "Offen", "nov_offen": 89.25, "nov_faellig": true},
+          {"einheit": "Garage 2", "mieter": "Richard Schmitz", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 3", "mieter": "Alexandra Pfahl", "status": "Vermietet", "saldo": 9.00},
+          {"einheit": "Garage 4", "mieter": "Werner-Michael Prass", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 5", "mieter": "Gerhard Wieschollek", "status": "Vermietet", "saldo": -2.63},
+          {"einheit": "Garage 6", "mieter": "Markus Sobanski", "status": "Vermietet", "saldo": -104.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
+          {"einheit": "Garage 7", "mieter": "Alexandra Pfahl", "status": "Vermietet", "saldo": 17.00},
+          {"einheit": "Garage 8", "mieter": "Gerd Podschadly", "status": "Vermietet", "saldo": -119.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
+          {"einheit": "Garage 9", "mieter": "Alexandra Pfahl", "status": "Vermietet", "saldo": 17.00},
+          {"einheit": "Garage 10", "mieter": "Gerd Podschadly", "status": "Vermietet", "saldo": -119.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
+          {"einheit": "Garage 11", "mieter": "Gerd Podschadly", "status": "Vermietet", "saldo": -119.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
+          {"einheit": "Garage 12", "mieter": "Martin und Karin Muthig", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 13", "mieter": "Peter und Sigrid Puffe", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 14", "mieter": "Herbert Serowiak", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 15", "mieter": "Sunita Suleymani", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Garage 16", "mieter": "Jörg Keller", "status": "Vermietet", "saldo": -267.00, "soll": 89.25, "nov_status": "Offen", "nov_offen": 89.25, "nov_faellig": true},
+          {"einheit": "Stellplatz 1", "mieter": "Maik Keller", "status": "Vermietet", "saldo": 0.00, "soll": 29.75, "nov_status": "Erwartet", "nov_offen": 29.75, "nov_faellig": false},
+          {"einheit": "Stellplatz 2", "mieter": "Maik Keller", "status": "Vermietet", "saldo": 0.00, "soll": 29.75, "nov_status": "Erwartet", "nov_offen": 29.75, "nov_faellig": false}
+        ]},
+        {"objekt": "MFH Krefeld Ritterstr 295", "adresse": "Ritterstr. 295, 47805 Krefeld", "konto": "…5000", "einheiten": [
+          {"einheit": "1.OG hinten", "mieter": "Ralf Francki", "status": "Vermietet", "saldo": 60.00, "soll": 460.00, "nov_status": "Offen", "nov_offen": 460.00, "nov_faellig": true, "hinweis": "Immocloud zeigt Zuordnungsvorschlag: Novemberzahlung vermutlich eingegangen, aber nicht zugeordnet"},
+          {"einheit": "1.OG mitte", "mieter": "Loulla Sideritaki", "status": "Vermietet", "saldo": -190.00, "soll": 380.00, "nov_status": "Offen", "nov_offen": 380.00, "nov_faellig": true},
+          {"einheit": "1.OG vorne", "mieter": "Monika Hilgers", "status": "Vermietet", "saldo": -5685.00, "soll": 800.00, "nov_status": "Offen", "nov_offen": 800.00, "nov_faellig": true, "hinweis": "NAS-Fotos vom 03.11.2026 ‚Wohnung ehemals Hilgers‘: Mietende in Immocloud offenbar nicht erfasst, Sollstellungen und Saldo prüfen"},
+          {"einheit": "2.OG mitte", "mieter": "Youness Amagtir", "status": "Vermietet", "saldo": 59.20},
+          {"einheit": "2.OG vorne", "mieter": "Spodich Sahin", "status": "Vermietet", "saldo": -290.00, "soll": 665.00, "nov_status": "Offen", "nov_offen": 665.00, "nov_faellig": true},
+          {"einheit": "DG vorne", "mieter": "Inge Hinz", "status": "Vermietet", "saldo": 15.00},
+          {"einheit": "EG mitte", "mieter": "Gabriele Knol", "status": "Vermietet", "saldo": -3034.50, "soll": 303.45, "nov_status": "Offen", "nov_offen": 303.45, "nov_faellig": true, "hinweis": "Gewerbe"},
+          {"einheit": "EG vorne", "mieter": "Ramona Lenz", "status": "Vermietet", "saldo": 0.00},
+          {"einheit": "Glas WS", "mieter": "Eva Scheller", "status": "Vermietet", "saldo": -545.00, "hinweis": "Gewerbe. Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "Schreinerei", "mieter": "Frank Weyand", "status": "Vermietet", "saldo": -726.65, "hinweis": "Gewerbe. Rückstand aus Vormonaten, Novembermiete bezahlt"},
+          {"einheit": "WS OG hinten", "mieter": "Simon Pleus", "status": "Vermietet", "saldo": -345.10, "soll": 505.75, "nov_status": "Teilbezahlt", "nov_offen": 41.65, "nov_faellig": true, "hinweis": "Gewerbe. Zahlt seit 03/2026 464,10 € statt 505,75 € (295 € KM + 130 € NK + USt), 41,65 €/Monat offen"}
+        ]}
+      ]
+    }
+  ]
+}
