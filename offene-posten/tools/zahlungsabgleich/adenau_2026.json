@@ -1,0 +1,1094 @@
+{
+ "konto": "17974404 (…4404) Adenau Lohmühlenstr. 17 + 19",
+ "quelle": "Kassenbuch GbR BH neu.xlsx, Blatt Adenau (vollständig, Stand 10.11.2026)",
+ "zahlungen": [
+  [
+   "02.01.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 01-2025",
+   "Miete Garage"
+  ],
+  [
+   "03.01.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 01-2025",
+   "Miete"
+  ],
+  [
+   "07.01.2025",
+   "Renate Schulz",
+   "NKA 2023 Rest",
+   295.46,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "21.01.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   15.0,
+   "Miete 01-2025",
+   "Miete"
+  ],
+  [
+   "28.01.2025",
+   "Verbandsgemeinde Adenau / Fr Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   207.9,
+   "Miete 12-2024",
+   "Miete"
+  ],
+  [
+   "28.01.2025",
+   "Verbandsgemeinde Adenau / Fr Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 01-2025",
+   "Miete"
+  ],
+  [
+   "28.01.2025",
+   "Verbandsgemeinde Adenau / Fr Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   190.0,
+   "Miete 02-2025",
+   "Miete"
+  ],
+  [
+   "30.01.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 02-2025",
+   "Miete"
+  ],
+  [
+   "31.01.2025",
+   "Verbandsgemeinde Adenau / Fr Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   32.9,
+   "Miete 02-2025",
+   "Miete"
+  ],
+  [
+   "03.02.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 02-2025",
+   "Miete Garage"
+  ],
+  [
+   "03.02.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 02-2025",
+   "Miete"
+  ],
+  [
+   "03.02.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 02-2025",
+   "Miete"
+  ],
+  [
+   "05.02.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "NKA 2023  - 1. Anteil",
+   331.97,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "26.02.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 03-2025",
+   "Miete"
+  ],
+  [
+   "28.02.2025",
+   "Verbandsgemeinde Adenau / Fr Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 03-2025",
+   "Miete"
+  ],
+  [
+   "28.02.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 03-2025",
+   "Miete"
+  ],
+  [
+   "03.03.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 03-2025",
+   "Miete Garage"
+  ],
+  [
+   "03.03.2025",
+   "Cindy Malt",
+   "NKA 2023  - 1. Anteil",
+   200.0,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "03.03.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 03-2025",
+   "Miete"
+  ],
+  [
+   "28.03.2025",
+   "Cindy Malt",
+   "NKA 2023  - 2. Anteil",
+   131.97,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "31.03.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 04-2025",
+   "Miete"
+  ],
+  [
+   "31.03.2025",
+   "Verbandsgemeinde Adenau / Fr Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 04-2025",
+   "Miete"
+  ],
+  [
+   "01.04.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 04-2025",
+   "Miete Garage"
+  ],
+  [
+   "01.04.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 04-2025",
+   "Miete"
+  ],
+  [
+   "02.04.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 04-2025",
+   "Miete"
+  ],
+  [
+   "02.04.2025",
+   "Peter Wagener",
+   "NKA 2023  - 1. Anteil",
+   263.0,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "07.04.2025",
+   "David Schnoger Rechtsanwalt",
+   "Auskehrung Guthaben aus Nachlass Frau van Aerssen",
+   5.24,
+   "-",
+   "Miete"
+  ],
+  [
+   "28.04.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 05-2025",
+   "Miete"
+  ],
+  [
+   "30.04.2025",
+   "Cindy Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 05-2025",
+   "Miete"
+  ],
+  [
+   "02.05.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 05-2025",
+   "Miete Garage"
+  ],
+  [
+   "02.05.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 05-2025",
+   "Miete"
+  ],
+  [
+   "07.05.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   415.0,
+   "Miete 05-2025",
+   "Miete"
+  ],
+  [
+   "09.05.2025",
+   "Peter Wagener",
+   "NKA 2023  - restlicher Anteil",
+   263.0,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "28.05.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 06-2025",
+   "Miete"
+  ],
+  [
+   "30.05.2025",
+   "Cindy Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 06-2025",
+   "Miete"
+  ],
+  [
+   "02.06.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 06-2025",
+   "Miete Garage"
+  ],
+  [
+   "02.06.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 06-2025",
+   "Miete"
+  ],
+  [
+   "02.06.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 06-2025",
+   "Miete"
+  ],
+  [
+   "30.06.2025",
+   "Cindy Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 07-2025",
+   "Miete"
+  ],
+  [
+   "30.06.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 07-2025",
+   "Miete"
+  ],
+  [
+   "01.07.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 07-2025",
+   "Miete Garage"
+  ],
+  [
+   "01.07.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 07-2025",
+   "Miete"
+  ],
+  [
+   "03.07.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 07-2025",
+   "Miete"
+  ],
+  [
+   "18.07.2025",
+   "Bastian Nelles",
+   "Kaution WE 1.OG Haus Nr 19",
+   1000.0,
+   "Kaution",
+   "Kaution"
+  ],
+  [
+   "28.07.2025",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 - Hr Nelles",
+   500.0,
+   "Miete 08-2025",
+   "Miete"
+  ],
+  [
+   "01.08.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 08-2025",
+   "Miete Garage"
+  ],
+  [
+   "01.08.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 08-2025",
+   "Miete"
+  ],
+  [
+   "01.08.2025",
+   "Cindy Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 08-2025",
+   "Miete"
+  ],
+  [
+   "05.08.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 08-2025",
+   "Miete"
+  ],
+  [
+   "28.08.2025",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 - Hr Nelles",
+   500.0,
+   "Miete 09-2025",
+   "Miete"
+  ],
+  [
+   "29.08.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 08-2025",
+   "Miete"
+  ],
+  [
+   "29.08.2025",
+   "Verbandsgemeinde Adenau / Hr Schumacher",
+   "1/2 Miete WE DG Haus Nr 19 - Hr Schumacher",
+   222.9,
+   "Miete 09-2025",
+   "Miete"
+  ],
+  [
+   "29.08.2025",
+   "Cindy Malt",
+   "1/2 Miete WE DG Haus Nr 19 - Fr Malt",
+   222.9,
+   "Miete 09-2025",
+   "Miete"
+  ],
+  [
+   "01.09.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 09-2025",
+   "Miete Garage"
+  ],
+  [
+   "01.09.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 09-2025",
+   "Miete"
+  ],
+  [
+   "01.09.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 09-2025",
+   "Miete"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 08-2024",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 09-2024",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 10-2024",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 11-2024",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 12-2024",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 01-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 02-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 03-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 04-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 05-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 06-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 07-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 08-2025",
+   "Miete Garage"
+  ],
+  [
+   "04.09.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 09-2025",
+   "Miete Garage"
+  ],
+  [
+   "29.09.2025",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 10-2025",
+   "Miete"
+  ],
+  [
+   "01.10.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 10-2025",
+   "Miete Garage"
+  ],
+  [
+   "01.10.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 10-2025",
+   "Miete"
+  ],
+  [
+   "01.10.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 10-2025",
+   "Miete"
+  ],
+  [
+   "28.10.2025",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 11-2025",
+   "Miete"
+  ],
+  [
+   "31.10.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 10-2025",
+   "Miete Garage"
+  ],
+  [
+   "31.10.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 11-2025",
+   "Miete Garage"
+  ],
+  [
+   "31.10.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 12-2025",
+   "Miete Garage"
+  ],
+  [
+   "31.10.2025",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 01-2026",
+   "Miete Garage"
+  ],
+  [
+   "03.11.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 11-2025",
+   "Miete Garage"
+  ],
+  [
+   "03.11.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 11-2025",
+   "Miete"
+  ],
+  [
+   "03.11.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 11-2025",
+   "Miete"
+  ],
+  [
+   "28.11.2025",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 12-2025",
+   "Miete"
+  ],
+  [
+   "01.12.2025",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 12-2025",
+   "Miete Garage"
+  ],
+  [
+   "01.12.2025",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 12-2025",
+   "Miete"
+  ],
+  [
+   "01.12.2025",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   515.0,
+   "Miete 12-2025",
+   "Miete"
+  ],
+  [
+   "29.12.2025",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 01-2026",
+   "Miete"
+  ],
+  [
+   "02.01.2026",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 01-2026",
+   "Miete Garage"
+  ],
+  [
+   "02.01.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   525.0,
+   "Miete 01-2026",
+   "Miete"
+  ],
+  [
+   "05.01.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 01-2026",
+   "Miete"
+  ],
+  [
+   "05.01.2026",
+   "Renate Schulz",
+   "1. Rate Nachzahlung NKA 2024",
+   200.0,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "08.01.2026",
+   "Hr Schumacher & Fr Malt",
+   "Ziehung Kaution WE DG Haus Nr 19 - Fr Malt & Hr Schumacher",
+   452.59,
+   "-",
+   "Kaution"
+  ],
+  [
+   "28.01.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 02-2026",
+   "Miete"
+  ],
+  [
+   "02.02.2026",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 02-2026",
+   "Miete Garage"
+  ],
+  [
+   "02.02.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   465.0,
+   "Miete 02-2026",
+   "Miete"
+  ],
+  [
+   "02.02.2026",
+   "Renate Schulz",
+   "Schlussrate NKA 2024",
+   207.88,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "04.02.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 02-2026",
+   "Miete"
+  ],
+  [
+   "04.02.2026",
+   "Peter Wagener",
+   "NKA 2024",
+   142.75,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "02.03.2026",
+   "Christoph Büntgens",
+   "Miete Garage gegenüber Haus Nr 19",
+   30.0,
+   "Miete 03-2026",
+   "Miete Garage"
+  ],
+  [
+   "02.03.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   465.0,
+   "Miete 03-2026",
+   "Miete"
+  ],
+  [
+   "02.03.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 03-2026",
+   "Miete"
+  ],
+  [
+   "03.03.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 03-2026",
+   "Miete"
+  ],
+  [
+   "03.03.2026",
+   "Peter Wagener",
+   "NKA 2024",
+   142.75,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "30.03.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 04-2026",
+   "Miete"
+  ],
+  [
+   "01.04.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   465.0,
+   "Miete 04-2026",
+   "Miete"
+  ],
+  [
+   "07.04.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 03-2026",
+   "Miete"
+  ],
+  [
+   "07.04.2026",
+   "Peter Wagener",
+   "NKA 2024",
+   142.75,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 02-2026",
+   "Miete Garage"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 03-2026",
+   "Miete Garage"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 04-2026",
+   "Miete Garage"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 05-2026",
+   "Miete Garage"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   50.0,
+   "Garage Miete 05-2026",
+   "Miete Garage"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 06-2026",
+   "Miete Garage"
+  ],
+  [
+   "09.04.2026",
+   "Gerhard Weber",
+   "restliche Miete WE EG Haus Nr 19 - Hr Wagener",
+   50.0,
+   "Miete 05-2025",
+   "Miete"
+  ],
+  [
+   "28.04.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 05-2026",
+   "Miete"
+  ],
+  [
+   "04.05.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 05-2026",
+   "Miete"
+  ],
+  [
+   "04.05.2026",
+   "Peter Wagener",
+   "NKA 2024",
+   142.75,
+   "Schreiben vom",
+   "Miete"
+  ],
+  [
+   "04.05.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   465.0,
+   "Miete 04-2026",
+   "Miete"
+  ],
+  [
+   "28.05.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 06-2026",
+   "Miete"
+  ],
+  [
+   "01.06.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   465.0,
+   "Miete 06-2026",
+   "Miete"
+  ],
+  [
+   "08.06.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 06-2026",
+   "Miete"
+  ],
+  [
+   "29.06.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 07-2026",
+   "Miete"
+  ],
+  [
+   "01.07.2026",
+   "Renate Schulz",
+   "Miete WE EG Haus Nr 17 - Fr Schulz",
+   465.0,
+   "Miete 07-2026",
+   "Miete"
+  ],
+  [
+   "02.07.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 07-2026",
+   "Miete"
+  ],
+  [
+   "28.07.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 08-2026",
+   "Miete"
+  ],
+  [
+   "03.08.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 08-2026",
+   "Miete"
+  ],
+  [
+   "28.08.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 09-2026",
+   "Miete"
+  ],
+  [
+   "02.09.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 09-2026",
+   "Miete"
+  ],
+  [
+   "07.09.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 07-2026",
+   "Miete Garage"
+  ],
+  [
+   "07.09.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 08-2026",
+   "Miete Garage"
+  ],
+  [
+   "07.09.2026",
+   "Gerhard Weber",
+   "Miete Garage Mitte Haus Nr 19",
+   60.0,
+   "Garage Miete 09-2026",
+   "Miete Garage"
+  ],
+  [
+   "07.09.2026",
+   "Gerhard Weber",
+   "Miete Garage 2 Mitte Haus Nr 19",
+   40.0,
+   "Garage Miete 09-2026",
+   "Miete Garage"
+  ],
+  [
+   "28.09.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 10-2026",
+   "Miete"
+  ],
+  [
+   "02.10.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 10-2026",
+   "Miete"
+  ],
+  [
+   "28.10.2026",
+   "Bastian Nelles",
+   "Miete WE 1.OG Haus Nr 19 + Stellplatz - Hr Nelles",
+   520.0,
+   "Miete 11-2026",
+   "Miete"
+  ],
+  [
+   "02.11.2026",
+   "Peter Wagener",
+   "Miete WE EG Haus Nr 19 - Hr Wagener",
+   465.0,
+   "Miete 11-2026",
+   "Miete"
+  ]
+ ]
+}

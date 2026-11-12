@@ -24,3 +24,15 @@ Die Excel-Datei danach einmal in Excel oder LibreOffice öffnen und speichern, d
 (in der Cloud-Sitzung übernimmt das `recalc.py` der xlsx-Fähigkeit).
 
 Lesart und Vorbehalte stehen im Blatt `Hinweise` der Arbeitsmappe und auf Seite 1 der PDFs.
+
+## Zahlungsabgleich (Pilot, 12.11.2026)
+
+`Zahlungsabgleich_Pilot_Adenau_Velbert_2026-11-12.xlsx` gleicht die tatsächlichen Mieteingänge mit dem Soll ab:
+
+- Adenau (Konto …4404): aus dem Kassenbuch `NAS/alle/Kassenbuch GbR BH neu.xlsx`, Blatt Adenau (vollständig bis 10.11.2026).
+- Velbert (Konto …4401): aus den Volksbank-Kontoauszügen 12/2025 und 02–09/2026 (`NAS/alle/Rechnungen/Käshammer und Penkhues Immobilien GbR/Umsätze VB`).
+
+Die übrigen sieben Konten konnten noch nicht ausgewertet werden: Die Kassenbuch-Blätter sind über die
+Microsoft-365-Schnittstelle nur bis ca. Zeile 1.000 lesbar (Krefeld bis 05/2023, Bickernstr bis 04/2023,
+Wilhelmstr bis 08/2024, Lenaustr bis 01/2026, Gelsenkirchen Breilstr bis 12/2024, Gymnich bis 2022/2025),
+und Kontoauszüge liegen auf der NAS nur für Velbert vor. Datenbasis und Skript: `tools/zahlungsabgleich/`.
