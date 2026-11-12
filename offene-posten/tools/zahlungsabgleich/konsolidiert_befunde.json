@@ -1,0 +1,154 @@
+{
+ "MFH Krefeld Ritterstr 295||1.OG hinten": {
+  "text": "Auszüge 01–09/2026: Ist 4.500,00 € (Monat: 01–09: 500,00); Soll 9 × 460,00 = 4.140,00 € (Immocloud 11/2026 (zahlt 500 lt. Projekt)); → Guthaben 360,00 € bis 09/2026. Zahlt 500 € (Dauerauftrag ‚Miete und Nebenkosten‘) statt Immocloud-Soll 460 €; Immocloud führt 11/2026 als offen, obwohl die Zahlungen regelmäßig eingehen – Soll und Zuordnung prüfen.",
+  "rest": -360.0
+ },
+ "MFH Krefeld Ritterstr 295||1.OG mitte": {
+  "text": "Auszüge 01–09/2026: Ist 3.690,00 € (Monat: 01–09: 410,00); Soll 9 × 380,00 = 3.420,00 € (Immocloud 11/2026 (zahlt 410)); → Guthaben 270,00 € bis 09/2026. Zahlt 410 € statt Immocloud-Soll 380 €; NKA-Guthaben 2024/25 von 226,49 € am 30.03.2026 ausgezahlt. Immocloud-Saldo −190 € passt nicht zu den Eingängen – Soll und Zuordnung prüfen.",
+  "rest": -270.0
+ },
+ "MFH Krefeld Ritterstr 295||1.OG vorne": {
+  "text": "Auszüge 01–09/2026: Ist 3.705,00 € (Monat: 01–04: 845,00; 05–06: 110,00; 07: 105,00; 08–09: –), letzte Zahlung 17.07.2026; Soll 9 × 800,00 = 7.200,00 € (Immocloud 11/2026); → Rückstand 3.495,00 € bis 09/2026. Jobcenter zahlte die Miete (735 €) nur für 01–04/2026 (zuletzt 31.03.2026); daneben ‚Tilgung Mietschulden‘ 110 €/Monat für 01–06/2026 und 105 € am 17.07.2026 (Altschulden, im Ist enthalten). Seit 08/2026 kein Eingang. Mietende/Auszug lt. NAS-Fotos (‚Wohnung ehemals Hilgers‘) in Immocloud nachtragen und Soll ab Auszug stornieren.",
+  "rest": 3495.0
+ },
+ "MFH Krefeld Ritterstr 295||2.OG mitte": {
+  "text": "Auszüge 01–09/2026: Ist 7.700,00 € (Monat: 01–04: 875,00; 05–09: 840,00); Soll 9 × 840,00 = 7.560,00 € (Dauerzahlung Jobcenter 840 (Projekt Jul–Sep 2026)); → Guthaben 140,00 € bis 09/2026. Jobcenter zahlte 01–04/2026 875 €, seit 05/2026 840 €.",
+  "rest": -140.0
+ },
+ "MFH Krefeld Ritterstr 295||2.OG vorne": {
+  "text": "Auszüge 01–09/2026: Ist 7.150,00 € (Monat: 01–03: 700,00; 04: –; 05: 700,00; 06: 2.100,00; 07–09: 750,00); Soll 9 × 665,00 = 5.985,00 € (Immocloud 11/2026 (zahlt 750)); → Guthaben 1.165,00 € bis 09/2026. Zahlungen 700 € (29.12., 30.01., 27.02., 29.04., 28.05.), 1.400 € (19.06.) und 750 € (02.07., 31.07., 31.08., 30.09.); für 04/2026 keine eigene Zahlung, 06/2026 Doppelzahlung. Immocloud-Soll 665 € liegt unter den gezahlten 700/750 € und Immocloud zeigt −290 € – Soll und Zuordnung prüfen.",
+  "rest": -1165.0
+ },
+ "MFH Krefeld Ritterstr 295||DG vorne": {
+  "text": "Auszüge 01–09/2026: Ist 6.405,00 € (Monat: 01–03: 745,00; 04–09: 695,00); Soll 9 × 695,00 = 6.255,00 € (Dauerzahlung 695 (Projekt Jul–Sep 2026)); → Guthaben 150,00 € bis 09/2026. 01–03/2026 745 €, seit 04/2026 695 €.",
+  "rest": -150.0
+ },
+ "MFH Krefeld Ritterstr 295||EG mitte": {
+  "text": "Auszüge 01–09/2026: Ist 0,00 € (Monat: kein Eingang); Soll 9 × 303,45 = 2.731,05 € (Immocloud 11/2026); → Rückstand 2.731,05 € bis 09/2026. Kein Eingang seit mindestens 12/2025. Forderung 02–09/2026 (8 × 303,45 = 2.427,60 €) liegt beim Anwalt (OP-Liste Projekt MI-09).",
+  "rest": 2731.05
+ },
+ "MFH Krefeld Ritterstr 295||EG vorne": {
+  "text": "Auszüge 01–09/2026: Ist 3.420,00 € (Monat: 01–09: 380,00); Soll 9 × 380,00 = 3.420,00 € (Dauerzahlung 380 inkl. Stellplatz (Projekt Jul–Sep 2026)); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Krefeld Ritterstr 295||Glas WS": {
+  "text": "Auszüge 01–09/2026: Ist 3.648,00 € (Monat: 01–03: 362,00; 04–09: 427,00); Soll 9 × 427,00 = 3.843,00 € (Dauerzahlung 427 (Projekt Jul–Sep 2026)); → Rückstand 195,00 € bis 09/2026. 01–03/2026 362 €, seit 04/2026 427 € (Dauerauftrag zum Monatsende für den Folgemonat). NK-Nachzahlungen 130,83 € (23.02.) und 858,77 € (02.03.2026) zusätzlich eingegangen. Immocloud-Saldo −545 € – Herkunft prüfen; aus den Auszügen ergeben sich nur 3 × 65 € = 195 €, falls das Soll 427 € schon ab 01/2026 galt.",
+  "rest": 195.0
+ },
+ "MFH Krefeld Ritterstr 295||Schreinerei": {
+  "text": "Auszüge 01–09/2026: Ist 8.717,25 € (Monat: 01–03: 882,75; 04–09: 1.011,50); Soll 9 × 1.011,50 = 9.103,50 € (Dauerzahlung 1.011,50 (Projekt Jul–Sep 2026)); → Rückstand 386,25 € bis 09/2026. 01–03/2026 882,75 €, seit 04/2026 1.011,50 € (07/2026 in zwei Teilen: 11,50 € + 1.000 €). NK-Nachzahlungen 139,71 € (16.01.) und 1.570,66 € (30.03.2026) zusätzlich eingegangen. Immocloud-Saldo −726,65 € – Herkunft prüfen; aus den Auszügen ergeben sich nur 3 × 128,75 € = 386,25 €, falls das Soll 1.011,50 € schon ab 01/2026 galt.",
+  "rest": 386.25
+ },
+ "MFH Krefeld Ritterstr 295||WS OG hinten": {
+  "text": "Auszüge 01–09/2026: Ist 4.165,00 € (Monat: 01–02: 458,15; 03–09: 464,10); Soll 9 × 505,75 = 4.551,75 € (Immocloud 11/2026 (zahlt 464,10)); → Rückstand 386,75 € bis 09/2026. 01–02/2026 458,15 €, seit 03/2026 464,10 € statt Soll 505,75 €.",
+  "rest": 386.75
+ },
+ "MFH Gelsenkirchen Bickernstr 102||1.OG": {
+  "text": "Auszüge 01–09/2026: Ist 13.005,00 € (Monat: 01–06: 1.415,00; 07–09: 1.505,00); Soll 9 × 1.605,00 = 14.445,00 € (Immocloud 11/2026 (Stadt zahlt 1.290 + 215 = 1.505)); → Rückstand 1.440,00 € bis 09/2026. Stadt Gelsenkirchen zahlt für 01–06/2026 1.415 € (1.212,86 + 202,14), seit 07/2026 1.505 € (1.290 + 215); gegenüber Immocloud-Soll 1.605 € fehlen 190 bzw. 100 €/Monat (Eigenanteil). Oktober (1.505 €) bereits am 30.09. eingegangen. Zusätzlich BKA 2024/2025 und NK-Nachzahlungen der Stadtkasse 4.645,17 € am 15./17.06.2026 (keine Miete).",
+  "rest": 1440.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||2.OG lks": {
+  "text": "Auszüge 01–09/2026: Ist 6.317,76 € (Monat: 01–07: 758,47; 08: 250,00; 09: 758,47); Soll 9 × 788,47 = 7.096,23 € (Immocloud 11/2026 (zahlt 758,47 Wohnung + 50 Garage 15)); → Rückstand 778,47 € bis 09/2026. Zahlt 758,47 € für die Wohnung (Soll 788,47 € → 30 €/Monat zu wenig) plus 50 € Garage 15; 08/2026 nur 250 € (508,47 € fehlen). NK-Raten 95,52 € (22.01.), 117,58 € (27.01.), 58,79 € (22.05.) und 58,79 € (06.07.) zusätzlich. Immocloud-Saldo −838,47 € passt zu den Auszügen.",
+  "rest": 778.47
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 15": {
+  "text": "Auszüge 01–09/2026: Ist 450,00 € (Monat: 01–09: 50,00); Soll 9 × 50,00 = 450,00 € (Dauerzahlung 50 (Immocloud ohne offene Sollstellung)); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||2.OG rts": {
+  "text": "Auszüge 01–09/2026: Ist 5.213,00 € (Monat: 01–02: 545,00; 03–09: 589,00); Soll 9 × 589,00 = 5.301,00 € (Dauerzahlung Amt 504 + Edelgard Dahms 85 (Projekt Jul–Sep 2026)); → Rückstand 88,00 € bis 09/2026. Jobcenter 460 € für 01–02/2026, 504 € seit 03/2026 (jeweils am Monatsende für den Folgemonat), dazu Edelgard Dahms 85 €/Monat (‚Mietdifferenz‘). Immocloud zeigt dagegen Guthaben 181 €.",
+  "rest": 88.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||DG Hof": {
+  "text": "Auszüge 01–09/2026: Ist 3.735,00 € (Monat: 01–09: 415,00); Soll 9 × 415,00 = 3.735,00 € (Immocloud 11/2026); → ausgeglichen bis 09/2026. Jobcenter zahlt 415 € jeweils am Monatsende für den Folgemonat (01/2026: 395 € am 30.12.2025 + 20 € am 08.01.2026); 10/2026 bereits am 30.09. eingegangen. Immocloud-Saldo −415 € und ‚11/2026 offen‘ beruhen vermutlich auf der Zuordnung der Monatsende-Zahlung zum laufenden Monat – prüfen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||DG lks": {
+  "text": "Auszüge 01–09/2026: Ist 2.979,16 € (Monat: 01–04: 333,30; 05: 312,76; 06–09: 333,30); Soll 9 × 333,30 = 2.999,70 € (Dauerzahlung 333,30 (Projekt Jul–Sep 2026)); → Rückstand 20,54 € bis 09/2026. 05/2026 nur 312,76 €: 20,54 € lt. Mieter mit NK-Guthaben verrechnet (Immocloud-Saldo 0) – daher kein Rückstand ausgewiesen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||DG rts": {
+  "text": "Auszüge 01–09/2026: Ist 3.981,60 € (Monat: 01–09: 442,40); Soll 9 × 442,40 = 3.981,60 € (Dauerzahlung 442,40 inkl. Garage 14 (Projekt Jul–Sep 2026)); → ausgeglichen bis 09/2026. 442,40 € = 392,40 € Wohnung + 50 € Garage 14; Heiz-/NK-Nachzahlung 2024 von 223,86 € am 22.12.2025.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||EG Gewerbe": {
+  "text": "Auszüge 01–09/2026: Ist 13.566,00 € (Monat: 01–08: 1.695,75; 09: –); Soll 9 × 1.695,75 = 15.261,75 € (Immocloud 11/2026: 1.636,25 Gewerbe + 2 × 29,75 Stellplatz); → Rückstand 1.695,75 € bis 09/2026. Acht Zahlungen à 1.695,75 € für 01–09/2026 (28.01., 23.02., 27.03., 22.04., 26.05., 24.06., 24.07., 01.09.) → eine Monatsmiete fehlt. NK-Raten 3 × 240 € (07.04., 15.05., 05.08.) zusätzlich. Immocloud-Saldo −357 € – prüfen.",
+  "rest": 1695.75
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Fläche Hauswand Plakatwerbung 1": {
+  "text": "Auszüge 01–09/2026: Ist 624,75 € (Monat: 01: 208,25; 02–03: –; 04: 208,25; 05–06: –; 07: 208,25; 08–09: –), letzte Zahlung 01.07.2026; kein monatliches Soll (Werbefläche, unregelmäßige Zahlung). Vierteljährliche Zahlung; nächste Rate 10/2026 nicht mehr in den vorliegenden Auszügen.",
+  "rest": null
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Fläche Hauswand Plakatwerbung 2": {
+  "text": "Auszüge 01–09/2026: Ist 517,65 € (Monat: 01: 172,55; 02–03: –; 04: 172,55; 05–06: –; 07: 172,55; 08–09: –), letzte Zahlung 06.07.2026; kein monatliches Soll (Werbefläche, unregelmäßige Zahlung). Vierteljährliche Zahlung; nächste Rate 10/2026 nicht mehr in den vorliegenden Auszügen.",
+  "rest": null
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 1": {
+  "text": "Auszüge 01–09/2026: Ist 356,50 € (Monat: 01: 176,50; 02–07: –; 08: 180,00; 09: –); Soll 9 × 178,50 = 1.606,50 € (Immocloud 11/2026: 2 × 89,25); → Rückstand 1.250,00 € bis 09/2026. Dauerauftrag (90 + 86,50 €) lief nur noch 01/2026, danach bis 07/2026 kein Eingang; am 05.08.2026 2 × 90 €. Immocloud zeigt nur −265,50/−267 € (Garage 1/16), die Auszüge deutlich mehr.",
+  "rest": 1250.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 16": {
+  "text": "Gemeinsame Zahlung mit Garage 1 (Jörg Keller) – Befund und Rückstand dort ausgewiesen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 2": {
+  "text": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 3": {
+  "text": "Auszüge 01–09/2026: Ist 1.620,00 € (Monat: 01–09: 180,00); Soll 9 × 178,50 = 1.606,50 € (3 × 59,50 (zahlt 180)); → Guthaben 13,50 € bis 09/2026. 180 € monatlich für die Garagen 3, 7 und 9 (Soll 3 × 59,50 = 178,50 €).",
+  "rest": -13.5
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 7": {
+  "text": "Gemeinsame Zahlung mit Garage 3 (Alexandra Pfahl) – Befund und Rückstand dort ausgewiesen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 9": {
+  "text": "Gemeinsame Zahlung mit Garage 3 (Alexandra Pfahl) – Befund und Rückstand dort ausgewiesen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 4": {
+  "text": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 5": {
+  "text": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 6": {
+  "text": "Auszüge 01–09/2026: Ist 540,00 € (Monat: 01–09: 60,00); Soll 9 × 59,50 = 535,50 € (Immocloud 11/2026 (zahlt 60)); → Guthaben 4,50 € bis 09/2026. Zahlt 60 € monatlich (Soll 59,50 €). Immocloud-Saldo −104 € widerspricht den Auszügen – prüfen.",
+  "rest": -4.5
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 8": {
+  "text": "Auszüge 01–09/2026: Ist 1.613,70 € (Monat: 01–09: 179,30); Soll 9 × 178,50 = 1.606,50 € (Immocloud 11/2026: 3 × 59,50); → Guthaben 7,20 € bis 09/2026. 179,30 € monatlich für die Garagen 8, 10 und 11 (Soll 3 × 59,50 = 178,50 €). Immocloud-Saldo −119 € je Garage widerspricht den Auszügen – prüfen.",
+  "rest": -7.2
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 10": {
+  "text": "Gemeinsame Zahlung mit Garage 8 (Gerd Podschadly) – Befund und Rückstand dort ausgewiesen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 11": {
+  "text": "Gemeinsame Zahlung mit Garage 8 (Gerd Podschadly) – Befund und Rückstand dort ausgewiesen.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 12": {
+  "text": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 13": {
+  "text": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Garage 14": {
+  "text": "In der Zahlung für DG rts (Serowiak, 442,40 €) enthalten: 50 €/Monat, 01–09/2026 vollständig.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Stellplatz 1": {
+  "text": "In der Gewerbemiete Maik Keller (1.695,75 € = 1.636,25 + 2 × 29,75) enthalten – siehe EG Gewerbe.",
+  "rest": 0.0
+ },
+ "MFH Gelsenkirchen Bickernstr 102||Stellplatz 2": {
+  "text": "In der Gewerbemiete Maik Keller (1.695,75 € = 1.636,25 + 2 × 29,75) enthalten – siehe EG Gewerbe.",
+  "rest": 0.0
+ }
+}

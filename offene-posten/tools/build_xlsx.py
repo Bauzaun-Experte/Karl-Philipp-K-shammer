@@ -39,7 +39,7 @@ ws = wb.active; ws.title = "Daten"
 hdr = ["Gesellschaft", "Objekt", "Adresse", "Bankkonto", "Einheit", "Mieter", "Status",
        "Soll-Miete 11/2026 (€)", "Nov 2026 Status", "Nov 2026 offen, überfällig (€)", "Nov 2026 offen, noch nicht fällig (€)",
        f"Saldo lt. Immocloud {STAND} (€)", "Rückstand Vormonate bis 10/2026 (€)", "Guthaben aus Vormonaten (€)",
-       "Rückstand gesamt, fällig (€)", "Offen gesamt inkl. noch nicht fällig (€)", "Hinweis"]
+       "Rückstand gesamt, fällig (€)", "Offen gesamt inkl. noch nicht fällig (€)", "Hinweis", "Bankbefund (Kontoauszüge/Kassenbuch, Stand 12.11.2026)", "Rückstand lt. Bank (€; negativ = Guthaben)"]
 ws.append(hdr)
 for c in range(1, len(hdr)+1):
     cell = ws.cell(row=1, column=c); cell.font = f_head; cell.fill = fill_head; cell.alignment = Alignment(wrap_text=True, vertical="center")
@@ -77,25 +77,27 @@ for g in d["gesellschaften"]:
             for c in (13, 14, 15, 16):
                 ws.cell(row=r, column=c).font = f_norm; ws.cell(row=r, column=c).number_format = EUR
             ws.cell(row=r, column=17, value=hinweis).font = f_norm; ws.cell(row=r, column=17).alignment = wrap
+            ws.cell(row=r, column=18, value=e.get("bank")).font = f_norm; ws.cell(row=r, column=18).alignment = wrap
+            cb = ws.cell(row=r, column=19, value=e.get("bank_rest")); cb.font = f_input; cb.number_format = EUR
             row_index.append({"ges": g["name"], "obj": o["objekt"], "row": r, "einheit": e["einheit"], "mieter": e["mieter"], "saldo": saldo, "j": j, "k": k})
             r += 1
         rows_by_obj[o["objekt"]] = (first, r - 1)
 LAST = r - 1
-widths = [34, 30, 34, 10, 30, 36, 11, 13, 12, 14, 14, 14, 14, 14, 14, 16, 70]
+widths = [34, 30, 34, 10, 30, 36, 11, 13, 12, 14, 14, 14, 14, 14, 14, 16, 60, 70, 14]
 for i, w in enumerate(widths, start=1): ws.column_dimensions[get_column_letter(i)].width = w
-ws.freeze_panes = "G2"; ws.auto_filter.ref = f"A1:Q{LAST}"
+ws.freeze_panes = "G2"; ws.auto_filter.ref = f"A1:S{LAST}"
 for col in ("O", "P", "M"): ws.conditional_formatting.add(f"{col}2:{col}{LAST}", red_rule())
 ws.page_setup.orientation = "landscape"; ws.page_setup.fitToWidth = 1; ws.page_setup.fitToHeight = 0; ws.sheet_properties.pageSetUpPr.fitToPage = True
 ws.print_title_rows = "1:1"
 nr = LAST + 2
 ws.cell(row=nr, column=1, value="Legende: blaue Zahlen = Eingaben aus Immocloud (Stand " + STAND + "), schwarze Zahlen = Formeln. Saldo: negativ = Rückstand, positiv = Guthaben (Lesart Immocloud). Vormonate = −(Saldo + Nov überfällig), Guthaben = Saldo + Nov überfällig (wenn positiv). ‚Noch nicht fällig‘ = Immocloud-Status ‚Erwartet‘, nicht im Saldo enthalten.").font = f_sub
-ws.merge_cells(start_row=nr, start_column=1, end_row=nr, end_column=17); ws.cell(row=nr, column=1).alignment = wrap; ws.row_dimensions[nr].height = 30
+ws.merge_cells(start_row=nr, start_column=1, end_row=nr, end_column=19); ws.cell(row=nr, column=1).alignment = wrap; ws.row_dimensions[nr].height = 30
 
 # ------------------------------------------------------- Gesellschaft sheets
 GS_COLS = ["Einheit", "Mieter", "Status", "Soll-Miete 11/2026", "Nov 2026 offen, überfällig", "Nov 2026 noch nicht fällig",
-           "Rückstand Vormonate bis 10/2026", "Guthaben aus Vormonaten", "Rückstand gesamt, fällig", "Offen gesamt inkl. noch nicht fällig", f"Saldo Immocloud {STAND}", "Hinweis"]
-SRC_COL = ["E", "F", "G", "H", "J", "K", "M", "N", "O", "P", "L", "Q"]   # Daten columns
-NUMC = [4, 5, 6, 7, 8, 9, 10, 11]
+           "Rückstand Vormonate bis 10/2026", "Guthaben aus Vormonaten", "Rückstand gesamt, fällig", "Offen gesamt inkl. noch nicht fällig", f"Saldo Immocloud {STAND}", "Hinweis", "Bankbefund (Stand 12.11.2026)", "Rückstand lt. Bank (negativ = Guthaben)"]
+SRC_COL = ["E", "F", "G", "H", "J", "K", "M", "N", "O", "P", "L", "Q", "R", "S"]   # Daten columns
+NUMC = [4, 5, 6, 7, 8, 9, 10, 11, 14]
 sheet_names = {}
 ges_total_rows = {}
 for g in d["gesellschaften"]:
@@ -109,7 +111,7 @@ for g in d["gesellschaften"]:
     sub_rows = []
     for o in g["objekte"]:
         s.cell(row=r, column=1, value=f"{o['objekt']}  ·  {o['adresse']}  ·  Konto {o['konto']}").font = f_bold
-        for c in range(1, 13): s.cell(row=r, column=c).fill = fill_sec
+        for c in range(1, 15): s.cell(row=r, column=c).fill = fill_sec
         r += 1
         for c, h in enumerate(GS_COLS, start=1):
             cell = s.cell(row=r, column=c, value=h); cell.font = f_head; cell.fill = fill_head; cell.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center" if c in NUMC else "left")
@@ -130,7 +132,7 @@ for g in d["gesellschaften"]:
             if c == 4: continue
             col = get_column_letter(c)
             cell = s.cell(row=r, column=c, value=f"=SUM({col}{f0}:{col}{f1})"); cell.font = f_bold; cell.number_format = EURS if c == 11 else EUR
-        for c in range(1, 13): s.cell(row=r, column=c).fill = fill_sub; s.cell(row=r, column=c).border = b_top
+        for c in range(1, 15): s.cell(row=r, column=c).fill = fill_sub; s.cell(row=r, column=c).border = b_top
         sub_rows.append(r)
         r += 2
     s.cell(row=r, column=1, value=f"GESAMT {g['name']}").font = f_bold
@@ -139,10 +141,10 @@ for g in d["gesellschaften"]:
         if c == 4: continue
         col = get_column_letter(c)
         cell = s.cell(row=r, column=c, value="=" + "+".join(f"{col}{x}" for x in sub_rows)); cell.font = f_bold; cell.number_format = EURS if c == 11 else EUR
-    for c in range(1, 13): s.cell(row=r, column=c).fill = fill_tot; s.cell(row=r, column=c).border = b_tot
+    for c in range(1, 15): s.cell(row=r, column=c).fill = fill_tot; s.cell(row=r, column=c).border = b_tot
     ges_total_rows[g["name"]] = r
-    for i, w in enumerate([30, 34, 11, 13, 14, 14, 14, 14, 14, 15, 14, 60], start=1): s.column_dimensions[get_column_letter(i)].width = w
-    for col in ("G", "I", "J"): s.conditional_formatting.add(f"{col}5:{col}{r}", red_rule())
+    for i, w in enumerate([30, 34, 11, 13, 14, 14, 14, 14, 14, 15, 14, 50, 60, 13], start=1): s.column_dimensions[get_column_letter(i)].width = w
+    for col in ("G", "I", "J", "N"): s.conditional_formatting.add(f"{col}5:{col}{r}", red_rule())
     s.freeze_panes = "C4"
     s.page_setup.orientation = "landscape"; s.page_setup.fitToWidth = 1; s.page_setup.fitToHeight = 0; s.sheet_properties.pageSetUpPr.fitToPage = True
     s.page_margins = PageMargins(left=0.4, right=0.4, top=0.5, bottom=0.5)
@@ -226,6 +228,7 @@ notes = [
  ("Abweichung Objektsummen", "Die Summe der Einheitensaldi weicht bei zwei Objekten von der Objektliste in Immocloud ab: Duisburg Wilhelmstr 4 hier 3.509,50 € (Immocloud 3.529,50 €), Bickernstr 102 hier 5.612,60 € (Immocloud 5.665,60 €). Alle anderen Objekte stimmen überein. Ursache unklar, in Immocloud prüfen."),
  ("Sonderfälle", "Monika Hilgers (Krefeld 1.OG vorne, 5.685 €): NAS-Fotos vom 03.11.2026 bezeichnen die Wohnung als ‚ehemals Hilgers‘; das Mietende ist in Immocloud offenbar nicht erfasst. Roni Osman (Breilstr 16): Vertragswerte 765 €/Monat belegt, Zusammensetzung des Rückstands im separaten OP-Projekt noch ungeklärt. Szabolcs Bella (Breilstr 16): Mahnung vom 13.11.2026 über 905 € inkl. 5 € Mahngebühr."),
  ("Nicht enthalten", "Kautionsrückstände, Nebenkostenabrechnungs-Salden, Mahngebühren und Verzugszinsen sind nicht Teil dieser Liste (Kautionshinweise aus der NAS-Mietaufstellung 06/2026 stehen nur in der Spalte Hinweis). Hilden, Ginsterweg 1 (privat) und Kohlstraße 4 (verkauft) sind nicht enthalten."),
+ ("Bankbefund", "Spalten R/S: Abgleich der Mieteingänge 2026 mit den Volksbank-Kontoauszügen 12/2025–09/2026 (Velbert 17974401, Krefeld 18375000, Bickernstr 18375001) bzw. dem Kassenbuch (Adenau, bis 10.11.2026). ‚Rückstand lt. Bank‘ = Soll Januar–September 2026 (9 Monate, Immocloud-Soll bzw. Dauerzahlung) minus Mieteingänge für diese Monate; negativ = Guthaben/Überzahlung. Zahlungen für Oktober/November 2026 sind nicht enthalten (Auszüge liegen noch nicht vor). Für Breilstr, Gymnich, Duisburg und Lenaustr liegen nur die Zahlerdaten Juli–September 2026 aus dem Projekt vor. Leistungsmonat: Nennung im Verwendungszweck, sonst Buchungstag (ab dem 25. = Folgemonat); Nebenkosten-Nachzahlungen, Kautionen und Umbuchungen zählen nicht als Miete. Details je Zahlung: Zahlungsabgleich_2026_2026-11-12.xlsx."),
  ("Pflege", "Neue Werte nur im Blatt ‚Daten‘ in den blauen Spalten eintragen (Soll-Miete, Nov offen, Saldo). Die Blätter je Gesellschaft und die Übersicht rechnen automatisch nach."),
 ]
 h["A1"] = "Hinweise und Methodik"; h["A1"].font = f_title

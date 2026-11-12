@@ -1,0 +1,278 @@
+{
+ "_hinweis": "Zuordnung Zahler (Regex auf Buchungstext der Kontoauszüge) -> Objekt/Einheit/Mieter wie in daten.json. soll = Immocloud-Sollstellung 11/2026 bzw. aus Dauerzahlung abgeleitet (Quelle im Feld soll_quelle).",
+ "18375000": {
+  "objekt": "MFH Krefeld Ritterstr 295",
+  "regeln": [
+   {
+    "muster": "Francki",
+    "einheit": "1.OG hinten",
+    "mieter": "Ralf Francki",
+    "soll": 460.0,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 500 lt. Projekt)"
+   },
+   {
+    "muster": "Sideritaki|Loulla",
+    "einheit": "1.OG mitte",
+    "mieter": "Loulla Sideritaki",
+    "soll": 380.0,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 410)"
+   },
+   {
+    "muster": "Hilgers",
+    "einheit": "1.OG vorne",
+    "mieter": "Monika Hilgers",
+    "soll": 800.0,
+    "soll_quelle": "Immocloud 11/2026"
+   },
+   {
+    "muster": "Amagtir|Mossati|Mhassani",
+    "einheit": "2.OG mitte",
+    "mieter": "Youness Amagtir",
+    "soll": 840.0,
+    "soll_quelle": "Dauerzahlung Jobcenter 840 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Sahin|Spudich|Spodich",
+    "einheit": "2.OG vorne",
+    "mieter": "Spodich Sahin",
+    "soll": 665.0,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 750)"
+   },
+   {
+    "muster": "Hinz",
+    "einheit": "DG vorne",
+    "mieter": "Inge Hinz",
+    "soll": 695.0,
+    "soll_quelle": "Dauerzahlung 695 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Knol",
+    "einheit": "EG mitte",
+    "mieter": "Gabriele Knol",
+    "soll": 303.45,
+    "soll_quelle": "Immocloud 11/2026"
+   },
+   {
+    "muster": "Lenz",
+    "einheit": "EG vorne",
+    "mieter": "Ramona Lenz",
+    "soll": 380.0,
+    "soll_quelle": "Dauerzahlung 380 inkl. Stellplatz (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Scheller",
+    "einheit": "Glas WS",
+    "mieter": "Eva Scheller",
+    "soll": 427.0,
+    "soll_quelle": "Dauerzahlung 427 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Weyand",
+    "einheit": "Schreinerei",
+    "mieter": "Frank Weyand",
+    "soll": 1011.5,
+    "soll_quelle": "Dauerzahlung 1.011,50 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Pleus",
+    "einheit": "WS OG hinten",
+    "mieter": "Simon Pleus",
+    "soll": 505.75,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 464,10)"
+   }
+  ]
+ },
+ "18375001": {
+  "objekt": "MFH Gelsenkirchen Bickernstr 102",
+  "regeln": [
+   {
+    "muster": "Murodov|Nurova",
+    "einheit": "1.OG",
+    "mieter": "Shevali Murodov",
+    "soll": 1605.0,
+    "soll_quelle": "Immocloud 11/2026 (Stadt zahlt 1.290 + 215 = 1.505)"
+   },
+   {
+    "muster": "\\A(?![\\s\\S]*Garage)[\\s\\S]*(Sulejmani|Suleymani|Sabanovski)",
+    "einheit": "2.OG lks",
+    "mieter": "Sunita Suleymani",
+    "soll": 788.47,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 758,47 Wohnung + 50 Garage 15)"
+   },
+   {
+    "muster": "(Sulejmani|Suleymani|Sabanovski).*Garage",
+    "einheit": "Garage 15",
+    "mieter": "Sunita Suleymani",
+    "soll": 50.0,
+    "soll_quelle": "Dauerzahlung 50 (Immocloud ohne offene Sollstellung)"
+   },
+   {
+    "muster": "Dahms",
+    "einheit": "2.OG rts",
+    "mieter": "David Dahms",
+    "soll": 589.0,
+    "soll_quelle": "Dauerzahlung Amt 504 + Edelgard Dahms 85 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Stefanov",
+    "einheit": "DG Hof",
+    "mieter": "Sabri Stefanov",
+    "soll": 415.0,
+    "soll_quelle": "Immocloud 11/2026"
+   },
+   {
+    "muster": "Koraman",
+    "einheit": "DG lks",
+    "mieter": "Ishan Koraman",
+    "soll": 333.3,
+    "soll_quelle": "Dauerzahlung 333,30 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Serowiak",
+    "einheit": "DG rts",
+    "mieter": "Herbert Serowiak",
+    "soll": 442.4,
+    "soll_quelle": "Dauerzahlung 442,40 inkl. Garage 14 (Projekt Jul–Sep 2026)"
+   },
+   {
+    "muster": "Maik Keller|Tattoo|gewerbe eg|Gewerbe EG",
+    "einheit": "EG Gewerbe",
+    "mieter": "Maik Keller",
+    "soll": 1695.75,
+    "soll_quelle": "Immocloud 11/2026: 1.636,25 Gewerbe + 2 × 29,75 Stellplatz",
+    "verteilung": "auffuellen"
+   },
+   {
+    "muster": "Str(ö|oe|o)er",
+    "einheit": "Fläche Hauswand Plakatwerbung 1",
+    "mieter": "Ströer Superposter",
+    "soll": null,
+    "soll_quelle": "Werbefläche, unregelmäßige Zahlung"
+   },
+   {
+    "muster": "DPW|Plakat",
+    "einheit": "Fläche Hauswand Plakatwerbung 2",
+    "mieter": "DPW Deutsche Plakat Werbung GmbH & Co. KG",
+    "soll": null,
+    "soll_quelle": "Werbefläche, unregelmäßige Zahlung"
+   },
+   {
+    "muster": "J(ö|o|oe)rg Keller|Garage 2 |Garage 1 |Garage 16",
+    "einheit": "Garage 1 + 16",
+    "mieter": "Jörg Keller",
+    "soll": 178.5,
+    "soll_quelle": "Immocloud 11/2026: 2 × 89,25"
+   },
+   {
+    "muster": "Schmitz",
+    "einheit": "Garage 2",
+    "mieter": "Richard Schmitz",
+    "soll": 59.5,
+    "soll_quelle": "Dauerzahlung 59,50"
+   },
+   {
+    "muster": "Pfahl",
+    "einheit": "Garage 3 + 7 + 9",
+    "mieter": "Alexandra Pfahl",
+    "soll": 178.5,
+    "soll_quelle": "3 × 59,50 (zahlt 180)"
+   },
+   {
+    "muster": "Prass",
+    "einheit": "Garage 4",
+    "mieter": "Werner-Michael Prass",
+    "soll": 59.5,
+    "soll_quelle": "Dauerzahlung 59,50"
+   },
+   {
+    "muster": "Wieschollek",
+    "einheit": "Garage 5",
+    "mieter": "Gerhard Wieschollek",
+    "soll": 59.5,
+    "soll_quelle": "Dauerzahlung 59,50"
+   },
+   {
+    "muster": "Sobanski",
+    "einheit": "Garage 6",
+    "mieter": "Markus Sobanski",
+    "soll": 59.5,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 60)"
+   },
+   {
+    "muster": "Podschadly",
+    "einheit": "Garage 8 + 10 + 11",
+    "mieter": "Gerd Podschadly",
+    "soll": 178.5,
+    "soll_quelle": "Immocloud 11/2026: 3 × 59,50"
+   },
+   {
+    "muster": "Muthig",
+    "einheit": "Garage 12",
+    "mieter": "Martin und Karin Muthig",
+    "soll": 59.5,
+    "soll_quelle": "Dauerzahlung 59,50"
+   },
+   {
+    "muster": "Puf+e",
+    "einheit": "Garage 13",
+    "mieter": "Peter und Sigrid Puffe",
+    "soll": 59.5,
+    "soll_quelle": "Dauerzahlung 59,50"
+   }
+  ]
+ },
+ "17974401": {
+  "objekt": "MFH Velbert Haus 17 + 19",
+  "regeln": [
+   {
+    "muster": "Singh",
+    "einheit": "Haus 19 EG Gewerbe",
+    "mieter": "Surinder Singh",
+    "soll": 1000.0,
+    "soll_quelle": "Dauerauftrag 1.000"
+   },
+   {
+    "muster": "Siehl",
+    "einheit": "Haus 19 1.OG",
+    "mieter": "Mathias Siehl",
+    "soll": 674.0,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 670)"
+   },
+   {
+    "muster": "Braun",
+    "einheit": "Haus 19 DG",
+    "mieter": "Braun",
+    "soll": 1135.0,
+    "soll_quelle": "Dauerzahlung ab 08/2026"
+   },
+   {
+    "muster": "Bl(ö|o|oe)mer",
+    "einheit": "Haus 19 EG hinten",
+    "mieter": "Marion Blömer",
+    "soll": 540.0,
+    "soll_quelle": "Dauerauftrag 540"
+   },
+   {
+    "muster": "Weiler",
+    "einheit": "Haus 17 EG",
+    "mieter": "Rolf Weiler",
+    "soll": 662.0,
+    "soll_quelle": "Dauerauftrag 662"
+   },
+   {
+    "muster": "Meschede",
+    "einheit": "Haus 17 DG",
+    "mieter": "Angelika Meschede",
+    "soll": 701.93,
+    "soll_quelle": "Dauerauftrag 701,93"
+   },
+   {
+    "muster": "Gatzka",
+    "einheit": "Haus 17 Surterrain",
+    "mieter": "Hubert Ewald Gatzka",
+    "soll": 440.0,
+    "soll_quelle": "Immocloud 11/2026 (zahlt 435)"
+   }
+  ]
+ }
+}

@@ -1,150 +1,1040 @@
 {
-  "stand_immocloud": "07.11.2026",
-  "erstellt": "12.11.2026",
-  "gesellschaften": [
+ "stand_immocloud": "07.11.2026",
+ "erstellt": "12.11.2026",
+ "gesellschaften": [
+  {
+   "name": "Käshammer und Penkhues Immobilien eGbR",
+   "kurz": "eGbR",
+   "objekte": [
     {
-      "name": "Käshammer und Penkhues Immobilien eGbR",
-      "kurz": "eGbR",
-      "objekte": [
-        {"objekt": "MFH Adenau Haus 17", "adresse": "Lohmühlenstr. 17, 53518 Adenau", "konto": "…4404", "einheiten": [
-          {"einheit": "EG lks", "mieter": "Leerstand", "status": "Leerstand", "saldo": null}
-        ]},
-        {"objekt": "MFH Adenau Haus 19", "adresse": "Lohmühlenstr. 19, 53518 Adenau", "konto": "…4404", "einheiten": [
-          {"einheit": "1.OG", "mieter": "Bastian Nelles", "status": "Vermietet", "saldo": -500.00, "soll": 500.00, "nov_status": "Offen", "nov_offen": 500.00, "nov_faellig": true},
-          {"einheit": "DG", "mieter": "Leerstand", "status": "Leerstand", "saldo": null},
-          {"einheit": "EG rts", "mieter": "Peter Wagener", "status": "Vermietet", "saldo": -55.00, "soll": 470.00, "nov_status": "Teilbezahlt", "nov_offen": 5.00, "nov_faellig": true},
-          {"einheit": "Garage 1", "mieter": "Leerstand", "status": "Leerstand", "saldo": null},
-          {"einheit": "Garage 2", "mieter": "Gerhard Weber", "status": "Vermietet", "saldo": -120.00, "soll": 60.00, "nov_status": "Offen", "nov_offen": 60.00, "nov_faellig": true},
-          {"einheit": "Garage 3", "mieter": "Gerhard Weber", "status": "Vermietet", "saldo": -60.00, "soll": 30.00, "nov_status": "Offen", "nov_offen": 30.00, "nov_faellig": true},
-          {"einheit": "Stellplatz", "mieter": "Bastian Nelles", "status": "Vermietet", "saldo": -20.00, "soll": 20.00, "nov_status": "Offen", "nov_offen": 20.00, "nov_faellig": true}
-        ]},
-        {"objekt": "MFH Gelsenkirchen Breilstr 16", "adresse": "Breilstraße 16, 45886 Gelsenkirchen", "konto": "…4402", "einheiten": [
-          {"einheit": "WE 1.OG", "mieter": "Safwan Ibrahim Alkhalil, Layla Ahmad", "status": "Vermietet", "saldo": 90.00},
-          {"einheit": "WE 2.OG", "mieter": "Firas Rahmoun", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "WE DG", "mieter": "Jennifer Doenmez", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "WE EG lks", "mieter": "Szabolcs Norbert Bella", "status": "Vermietet", "saldo": -900.00, "soll": 450.00, "nov_status": "Offen", "nov_offen": 450.00, "nov_faellig": true,
-           "hinweis": "Juli- und Novembermiete offen (Zahlungen 11.08., 11.09., 10.10.2026 je 450 €). Mahnung vom 13.11.2026 über 905 € inkl. 5 € Mahngebühr, Frist 26.11.2026."},
-          {"einheit": "WE EG rts", "mieter": "Roni Osman", "status": "Vermietet", "saldo": -1560.00, "soll": 765.00, "nov_status": "Offen", "nov_offen": 765.00, "nov_faellig": true,
-           "hinweis": "Soll lt. Mietvertrag vom 16.10.2025: 475 € Kaltmiete + 135 € HK-VZ + 155 € BK-VZ = 765 €. Zusammensetzung des Rückstands im OP-Projekt noch ungeklärt; NKA 2025 lt. J. Penkhues (06.11.2026) in Bearbeitung."}
-        ]},
-        {"objekt": "MFH Gymnich 2", "adresse": "Kerpener Str. 35, 50374 Erftstadt-Gymnich", "konto": "…4400", "einheiten": [
-          {"einheit": "DG", "mieter": "Leerstand", "status": "Leerstand", "saldo": null, "hinweis": "Vormieter Heinrichs/Vanhoefen bis 30.09.2026"},
-          {"einheit": "EG", "mieter": "Ion Petrovic", "status": "Vermietet", "saldo": -50.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "Garage", "mieter": "Werner Stenzel", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "OG", "mieter": "Werner Stenzel", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Stellplatz 1", "mieter": "Leerstand", "status": "Leerstand", "saldo": null},
-          {"einheit": "Stellplatz 2", "mieter": "Britta Peters", "status": "Vermietet", "saldo": 0.00}
-        ]},
-        {"objekt": "MFH Gymnich 3", "adresse": "Alter Burgweg 14, 50374 Erftstadt-Gymnich", "konto": "…4403", "einheiten": [
-          {"einheit": "DG", "mieter": "Britta Peters", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "EG hinten", "mieter": "Jan Breuer", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "EG vorne", "mieter": "Marco di Bari", "status": "Vermietet", "saldo": -10.00, "soll": 795.00, "nov_status": "Teilbezahlt", "nov_offen": 10.00, "nov_faellig": true, "hinweis": "Soll ab 11/2026 795 € (vorher 785 €), Differenz 10 € offen"},
-          {"einheit": "OG hinten", "mieter": "Maximilian Fox", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "OG vorne", "mieter": "Markus Wemmer", "status": "Vermietet", "saldo": -20.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "Stellplatz 1", "mieter": "Marco di Bari", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Stellplatz 2", "mieter": "Jan Breuer", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Stellplatz 3", "mieter": "Markus Wemmer", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Stellplatz 4", "mieter": "Maximilian Fox", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Stellplatz 5", "mieter": "Britta Peters", "status": "Vermietet", "saldo": 0.00}
-        ]},
-        {"objekt": "MFH Velbert Haus 17", "adresse": "Bonsfelder Str. 17, 42555 Velbert", "konto": "…4401", "einheiten": [
-          {"einheit": "DG", "mieter": "Angelika Meschede", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "EG", "mieter": "Rolf Weiler", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Surterrain", "mieter": "Hubert Ewald Gatzka", "status": "Vermietet", "saldo": -15.00, "soll": 440.00, "nov_status": "Teilbezahlt", "nov_offen": 5.00, "nov_faellig": true}
-        ]},
-        {"objekt": "MFH Velbert Haus 19", "adresse": "Bonsfelder Str. 19, 42555 Velbert", "konto": "…4401", "einheiten": [
-          {"einheit": "1.OG", "mieter": "Mathias Siehl", "status": "Vermietet", "saldo": -59.00, "soll": 674.00, "nov_status": "Teilbezahlt", "nov_offen": 4.00, "nov_faellig": true},
-          {"einheit": "DG", "mieter": "Braun", "status": "Vermietet", "saldo": 0.00, "hinweis": "Familie Braun ab 01.08.2026"},
-          {"einheit": "EG", "mieter": "Surinder Singh", "status": "Vermietet", "saldo": 8.60, "hinweis": "Gewerbe"},
-          {"einheit": "EG hinten", "mieter": "Marion Blömer", "status": "Vermietet", "saldo": 0.00}
-        ]}
-      ]
+     "objekt": "MFH Adenau Haus 17",
+     "adresse": "Lohmühlenstr. 17, 53518 Adenau",
+     "konto": "…4404",
+     "einheiten": [
+      {
+       "einheit": "EG lks",
+       "mieter": "Leerstand",
+       "status": "Leerstand",
+       "saldo": null,
+       "bank": "Kassenbuch: Renate Schulz zahlte bis 07/2026 (ab 02/2026 465 €), Auszug 31.07.2026; Kaution 504 € offen zu verrechnen (OP-Liste Projekt AL-01). | Kassenbuch: Renate Schulz zahlte bis 07/2026 (ab 02/2026 465 €), Auszug 31.07.2026; Kaution 504 € offen zu verrechnen (OP-Liste Projekt AL-01).",
+       "bank_rest": null
+      }
+     ]
     },
     {
-      "name": "KPK Grundbesitz GmbH",
-      "kurz": "KPK Grundbesitz",
-      "objekte": [
-        {"objekt": "MFH Duisburg Wilhelmstr 4", "adresse": "Wilhelmstr. 4, 47198 Duisburg-Homberg", "konto": "…4700", "einheiten": [
-          {"einheit": "WE 01 EG rts Haupthaus", "mieter": "Lisa Hartmann", "status": "Vermietet", "saldo": 975.00},
-          {"einheit": "WE 02 EG Anbau", "mieter": "Cornelia Ignatovic", "status": "Vermietet", "saldo": 280.00, "soll": 465.00, "nov_status": "Erwartet", "nov_offen": 465.00, "nov_faellig": false},
-          {"einheit": "WE 03 - 04 EG Anbau", "mieter": "Ralf Franzolet", "status": "Vermietet", "saldo": -180.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "WE 05a Gewerbe EG rts Seitenhaus", "mieter": "Frauke Borgards-Zwering", "status": "Gekündigt", "saldo": -110.00, "soll": 915.00, "nov_status": "Teilbezahlt", "nov_offen": 10.00, "nov_faellig": true, "hinweis": "Mietverhältnis gekündigt (Gewerbe)"},
-          {"einheit": "WE 05b EG lks Seitenhaus", "mieter": "Vera Hübeker", "status": "Vermietet", "saldo": -545.00, "soll": 665.00, "nov_status": "Offen", "nov_offen": 665.00, "nov_faellig": true},
-          {"einheit": "WE 06 - 1.OG rts Haupthaus", "mieter": "Daniel Tresp", "status": "Vermietet", "saldo": 236.00, "soll": 616.25, "nov_status": "Teilbezahlt", "nov_offen": 10.00, "nov_faellig": true},
-          {"einheit": "WE 07 - 1.OG lks Haupthaus", "mieter": "Olaf Plüm", "status": "Vermietet", "saldo": 0.00, "hinweis": "Mieter seit 04/2026. Kaution lt. NAS-Mietaufstellung 06/2026: 900 € Soll, 0 € erhalten (nicht in dieser Liste enthalten)"},
-          {"einheit": "WE 08 - 1.OG lks Seitenhaus", "mieter": "Frank Skotz", "status": "Vermietet", "saldo": 0.00, "hinweis": "Mieterwechsel 10/2026 (vorher Specht)"},
-          {"einheit": "WE 09 - 1.OG rts Seitenhaus", "mieter": "Mutlu Üzmez", "status": "Vermietet", "saldo": 0.00, "soll": 770.00, "nov_status": "Erwartet", "nov_offen": 770.00, "nov_faellig": false, "hinweis": "NAS-Mietaufstellung 06/2026 nennt noch ‚Huth‘; Mieterwechsel im NAS nicht belegt"},
-          {"einheit": "WE 10 - 2.OG rts Haupthaus", "mieter": "Mariusz Filipek", "status": "Vermietet", "saldo": -530.00, "soll": 450.00, "nov_status": "Offen", "nov_offen": 450.00, "nov_faellig": true, "hinweis": "Kaution lt. NAS 06/2026: 820 € Soll, 540 € erhalten (280 € offen, nicht in dieser Liste enthalten)"},
-          {"einheit": "WE 11 - 2.OG lks Haupthaus", "mieter": "Lukas Kozlowski", "status": "Vermietet", "saldo": -13.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "WE 12 - 2.OG lks Seitenhaus", "mieter": "Michelle Oppenberg", "status": "Vermietet", "saldo": -3222.50, "soll": 1122.50, "nov_status": "Teilbezahlt", "nov_offen": 672.50, "nov_faellig": true},
-          {"einheit": "WE 13 - 2.OG rts Seitenhaus", "mieter": "Bastian Klingbeil", "status": "Vermietet", "saldo": -400.00, "soll": 400.00, "nov_status": "Offen", "nov_offen": 400.00, "nov_faellig": true}
-        ]},
-        {"objekt": "MFH Gelsenkirchen Lenaustr 10", "adresse": "Lenaustr. 10, 45889 Gelsenkirchen", "konto": "…4702", "einheiten": [
-          {"einheit": "WE 01 EG lks", "mieter": "Ina Ranker", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "WE 02 EG rts", "mieter": "Dirk Mönnig", "status": "Vermietet", "saldo": 10.00, "hinweis": "In Immocloud als ‚Monnig‘ geführt"},
-          {"einheit": "WE 03 - 1.OG lks", "mieter": "Andrija Tomas", "status": "Vermietet", "saldo": -60.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "WE 04 - 1.OG rts", "mieter": "Andrija Tomas", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "WE 05 - DG lks Maisonette", "mieter": "Andrija Tomas", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "WE 06 - DG rts Maisonette", "mieter": "Udo Schwarz", "status": "Vermietet", "saldo": 47.85, "hinweis": "Kaution lt. NAS: keine erhalten"},
-          {"einheit": "WE 07 - Wintergarten Hinterhof", "mieter": "Nour Malla", "status": "Vermietet", "saldo": -1350.00, "soll": 475.00, "nov_status": "Offen", "nov_offen": 475.00, "nov_faellig": true}
-        ]},
-        {"objekt": "MFH Gelsenkirchen Lenaustr 12", "adresse": "Lenaustr. 12, 45889 Gelsenkirchen", "konto": "…4702", "einheiten": [
-          {"einheit": "WE 01 EG lks", "mieter": "Bindewald Michels", "status": "Vermietet", "saldo": 0.00, "hinweis": "Kaution lt. NAS: keine erhalten"},
-          {"einheit": "WE 02 EG rts", "mieter": "Bindewald Linka", "status": "Vermietet", "saldo": 0.00, "hinweis": "Kaution lt. NAS: keine erhalten"},
-          {"einheit": "WE 03 - 1.OG lks", "mieter": "Cornelia Kleiblomer", "status": "Vermietet", "saldo": 0.00, "hinweis": "Kaution lt. NAS: keine erhalten"},
-          {"einheit": "WE 04 - 1.OG rts", "mieter": "Ullrich Schultz", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "WE 05 - DG lks", "mieter": "Abdalla Mansour", "status": "Vermietet", "saldo": -1640.00, "soll": 660.00, "nov_status": "Teilbezahlt", "nov_offen": 25.00, "nov_faellig": true},
-          {"einheit": "WE 06 - DG rts Maisonette", "mieter": "Ayhan Baytekin", "status": "Vermietet", "saldo": -20.00, "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt. Kaution lt. NAS: keine erhalten"}
-        ]}
-      ]
+     "objekt": "MFH Adenau Haus 19",
+     "adresse": "Lohmühlenstr. 19, 53518 Adenau",
+     "konto": "…4404",
+     "einheiten": [
+      {
+       "einheit": "1.OG",
+       "mieter": "Bastian Nelles",
+       "status": "Vermietet",
+       "saldo": -500.0,
+       "soll": 500.0,
+       "nov_status": "Offen",
+       "nov_offen": 500.0,
+       "nov_faellig": true,
+       "bank": "Kassenbuch bis 10.11.2026: 01–11/2026 jeden Monat 520 € (inkl. Stellplatz) bezahlt, zuletzt 28.10.2026 für 11/2026. Immocloud führt 11/2026 fälschlich als offen. | Projekt-Bankdaten Jul–Sep 2026: Bastian Nelles: 3 von 3 Monaten je 520,00 €, zuletzt 28.09.2026",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "DG",
+       "mieter": "Leerstand",
+       "status": "Leerstand",
+       "saldo": null
+      },
+      {
+       "einheit": "EG rts",
+       "mieter": "Peter Wagener",
+       "status": "Vermietet",
+       "saldo": -55.0,
+       "soll": 470.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 5.0,
+       "nov_faellig": true,
+       "bank": "Kassenbuch bis 10.11.2026: 01–11/2026 je 465 € statt 470 € Soll, zuletzt 02.11.2026; NKA 2024 in vier Raten à 142,75 € beglichen. Rückstand 11 × 5 € = 55 €. | Projekt-Bankdaten Jul–Sep 2026: Peter Wagener: 3 von 3 Monaten je 465,00 €, zuletzt 02.09.2026",
+       "bank_rest": 55.0
+      },
+      {
+       "einheit": "Garage 1",
+       "mieter": "Leerstand",
+       "status": "Leerstand",
+       "saldo": null,
+       "bank": "Kassenbuch: Christoph Büntgens zahlte bis 03/2026 30 €/Monat für die Garage gegenüber Haus 19, seitdem nichts; in Immocloud nicht geführt (OP-Liste Projekt AL-04). | Kassenbuch: Christoph Büntgens zahlte bis 03/2026 30 €/Monat für die Garage gegenüber Haus 19, seitdem nichts; in Immocloud nicht geführt (OP-Liste Projekt AL-04).",
+       "bank_rest": null
+      },
+      {
+       "einheit": "Garage 2",
+       "mieter": "Gerhard Weber",
+       "status": "Vermietet",
+       "saldo": -120.0,
+       "soll": 60.0,
+       "nov_status": "Offen",
+       "nov_offen": 60.0,
+       "nov_faellig": true,
+       "bank": "Kassenbuch bis 10.11.2026: bezahlt bis 09/2026 (07.09.2026 für 07–09/2026); 10/2026 und 11/2026 offen. | Projekt-Bankdaten Jul–Sep 2026: Gerhard Weber: 1 von 3 Monaten je 220,00 €, zuletzt 07.09.2026 – nicht in allen drei Monaten gezahlt",
+       "bank_rest": 120.0
+      },
+      {
+       "einheit": "Garage 3",
+       "mieter": "Gerhard Weber",
+       "status": "Vermietet",
+       "saldo": -60.0,
+       "soll": 30.0,
+       "nov_status": "Offen",
+       "nov_offen": 30.0,
+       "nov_faellig": true,
+       "bank": "Kassenbuch bis 10.11.2026: nur 50 € (04/2026 für 05/2026) und 40 € (07.09.2026 für 09/2026) als zweite Garagenzahlung; Soll 30 €/Monat und Zuordnung klären. | Projekt-Bankdaten Jul–Sep 2026: Gerhard Weber: 1 von 3 Monaten je 220,00 €, zuletzt 07.09.2026 – nicht in allen drei Monaten gezahlt",
+       "bank_rest": null
+      },
+      {
+       "einheit": "Stellplatz",
+       "mieter": "Bastian Nelles",
+       "status": "Vermietet",
+       "saldo": -20.0,
+       "soll": 20.0,
+       "nov_status": "Offen",
+       "nov_offen": 20.0,
+       "nov_faellig": true,
+       "bank": "Kassenbuch bis 10.11.2026: in den 520 € monatlich enthalten, 01–11/2026 bezahlt. | Projekt-Bankdaten Jul–Sep 2026: Bastian Nelles: 3 von 3 Monaten je 520,00 €, zuletzt 28.09.2026",
+       "bank_rest": 0.0
+      }
+     ]
     },
     {
-      "name": "PK Immo Verwaltungs GmbH",
-      "kurz": "PK Immo",
-      "objekte": [
-        {"objekt": "MFH Gelsenkirchen Bickernstr 102", "adresse": "Bickernstr. 102, 45889 Gelsenkirchen", "konto": "…5001", "einheiten": [
-          {"einheit": "1.OG", "mieter": "Shevali Murodov", "status": "Vermietet", "saldo": -3230.00, "soll": 1605.00, "nov_status": "Teilbezahlt", "nov_offen": 100.00, "nov_faellig": true},
-          {"einheit": "2.OG lks", "mieter": "Sunita Suleymani", "status": "Vermietet", "saldo": -838.47, "soll": 788.47, "nov_status": "Teilbezahlt", "nov_offen": 30.00, "nov_faellig": true},
-          {"einheit": "2.OG rts", "mieter": "David Dahms", "status": "Vermietet", "saldo": 181.00},
-          {"einheit": "DG Hof", "mieter": "Sabri Stefanov", "status": "Vermietet", "saldo": -415.00, "soll": 415.00, "nov_status": "Offen", "nov_offen": 415.00, "nov_faellig": true},
-          {"einheit": "DG lks", "mieter": "Ishan Koraman", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "DG rts", "mieter": "Herbert Serowiak", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "EG Gewerbe", "mieter": "Maik Keller", "status": "Vermietet", "saldo": -357.00, "soll": 1636.25, "nov_status": "Erwartet", "nov_offen": 1636.25, "nov_faellig": false, "hinweis": "Gewerbe (Beträge inkl. USt)"},
-          {"einheit": "Fläche Hauswand Plakatwerbung 1", "mieter": "Ströer Superposter", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Fläche Hauswand Plakatwerbung 2", "mieter": "DPW Deutsche Plakat Werbung GmbH & Co. KG", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 1", "mieter": "Jörg Keller", "status": "Vermietet", "saldo": -265.50, "soll": 89.25, "nov_status": "Offen", "nov_offen": 89.25, "nov_faellig": true},
-          {"einheit": "Garage 2", "mieter": "Richard Schmitz", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 3", "mieter": "Alexandra Pfahl", "status": "Vermietet", "saldo": 9.00},
-          {"einheit": "Garage 4", "mieter": "Werner-Michael Prass", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 5", "mieter": "Gerhard Wieschollek", "status": "Vermietet", "saldo": -2.63},
-          {"einheit": "Garage 6", "mieter": "Markus Sobanski", "status": "Vermietet", "saldo": -104.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
-          {"einheit": "Garage 7", "mieter": "Alexandra Pfahl", "status": "Vermietet", "saldo": 17.00},
-          {"einheit": "Garage 8", "mieter": "Gerd Podschadly", "status": "Vermietet", "saldo": -119.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
-          {"einheit": "Garage 9", "mieter": "Alexandra Pfahl", "status": "Vermietet", "saldo": 17.00},
-          {"einheit": "Garage 10", "mieter": "Gerd Podschadly", "status": "Vermietet", "saldo": -119.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
-          {"einheit": "Garage 11", "mieter": "Gerd Podschadly", "status": "Vermietet", "saldo": -119.00, "soll": 59.50, "nov_status": "Offen", "nov_offen": 59.50, "nov_faellig": true},
-          {"einheit": "Garage 12", "mieter": "Martin und Karin Muthig", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 13", "mieter": "Peter und Sigrid Puffe", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 14", "mieter": "Herbert Serowiak", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 15", "mieter": "Sunita Suleymani", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Garage 16", "mieter": "Jörg Keller", "status": "Vermietet", "saldo": -267.00, "soll": 89.25, "nov_status": "Offen", "nov_offen": 89.25, "nov_faellig": true},
-          {"einheit": "Stellplatz 1", "mieter": "Maik Keller", "status": "Vermietet", "saldo": 0.00, "soll": 29.75, "nov_status": "Erwartet", "nov_offen": 29.75, "nov_faellig": false},
-          {"einheit": "Stellplatz 2", "mieter": "Maik Keller", "status": "Vermietet", "saldo": 0.00, "soll": 29.75, "nov_status": "Erwartet", "nov_offen": 29.75, "nov_faellig": false}
-        ]},
-        {"objekt": "MFH Krefeld Ritterstr 295", "adresse": "Ritterstr. 295, 47805 Krefeld", "konto": "…5000", "einheiten": [
-          {"einheit": "1.OG hinten", "mieter": "Ralf Francki", "status": "Vermietet", "saldo": 60.00, "soll": 460.00, "nov_status": "Offen", "nov_offen": 460.00, "nov_faellig": true, "hinweis": "Immocloud zeigt Zuordnungsvorschlag: Novemberzahlung vermutlich eingegangen, aber nicht zugeordnet"},
-          {"einheit": "1.OG mitte", "mieter": "Loulla Sideritaki", "status": "Vermietet", "saldo": -190.00, "soll": 380.00, "nov_status": "Offen", "nov_offen": 380.00, "nov_faellig": true},
-          {"einheit": "1.OG vorne", "mieter": "Monika Hilgers", "status": "Vermietet", "saldo": -5685.00, "soll": 800.00, "nov_status": "Offen", "nov_offen": 800.00, "nov_faellig": true, "hinweis": "NAS-Fotos vom 03.11.2026 ‚Wohnung ehemals Hilgers‘: Mietende in Immocloud offenbar nicht erfasst, Sollstellungen und Saldo prüfen"},
-          {"einheit": "2.OG mitte", "mieter": "Youness Amagtir", "status": "Vermietet", "saldo": 59.20},
-          {"einheit": "2.OG vorne", "mieter": "Spodich Sahin", "status": "Vermietet", "saldo": -290.00, "soll": 665.00, "nov_status": "Offen", "nov_offen": 665.00, "nov_faellig": true},
-          {"einheit": "DG vorne", "mieter": "Inge Hinz", "status": "Vermietet", "saldo": 15.00},
-          {"einheit": "EG mitte", "mieter": "Gabriele Knol", "status": "Vermietet", "saldo": -3034.50, "soll": 303.45, "nov_status": "Offen", "nov_offen": 303.45, "nov_faellig": true, "hinweis": "Gewerbe"},
-          {"einheit": "EG vorne", "mieter": "Ramona Lenz", "status": "Vermietet", "saldo": 0.00},
-          {"einheit": "Glas WS", "mieter": "Eva Scheller", "status": "Vermietet", "saldo": -545.00, "hinweis": "Gewerbe. Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "Schreinerei", "mieter": "Frank Weyand", "status": "Vermietet", "saldo": -726.65, "hinweis": "Gewerbe. Rückstand aus Vormonaten, Novembermiete bezahlt"},
-          {"einheit": "WS OG hinten", "mieter": "Simon Pleus", "status": "Vermietet", "saldo": -345.10, "soll": 505.75, "nov_status": "Teilbezahlt", "nov_offen": 41.65, "nov_faellig": true, "hinweis": "Gewerbe. Zahlt seit 03/2026 464,10 € statt 505,75 € (295 € KM + 130 € NK + USt), 41,65 €/Monat offen"}
-        ]}
-      ]
+     "objekt": "MFH Gelsenkirchen Breilstr 16",
+     "adresse": "Breilstraße 16, 45886 Gelsenkirchen",
+     "konto": "…4402",
+     "einheiten": [
+      {
+       "einheit": "WE 1.OG",
+       "mieter": "Safwan Ibrahim Alkhalil, Layla Ahmad",
+       "status": "Vermietet",
+       "saldo": 90.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Ahmad, Layla: 2 von 3 Monaten je 1.424,11 €, zuletzt 30.09.2026 – nicht in allen drei Monaten gezahlt"
+      },
+      {
+       "einheit": "WE 2.OG",
+       "mieter": "Firas Rahmoun",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Firas Rahmoun: 3 von 3 Monaten je 1.090,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "WE DG",
+       "mieter": "Jennifer Doenmez",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Doenmez, Jennifer: 3 von 3 Monaten je 910,00 €, zuletzt 30.09.2026"
+      },
+      {
+       "einheit": "WE EG lks",
+       "mieter": "Szabolcs Norbert Bella",
+       "status": "Vermietet",
+       "saldo": -900.0,
+       "soll": 450.0,
+       "nov_status": "Offen",
+       "nov_offen": 450.0,
+       "nov_faellig": true,
+       "hinweis": "Juli- und Novembermiete offen (Zahlungen 11.08., 11.09., 10.10.2026 je 450 €). Mahnung vom 13.11.2026 über 905 € inkl. 5 € Mahngebühr, Frist 26.11.2026.",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Szabolcs Bella: 2 von 3 Monaten je 450,00 €, zuletzt 11.09.2026 – nicht in allen drei Monaten gezahlt"
+      },
+      {
+       "einheit": "WE EG rts",
+       "mieter": "Roni Osman",
+       "status": "Vermietet",
+       "saldo": -1560.0,
+       "soll": 765.0,
+       "nov_status": "Offen",
+       "nov_offen": 765.0,
+       "nov_faellig": true,
+       "hinweis": "Soll lt. Mietvertrag vom 16.10.2025: 475 € Kaltmiete + 135 € HK-VZ + 155 € BK-VZ = 765 €. Zusammensetzung des Rückstands im OP-Projekt noch ungeklärt; NKA 2025 lt. J. Penkhues (06.11.2026) in Bearbeitung.",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Nour Osman: 3 von 3 Monaten je 765,00 €, zuletzt 10.09.2026"
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Gymnich 2",
+     "adresse": "Kerpener Str. 35, 50374 Erftstadt-Gymnich",
+     "konto": "…4400",
+     "einheiten": [
+      {
+       "einheit": "DG",
+       "mieter": "Leerstand",
+       "status": "Leerstand",
+       "saldo": null,
+       "hinweis": "Vormieter Heinrichs/Vanhoefen bis 30.09.2026",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Vormieter Heinrichs/Vanhoefen zahlten bis 09/2026 je 985 € (3 von 3 Monaten); Kaution 1.950 € abzurechnen (OP-Liste Projekt KA-06)."
+      },
+      {
+       "einheit": "EG",
+       "mieter": "Ion Petrovic",
+       "status": "Vermietet",
+       "saldo": -50.0,
+       "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Petrovics, Ioan: 3 von 3 Monaten je 783,40 €, zuletzt 30.09.2026"
+      },
+      {
+       "einheit": "Garage",
+       "mieter": "Werner Stenzel",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Franz Werner Stenzel: 3 von 3 Monaten je 639,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "OG",
+       "mieter": "Werner Stenzel",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Franz Werner Stenzel: 3 von 3 Monaten je 639,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "Stellplatz 1",
+       "mieter": "Leerstand",
+       "status": "Leerstand",
+       "saldo": null
+      },
+      {
+       "einheit": "Stellplatz 2",
+       "mieter": "Britta Peters",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: in der Zahlung von Britta Peters (1.405 €/Monat an Alter Burgweg 14, 3 von 3 Monaten) enthalten."
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Gymnich 3",
+     "adresse": "Alter Burgweg 14, 50374 Erftstadt-Gymnich",
+     "konto": "…4403",
+     "einheiten": [
+      {
+       "einheit": "DG",
+       "mieter": "Britta Peters",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Britta Peters: 3 von 3 Monaten je 1.405,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "EG hinten",
+       "mieter": "Jan Breuer",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Jan Breuer: 3 von 3 Monaten je 1.020,00 €, zuletzt 29.09.2026"
+      },
+      {
+       "einheit": "EG vorne",
+       "mieter": "Marco di Bari",
+       "status": "Vermietet",
+       "saldo": -10.0,
+       "soll": 795.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 10.0,
+       "nov_faellig": true,
+       "hinweis": "Soll ab 11/2026 795 € (vorher 785 €), Differenz 10 € offen",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Marco Di Bari: 3 von 3 Monaten je 820,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "OG hinten",
+       "mieter": "Maximilian Fox",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Maximilian Fox: 3 von 3 Monaten je 965,00 €, zuletzt 03.09.2026"
+      },
+      {
+       "einheit": "OG vorne",
+       "mieter": "Markus Wemmer",
+       "status": "Vermietet",
+       "saldo": -20.0,
+       "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Markus Wemmer: 3 von 3 Monaten je 875,00 €, zuletzt 02.09.2026"
+      },
+      {
+       "einheit": "Stellplatz 1",
+       "mieter": "Marco di Bari",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Marco Di Bari: 3 von 3 Monaten je 820,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "Stellplatz 2",
+       "mieter": "Jan Breuer",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Jan Breuer: 3 von 3 Monaten je 1.020,00 €, zuletzt 29.09.2026"
+      },
+      {
+       "einheit": "Stellplatz 3",
+       "mieter": "Markus Wemmer",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Markus Wemmer: 3 von 3 Monaten je 875,00 €, zuletzt 02.09.2026"
+      },
+      {
+       "einheit": "Stellplatz 4",
+       "mieter": "Maximilian Fox",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Maximilian Fox: 3 von 3 Monaten je 965,00 €, zuletzt 03.09.2026"
+      },
+      {
+       "einheit": "Stellplatz 5",
+       "mieter": "Britta Peters",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Britta Peters: 3 von 3 Monaten je 1.405,00 €, zuletzt 01.09.2026"
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Velbert Haus 17",
+     "adresse": "Bonsfelder Str. 17, 42555 Velbert",
+     "konto": "…4401",
+     "einheiten": [
+      {
+       "einheit": "DG",
+       "mieter": "Angelika Meschede",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge: Miete 01–10/2026 je 701,93 € per Dauerauftrag, jeweils am 28. des Vormonats. | Projekt-Bankdaten Jul–Sep 2026: Angelika Meschede: 3 von 3 Monaten je 701,93 €, zuletzt 28.09.2026",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "EG",
+       "mieter": "Rolf Weiler",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: je 662 € per Dauerauftrag. | Projekt-Bankdaten Jul–Sep 2026: Rolf und Marie-Luise Weiler: 3 von 3 Monaten je 662,00 €, zuletzt 01.09.2026",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Surterrain",
+       "mieter": "Hubert Ewald Gatzka",
+       "status": "Vermietet",
+       "saldo": -15.0,
+       "soll": 440.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 5.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: je 435 € per Dauerauftrag (Immocloud-Soll 440 €); Differenz 9 × 5 = 45 € bis 09/2026. | Projekt-Bankdaten Jul–Sep 2026: Hubert Gatzka: 3 von 3 Monaten je 435,00 €, zuletzt 01.09.2026",
+       "bank_rest": 45.0
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Velbert Haus 19",
+     "adresse": "Bonsfelder Str. 19, 42555 Velbert",
+     "konto": "…4401",
+     "einheiten": [
+      {
+       "einheit": "1.OG",
+       "mieter": "Mathias Siehl",
+       "status": "Vermietet",
+       "saldo": -59.0,
+       "soll": 674.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 4.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: 01/2026 650 €, 02–09/2026 je 670 € (Immocloud-Soll 674 €); Differenz 24 + 8 × 4 = 56 € bis 09/2026. | Projekt-Bankdaten Jul–Sep 2026: Mathias Siehl: 3 von 3 Monaten je 670,00 €, zuletzt 01.09.2026",
+       "bank_rest": 56.0
+      },
+      {
+       "einheit": "DG",
+       "mieter": "Braun",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "hinweis": "Familie Braun ab 01.08.2026",
+       "bank": "Auszüge: 08/2026 1.135 € (03.08.), 09/2026 1.135 € (02.09., Umbuchung vom eGbR-Hauptkonto). | Projekt-Bankdaten Jul–Sep 2026: Leonard Braun: 3 von 3 Monaten je 1.135,00 €, zuletzt 01.09.2026",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "EG",
+       "mieter": "Surinder Singh",
+       "status": "Vermietet",
+       "saldo": 8.6,
+       "hinweis": "Gewerbe",
+       "bank": "Auszüge 01–09/2026: je 1.000 € per Dauerauftrag zum Monatsersten. | Projekt-Bankdaten Jul–Sep 2026: Surinder Singh: 3 von 3 Monaten je 1.000,00 €, zuletzt 01.09.2026",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "EG hinten",
+       "mieter": "Marion Blömer",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: je 540 € per Dauerauftrag; NKA 2024 163,45 € am 05.01.2026 nachgezahlt. | Projekt-Bankdaten Jul–Sep 2026: Marion Blomer: 3 von 3 Monaten je 540,00 €, zuletzt 01.09.2026",
+       "bank_rest": 0.0
+      }
+     ]
     }
-  ]
+   ]
+  },
+  {
+   "name": "KPK Grundbesitz GmbH",
+   "kurz": "KPK Grundbesitz",
+   "objekte": [
+    {
+     "objekt": "MFH Duisburg Wilhelmstr 4",
+     "adresse": "Wilhelmstr. 4, 47198 Duisburg-Homberg",
+     "konto": "…4700",
+     "einheiten": [
+      {
+       "einheit": "WE 01 EG rts Haupthaus",
+       "mieter": "Lisa Hartmann",
+       "status": "Vermietet",
+       "saldo": 975.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Hartmann, Lisa: 3 von 3 Monaten je 540,00 €, zuletzt 30.09.2026; Wolfgang Schmale: 2 von 3 Monaten je 138,75 €, zuletzt 28.09.2026 – nicht in allen drei Monaten gezahlt"
+      },
+      {
+       "einheit": "WE 02 EG Anbau",
+       "mieter": "Cornelia Ignatovic",
+       "status": "Vermietet",
+       "saldo": 280.0,
+       "soll": 465.0,
+       "nov_status": "Erwartet",
+       "nov_offen": 465.0,
+       "nov_faellig": false,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Cornelia Ignatovic: 3 von 3 Monaten je 500,00 €, zuletzt 14.09.2026"
+      },
+      {
+       "einheit": "WE 03 - 04 EG Anbau",
+       "mieter": "Ralf Franzolet",
+       "status": "Vermietet",
+       "saldo": -180.0,
+       "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Franzolet, Ralf: 3 von 3 Monaten je 420,00 €, zuletzt 30.09.2026"
+      },
+      {
+       "einheit": "WE 05a Gewerbe EG rts Seitenhaus",
+       "mieter": "Frauke Borgards-Zwering",
+       "status": "Gekündigt",
+       "saldo": -110.0,
+       "soll": 915.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 10.0,
+       "nov_faellig": true,
+       "hinweis": "Mietverhältnis gekündigt (Gewerbe)",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Frauke Borgards-Zwering: 3 von 3 Monaten je 905,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "WE 05b EG lks Seitenhaus",
+       "mieter": "Vera Hübeker",
+       "status": "Vermietet",
+       "saldo": -545.0,
+       "soll": 665.0,
+       "nov_status": "Offen",
+       "nov_offen": 665.0,
+       "nov_faellig": true,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Vera Hübeker: 3 von 3 Monaten je 700,00 €, zuletzt 14.09.2026"
+      },
+      {
+       "einheit": "WE 06 - 1.OG rts Haupthaus",
+       "mieter": "Daniel Tresp",
+       "status": "Vermietet",
+       "saldo": 236.0,
+       "soll": 616.25,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 10.0,
+       "nov_faellig": true,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Daniel Tresp: 3 von 3 Monaten je 606,25 €, zuletzt 03.09.2026"
+      },
+      {
+       "einheit": "WE 07 - 1.OG lks Haupthaus",
+       "mieter": "Olaf Plüm",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "hinweis": "Mieter seit 04/2026. Kaution lt. NAS-Mietaufstellung 06/2026: 900 € Soll, 0 € erhalten (nicht in dieser Liste enthalten)",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Olaf Plüm: 3 von 3 Monaten je 470,00 €, zuletzt 29.09.2026"
+      },
+      {
+       "einheit": "WE 08 - 1.OG lks Seitenhaus",
+       "mieter": "Frank Skotz",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "hinweis": "Mieterwechsel 10/2026 (vorher Specht)",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Heinz-Werner Specht Oder Petra Maria Specht: 2 von 3 Monaten je 1.786,49 €, zuletzt 03.08.2026 – nicht in allen drei Monaten gezahlt"
+      },
+      {
+       "einheit": "WE 09 - 1.OG rts Seitenhaus",
+       "mieter": "Mutlu Üzmez",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "soll": 770.0,
+       "nov_status": "Erwartet",
+       "nov_offen": 770.0,
+       "nov_faellig": false,
+       "hinweis": "NAS-Mietaufstellung 06/2026 nennt noch ‚Huth‘; Mieterwechsel im NAS nicht belegt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Mutlu Üzmez: 1 von 3 Monaten je 770,00 €, zuletzt 18.09.2026 – nicht in allen drei Monaten gezahlt"
+      },
+      {
+       "einheit": "WE 10 - 2.OG rts Haupthaus",
+       "mieter": "Mariusz Filipek",
+       "status": "Vermietet",
+       "saldo": -530.0,
+       "soll": 450.0,
+       "nov_status": "Offen",
+       "nov_offen": 450.0,
+       "nov_faellig": true,
+       "hinweis": "Kaution lt. NAS 06/2026: 820 € Soll, 540 € erhalten (280 € offen, nicht in dieser Liste enthalten)",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Mariusz Filipek: 3 von 3 Monaten je 450,00 €, zuletzt 07.09.2026"
+      },
+      {
+       "einheit": "WE 11 - 2.OG lks Haupthaus",
+       "mieter": "Lukas Kozlowski",
+       "status": "Vermietet",
+       "saldo": -13.0,
+       "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Lukas Kozlowski: 3 von 3 Monaten je 378,00 €, zuletzt 02.09.2026"
+      },
+      {
+       "einheit": "WE 12 - 2.OG lks Seitenhaus",
+       "mieter": "Michelle Oppenberg",
+       "status": "Vermietet",
+       "saldo": -3222.5,
+       "soll": 1122.5,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 672.5,
+       "nov_faellig": true,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Oppenberg, Michelle: 3 von 3 Monaten je 450,00 €, zuletzt 30.09.2026"
+      },
+      {
+       "einheit": "WE 13 - 2.OG rts Seitenhaus",
+       "mieter": "Bastian Klingbeil",
+       "status": "Vermietet",
+       "saldo": -400.0,
+       "soll": 400.0,
+       "nov_status": "Offen",
+       "nov_offen": 400.0,
+       "nov_faellig": true,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Bastian Klingbeil: 3 von 3 Monaten je 400,00 €, zuletzt 02.09.2026"
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Gelsenkirchen Lenaustr 10",
+     "adresse": "Lenaustr. 10, 45889 Gelsenkirchen",
+     "konto": "…4702",
+     "einheiten": [
+      {
+       "einheit": "WE 01 EG lks",
+       "mieter": "Ina Ranker",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Ina Ranker: 3 von 3 Monaten je 376,50 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "WE 02 EG rts",
+       "mieter": "Dirk Mönnig",
+       "status": "Vermietet",
+       "saldo": 10.0,
+       "hinweis": "In Immocloud als ‚Monnig‘ geführt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Amt für Moennig, Dirk: 3 von 3 Monaten je 437,80 €, zuletzt 30.09.2026"
+      },
+      {
+       "einheit": "WE 03 - 1.OG lks",
+       "mieter": "Andrija Tomas",
+       "status": "Vermietet",
+       "saldo": -60.0,
+       "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Andrija Anton Tomas: 3 von 3 Monaten je 2.245,00 €, zuletzt 07.09.2026"
+      },
+      {
+       "einheit": "WE 04 - 1.OG rts",
+       "mieter": "Andrija Tomas",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Andrija Anton Tomas: 3 von 3 Monaten je 2.245,00 €, zuletzt 07.09.2026"
+      },
+      {
+       "einheit": "WE 05 - DG lks Maisonette",
+       "mieter": "Andrija Tomas",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Andrija Anton Tomas: 3 von 3 Monaten je 2.245,00 €, zuletzt 07.09.2026"
+      },
+      {
+       "einheit": "WE 06 - DG rts Maisonette",
+       "mieter": "Udo Schwarz",
+       "status": "Vermietet",
+       "saldo": 47.85,
+       "hinweis": "Kaution lt. NAS: keine erhalten",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Udo und Silvia Schwarz: 3 von 3 Monaten je 525,00 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "WE 07 - Wintergarten Hinterhof",
+       "mieter": "Nour Malla",
+       "status": "Vermietet",
+       "saldo": -1350.0,
+       "soll": 475.0,
+       "nov_status": "Offen",
+       "nov_offen": 475.0,
+       "nov_faellig": true,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Nour Eddin Malla Ant: 2 von 3 Monaten je 500,00 €, zuletzt 08.09.2026 – nicht in allen drei Monaten gezahlt"
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Gelsenkirchen Lenaustr 12",
+     "adresse": "Lenaustr. 12, 45889 Gelsenkirchen",
+     "konto": "…4702",
+     "einheiten": [
+      {
+       "einheit": "WE 01 EG lks",
+       "mieter": "Bindewald Michels",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "hinweis": "Kaution lt. NAS: keine erhalten",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Barbel Michels-Bindewald: 3 von 3 Monaten je 448,31 €, zuletzt 01.09.2026; Silvia Bindewald-Linka: 3 von 3 Monaten je 431,82 €, zuletzt 02.09.2026"
+      },
+      {
+       "einheit": "WE 02 EG rts",
+       "mieter": "Bindewald Linka",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "hinweis": "Kaution lt. NAS: keine erhalten",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Barbel Michels-Bindewald: 3 von 3 Monaten je 448,31 €, zuletzt 01.09.2026; Silvia Bindewald-Linka: 3 von 3 Monaten je 431,82 €, zuletzt 02.09.2026"
+      },
+      {
+       "einheit": "WE 03 - 1.OG lks",
+       "mieter": "Cornelia Kleiblomer",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "hinweis": "Kaution lt. NAS: keine erhalten",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Cornelia Ingrid Kleibomer: 3 von 3 Monaten je 431,80 €, zuletzt 01.09.2026"
+      },
+      {
+       "einheit": "WE 04 - 1.OG rts",
+       "mieter": "Ullrich Schultz",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Ulrich Schultz: 3 von 3 Monaten je 647,00 €, zuletzt 30.09.2026"
+      },
+      {
+       "einheit": "WE 05 - DG lks",
+       "mieter": "Abdalla Mansour",
+       "status": "Vermietet",
+       "saldo": -1640.0,
+       "soll": 660.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 25.0,
+       "nov_faellig": true,
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Abdalla Mansour: 2 von 3 Monaten je 635,00 €, zuletzt 05.08.2026 – nicht in allen drei Monaten gezahlt"
+      },
+      {
+       "einheit": "WE 06 - DG rts Maisonette",
+       "mieter": "Ayhan Baytekin",
+       "status": "Vermietet",
+       "saldo": -20.0,
+       "hinweis": "Rückstand aus Vormonaten, Novembermiete bezahlt. Kaution lt. NAS: keine erhalten",
+       "bank": "Projekt-Bankdaten Jul–Sep 2026: Ayhan Baytekin: 3 von 3 Monaten je 492,88 €, zuletzt 01.09.2026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "PK Immo Verwaltungs GmbH",
+   "kurz": "PK Immo",
+   "objekte": [
+    {
+     "objekt": "MFH Gelsenkirchen Bickernstr 102",
+     "adresse": "Bickernstr. 102, 45889 Gelsenkirchen",
+     "konto": "…5001",
+     "einheiten": [
+      {
+       "einheit": "1.OG",
+       "mieter": "Shevali Murodov",
+       "status": "Vermietet",
+       "saldo": -3230.0,
+       "soll": 1605.0,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 100.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 13.005,00 € (Monat: 01–06: 1.415,00; 07–09: 1.505,00); Soll 9 × 1.605,00 = 14.445,00 € (Immocloud 11/2026 (Stadt zahlt 1.290 + 215 = 1.505)); → Rückstand 1.440,00 € bis 09/2026. Stadt Gelsenkirchen zahlt für 01–06/2026 1.415 € (1.212,86 + 202,14), seit 07/2026 1.505 € (1.290 + 215); gegenüber Immocloud-Soll 1.605 € fehlen 190 bzw. 100 €/Monat (Eigenanteil). Oktober (1.505 €) bereits am 30.09. eingegangen. Zusätzlich BKA 2024/2025 und NK-Nachzahlungen der Stadtkasse 4.645,17 € am 15./17.06.2026 (keine Miete).",
+       "bank_rest": 1440.0
+      },
+      {
+       "einheit": "2.OG lks",
+       "mieter": "Sunita Suleymani",
+       "status": "Vermietet",
+       "saldo": -838.47,
+       "soll": 788.47,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 30.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 6.317,76 € (Monat: 01–07: 758,47; 08: 250,00; 09: 758,47); Soll 9 × 788,47 = 7.096,23 € (Immocloud 11/2026 (zahlt 758,47 Wohnung + 50 Garage 15)); → Rückstand 778,47 € bis 09/2026. Zahlt 758,47 € für die Wohnung (Soll 788,47 € → 30 €/Monat zu wenig) plus 50 € Garage 15; 08/2026 nur 250 € (508,47 € fehlen). NK-Raten 95,52 € (22.01.), 117,58 € (27.01.), 58,79 € (22.05.) und 58,79 € (06.07.) zusätzlich. Immocloud-Saldo −838,47 € passt zu den Auszügen.",
+       "bank_rest": 778.47
+      },
+      {
+       "einheit": "2.OG rts",
+       "mieter": "David Dahms",
+       "status": "Vermietet",
+       "saldo": 181.0,
+       "bank": "Auszüge 01–09/2026: Ist 5.213,00 € (Monat: 01–02: 545,00; 03–09: 589,00); Soll 9 × 589,00 = 5.301,00 € (Dauerzahlung Amt 504 + Edelgard Dahms 85 (Projekt Jul–Sep 2026)); → Rückstand 88,00 € bis 09/2026. Jobcenter 460 € für 01–02/2026, 504 € seit 03/2026 (jeweils am Monatsende für den Folgemonat), dazu Edelgard Dahms 85 €/Monat (‚Mietdifferenz‘). Immocloud zeigt dagegen Guthaben 181 €.",
+       "bank_rest": 88.0
+      },
+      {
+       "einheit": "DG Hof",
+       "mieter": "Sabri Stefanov",
+       "status": "Vermietet",
+       "saldo": -415.0,
+       "soll": 415.0,
+       "nov_status": "Offen",
+       "nov_offen": 415.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 3.735,00 € (Monat: 01–09: 415,00); Soll 9 × 415,00 = 3.735,00 € (Immocloud 11/2026); → ausgeglichen bis 09/2026. Jobcenter zahlt 415 € jeweils am Monatsende für den Folgemonat (01/2026: 395 € am 30.12.2025 + 20 € am 08.01.2026); 10/2026 bereits am 30.09. eingegangen. Immocloud-Saldo −415 € und ‚11/2026 offen‘ beruhen vermutlich auf der Zuordnung der Monatsende-Zahlung zum laufenden Monat – prüfen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "DG lks",
+       "mieter": "Ishan Koraman",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 2.979,16 € (Monat: 01–04: 333,30; 05: 312,76; 06–09: 333,30); Soll 9 × 333,30 = 2.999,70 € (Dauerzahlung 333,30 (Projekt Jul–Sep 2026)); → Rückstand 20,54 € bis 09/2026. 05/2026 nur 312,76 €: 20,54 € lt. Mieter mit NK-Guthaben verrechnet (Immocloud-Saldo 0) – daher kein Rückstand ausgewiesen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "DG rts",
+       "mieter": "Herbert Serowiak",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 3.981,60 € (Monat: 01–09: 442,40); Soll 9 × 442,40 = 3.981,60 € (Dauerzahlung 442,40 inkl. Garage 14 (Projekt Jul–Sep 2026)); → ausgeglichen bis 09/2026. 442,40 € = 392,40 € Wohnung + 50 € Garage 14; Heiz-/NK-Nachzahlung 2024 von 223,86 € am 22.12.2025.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "EG Gewerbe",
+       "mieter": "Maik Keller",
+       "status": "Vermietet",
+       "saldo": -357.0,
+       "soll": 1636.25,
+       "nov_status": "Erwartet",
+       "nov_offen": 1636.25,
+       "nov_faellig": false,
+       "hinweis": "Gewerbe (Beträge inkl. USt)",
+       "bank": "Auszüge 01–09/2026: Ist 13.566,00 € (Monat: 01–08: 1.695,75; 09: –); Soll 9 × 1.695,75 = 15.261,75 € (Immocloud 11/2026: 1.636,25 Gewerbe + 2 × 29,75 Stellplatz); → Rückstand 1.695,75 € bis 09/2026. Acht Zahlungen à 1.695,75 € für 01–09/2026 (28.01., 23.02., 27.03., 22.04., 26.05., 24.06., 24.07., 01.09.) → eine Monatsmiete fehlt. NK-Raten 3 × 240 € (07.04., 15.05., 05.08.) zusätzlich. Immocloud-Saldo −357 € – prüfen.",
+       "bank_rest": 1695.75
+      },
+      {
+       "einheit": "Fläche Hauswand Plakatwerbung 1",
+       "mieter": "Ströer Superposter",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 624,75 € (Monat: 01: 208,25; 02–03: –; 04: 208,25; 05–06: –; 07: 208,25; 08–09: –), letzte Zahlung 01.07.2026; kein monatliches Soll (Werbefläche, unregelmäßige Zahlung). Vierteljährliche Zahlung; nächste Rate 10/2026 nicht mehr in den vorliegenden Auszügen.",
+       "bank_rest": null
+      },
+      {
+       "einheit": "Fläche Hauswand Plakatwerbung 2",
+       "mieter": "DPW Deutsche Plakat Werbung GmbH & Co. KG",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 517,65 € (Monat: 01: 172,55; 02–03: –; 04: 172,55; 05–06: –; 07: 172,55; 08–09: –), letzte Zahlung 06.07.2026; kein monatliches Soll (Werbefläche, unregelmäßige Zahlung). Vierteljährliche Zahlung; nächste Rate 10/2026 nicht mehr in den vorliegenden Auszügen.",
+       "bank_rest": null
+      },
+      {
+       "einheit": "Garage 1",
+       "mieter": "Jörg Keller",
+       "status": "Vermietet",
+       "saldo": -265.5,
+       "soll": 89.25,
+       "nov_status": "Offen",
+       "nov_offen": 89.25,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 356,50 € (Monat: 01: 176,50; 02–07: –; 08: 180,00; 09: –); Soll 9 × 178,50 = 1.606,50 € (Immocloud 11/2026: 2 × 89,25); → Rückstand 1.250,00 € bis 09/2026. Dauerauftrag (90 + 86,50 €) lief nur noch 01/2026, danach bis 07/2026 kein Eingang; am 05.08.2026 2 × 90 €. Immocloud zeigt nur −265,50/−267 € (Garage 1/16), die Auszüge deutlich mehr.",
+       "bank_rest": 1250.0
+      },
+      {
+       "einheit": "Garage 2",
+       "mieter": "Richard Schmitz",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 3",
+       "mieter": "Alexandra Pfahl",
+       "status": "Vermietet",
+       "saldo": 9.0,
+       "bank": "Auszüge 01–09/2026: Ist 1.620,00 € (Monat: 01–09: 180,00); Soll 9 × 178,50 = 1.606,50 € (3 × 59,50 (zahlt 180)); → Guthaben 13,50 € bis 09/2026. 180 € monatlich für die Garagen 3, 7 und 9 (Soll 3 × 59,50 = 178,50 €).",
+       "bank_rest": -13.5
+      },
+      {
+       "einheit": "Garage 4",
+       "mieter": "Werner-Michael Prass",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 5",
+       "mieter": "Gerhard Wieschollek",
+       "status": "Vermietet",
+       "saldo": -2.63,
+       "bank": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 6",
+       "mieter": "Markus Sobanski",
+       "status": "Vermietet",
+       "saldo": -104.0,
+       "soll": 59.5,
+       "nov_status": "Offen",
+       "nov_offen": 59.5,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 540,00 € (Monat: 01–09: 60,00); Soll 9 × 59,50 = 535,50 € (Immocloud 11/2026 (zahlt 60)); → Guthaben 4,50 € bis 09/2026. Zahlt 60 € monatlich (Soll 59,50 €). Immocloud-Saldo −104 € widerspricht den Auszügen – prüfen.",
+       "bank_rest": -4.5
+      },
+      {
+       "einheit": "Garage 7",
+       "mieter": "Alexandra Pfahl",
+       "status": "Vermietet",
+       "saldo": 17.0,
+       "bank": "Gemeinsame Zahlung mit Garage 3 (Alexandra Pfahl) – Befund und Rückstand dort ausgewiesen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 8",
+       "mieter": "Gerd Podschadly",
+       "status": "Vermietet",
+       "saldo": -119.0,
+       "soll": 59.5,
+       "nov_status": "Offen",
+       "nov_offen": 59.5,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 1.613,70 € (Monat: 01–09: 179,30); Soll 9 × 178,50 = 1.606,50 € (Immocloud 11/2026: 3 × 59,50); → Guthaben 7,20 € bis 09/2026. 179,30 € monatlich für die Garagen 8, 10 und 11 (Soll 3 × 59,50 = 178,50 €). Immocloud-Saldo −119 € je Garage widerspricht den Auszügen – prüfen.",
+       "bank_rest": -7.2
+      },
+      {
+       "einheit": "Garage 9",
+       "mieter": "Alexandra Pfahl",
+       "status": "Vermietet",
+       "saldo": 17.0,
+       "bank": "Gemeinsame Zahlung mit Garage 3 (Alexandra Pfahl) – Befund und Rückstand dort ausgewiesen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 10",
+       "mieter": "Gerd Podschadly",
+       "status": "Vermietet",
+       "saldo": -119.0,
+       "soll": 59.5,
+       "nov_status": "Offen",
+       "nov_offen": 59.5,
+       "nov_faellig": true,
+       "bank": "Gemeinsame Zahlung mit Garage 8 (Gerd Podschadly) – Befund und Rückstand dort ausgewiesen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 11",
+       "mieter": "Gerd Podschadly",
+       "status": "Vermietet",
+       "saldo": -119.0,
+       "soll": 59.5,
+       "nov_status": "Offen",
+       "nov_offen": 59.5,
+       "nov_faellig": true,
+       "bank": "Gemeinsame Zahlung mit Garage 8 (Gerd Podschadly) – Befund und Rückstand dort ausgewiesen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 12",
+       "mieter": "Martin und Karin Muthig",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 13",
+       "mieter": "Peter und Sigrid Puffe",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 535,50 € (Monat: 01–09: 59,50); Soll 9 × 59,50 = 535,50 € (Dauerzahlung 59,50); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 14",
+       "mieter": "Herbert Serowiak",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "In der Zahlung für DG rts (Serowiak, 442,40 €) enthalten: 50 €/Monat, 01–09/2026 vollständig.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 15",
+       "mieter": "Sunita Suleymani",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 450,00 € (Monat: 01–09: 50,00); Soll 9 × 50,00 = 450,00 € (Dauerzahlung 50 (Immocloud ohne offene Sollstellung)); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Garage 16",
+       "mieter": "Jörg Keller",
+       "status": "Vermietet",
+       "saldo": -267.0,
+       "soll": 89.25,
+       "nov_status": "Offen",
+       "nov_offen": 89.25,
+       "nov_faellig": true,
+       "bank": "Gemeinsame Zahlung mit Garage 1 (Jörg Keller) – Befund und Rückstand dort ausgewiesen.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Stellplatz 1",
+       "mieter": "Maik Keller",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "soll": 29.75,
+       "nov_status": "Erwartet",
+       "nov_offen": 29.75,
+       "nov_faellig": false,
+       "bank": "In der Gewerbemiete Maik Keller (1.695,75 € = 1.636,25 + 2 × 29,75) enthalten – siehe EG Gewerbe.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Stellplatz 2",
+       "mieter": "Maik Keller",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "soll": 29.75,
+       "nov_status": "Erwartet",
+       "nov_offen": 29.75,
+       "nov_faellig": false,
+       "bank": "In der Gewerbemiete Maik Keller (1.695,75 € = 1.636,25 + 2 × 29,75) enthalten – siehe EG Gewerbe.",
+       "bank_rest": 0.0
+      }
+     ]
+    },
+    {
+     "objekt": "MFH Krefeld Ritterstr 295",
+     "adresse": "Ritterstr. 295, 47805 Krefeld",
+     "konto": "…5000",
+     "einheiten": [
+      {
+       "einheit": "1.OG hinten",
+       "mieter": "Ralf Francki",
+       "status": "Vermietet",
+       "saldo": 60.0,
+       "soll": 460.0,
+       "nov_status": "Offen",
+       "nov_offen": 460.0,
+       "nov_faellig": true,
+       "hinweis": "Immocloud zeigt Zuordnungsvorschlag: Novemberzahlung vermutlich eingegangen, aber nicht zugeordnet",
+       "bank": "Auszüge 01–09/2026: Ist 4.500,00 € (Monat: 01–09: 500,00); Soll 9 × 460,00 = 4.140,00 € (Immocloud 11/2026 (zahlt 500 lt. Projekt)); → Guthaben 360,00 € bis 09/2026. Zahlt 500 € (Dauerauftrag ‚Miete und Nebenkosten‘) statt Immocloud-Soll 460 €; Immocloud führt 11/2026 als offen, obwohl die Zahlungen regelmäßig eingehen – Soll und Zuordnung prüfen.",
+       "bank_rest": -360.0
+      },
+      {
+       "einheit": "1.OG mitte",
+       "mieter": "Loulla Sideritaki",
+       "status": "Vermietet",
+       "saldo": -190.0,
+       "soll": 380.0,
+       "nov_status": "Offen",
+       "nov_offen": 380.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 3.690,00 € (Monat: 01–09: 410,00); Soll 9 × 380,00 = 3.420,00 € (Immocloud 11/2026 (zahlt 410)); → Guthaben 270,00 € bis 09/2026. Zahlt 410 € statt Immocloud-Soll 380 €; NKA-Guthaben 2024/25 von 226,49 € am 30.03.2026 ausgezahlt. Immocloud-Saldo −190 € passt nicht zu den Eingängen – Soll und Zuordnung prüfen.",
+       "bank_rest": -270.0
+      },
+      {
+       "einheit": "1.OG vorne",
+       "mieter": "Monika Hilgers",
+       "status": "Vermietet",
+       "saldo": -5685.0,
+       "soll": 800.0,
+       "nov_status": "Offen",
+       "nov_offen": 800.0,
+       "nov_faellig": true,
+       "hinweis": "NAS-Fotos vom 03.11.2026 ‚Wohnung ehemals Hilgers‘: Mietende in Immocloud offenbar nicht erfasst, Sollstellungen und Saldo prüfen",
+       "bank": "Auszüge 01–09/2026: Ist 3.705,00 € (Monat: 01–04: 845,00; 05–06: 110,00; 07: 105,00; 08–09: –), letzte Zahlung 17.07.2026; Soll 9 × 800,00 = 7.200,00 € (Immocloud 11/2026); → Rückstand 3.495,00 € bis 09/2026. Jobcenter zahlte die Miete (735 €) nur für 01–04/2026 (zuletzt 31.03.2026); daneben ‚Tilgung Mietschulden‘ 110 €/Monat für 01–06/2026 und 105 € am 17.07.2026 (Altschulden, im Ist enthalten). Seit 08/2026 kein Eingang. Mietende/Auszug lt. NAS-Fotos (‚Wohnung ehemals Hilgers‘) in Immocloud nachtragen und Soll ab Auszug stornieren.",
+       "bank_rest": 3495.0
+      },
+      {
+       "einheit": "2.OG mitte",
+       "mieter": "Youness Amagtir",
+       "status": "Vermietet",
+       "saldo": 59.2,
+       "bank": "Auszüge 01–09/2026: Ist 7.700,00 € (Monat: 01–04: 875,00; 05–09: 840,00); Soll 9 × 840,00 = 7.560,00 € (Dauerzahlung Jobcenter 840 (Projekt Jul–Sep 2026)); → Guthaben 140,00 € bis 09/2026. Jobcenter zahlte 01–04/2026 875 €, seit 05/2026 840 €.",
+       "bank_rest": -140.0
+      },
+      {
+       "einheit": "2.OG vorne",
+       "mieter": "Spodich Sahin",
+       "status": "Vermietet",
+       "saldo": -290.0,
+       "soll": 665.0,
+       "nov_status": "Offen",
+       "nov_offen": 665.0,
+       "nov_faellig": true,
+       "bank": "Auszüge 01–09/2026: Ist 7.150,00 € (Monat: 01–03: 700,00; 04: –; 05: 700,00; 06: 2.100,00; 07–09: 750,00); Soll 9 × 665,00 = 5.985,00 € (Immocloud 11/2026 (zahlt 750)); → Guthaben 1.165,00 € bis 09/2026. Zahlungen 700 € (29.12., 30.01., 27.02., 29.04., 28.05.), 1.400 € (19.06.) und 750 € (02.07., 31.07., 31.08., 30.09.); für 04/2026 keine eigene Zahlung, 06/2026 Doppelzahlung. Immocloud-Soll 665 € liegt unter den gezahlten 700/750 € und Immocloud zeigt −290 € – Soll und Zuordnung prüfen.",
+       "bank_rest": -1165.0
+      },
+      {
+       "einheit": "DG vorne",
+       "mieter": "Inge Hinz",
+       "status": "Vermietet",
+       "saldo": 15.0,
+       "bank": "Auszüge 01–09/2026: Ist 6.405,00 € (Monat: 01–03: 745,00; 04–09: 695,00); Soll 9 × 695,00 = 6.255,00 € (Dauerzahlung 695 (Projekt Jul–Sep 2026)); → Guthaben 150,00 € bis 09/2026. 01–03/2026 745 €, seit 04/2026 695 €.",
+       "bank_rest": -150.0
+      },
+      {
+       "einheit": "EG mitte",
+       "mieter": "Gabriele Knol",
+       "status": "Vermietet",
+       "saldo": -3034.5,
+       "soll": 303.45,
+       "nov_status": "Offen",
+       "nov_offen": 303.45,
+       "nov_faellig": true,
+       "hinweis": "Gewerbe",
+       "bank": "Auszüge 01–09/2026: Ist 0,00 € (Monat: kein Eingang); Soll 9 × 303,45 = 2.731,05 € (Immocloud 11/2026); → Rückstand 2.731,05 € bis 09/2026. Kein Eingang seit mindestens 12/2025. Forderung 02–09/2026 (8 × 303,45 = 2.427,60 €) liegt beim Anwalt (OP-Liste Projekt MI-09).",
+       "bank_rest": 2731.05
+      },
+      {
+       "einheit": "EG vorne",
+       "mieter": "Ramona Lenz",
+       "status": "Vermietet",
+       "saldo": 0.0,
+       "bank": "Auszüge 01–09/2026: Ist 3.420,00 € (Monat: 01–09: 380,00); Soll 9 × 380,00 = 3.420,00 € (Dauerzahlung 380 inkl. Stellplatz (Projekt Jul–Sep 2026)); → ausgeglichen bis 09/2026.",
+       "bank_rest": 0.0
+      },
+      {
+       "einheit": "Glas WS",
+       "mieter": "Eva Scheller",
+       "status": "Vermietet",
+       "saldo": -545.0,
+       "hinweis": "Gewerbe. Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Auszüge 01–09/2026: Ist 3.648,00 € (Monat: 01–03: 362,00; 04–09: 427,00); Soll 9 × 427,00 = 3.843,00 € (Dauerzahlung 427 (Projekt Jul–Sep 2026)); → Rückstand 195,00 € bis 09/2026. 01–03/2026 362 €, seit 04/2026 427 € (Dauerauftrag zum Monatsende für den Folgemonat). NK-Nachzahlungen 130,83 € (23.02.) und 858,77 € (02.03.2026) zusätzlich eingegangen. Immocloud-Saldo −545 € – Herkunft prüfen; aus den Auszügen ergeben sich nur 3 × 65 € = 195 €, falls das Soll 427 € schon ab 01/2026 galt.",
+       "bank_rest": 195.0
+      },
+      {
+       "einheit": "Schreinerei",
+       "mieter": "Frank Weyand",
+       "status": "Vermietet",
+       "saldo": -726.65,
+       "hinweis": "Gewerbe. Rückstand aus Vormonaten, Novembermiete bezahlt",
+       "bank": "Auszüge 01–09/2026: Ist 8.717,25 € (Monat: 01–03: 882,75; 04–09: 1.011,50); Soll 9 × 1.011,50 = 9.103,50 € (Dauerzahlung 1.011,50 (Projekt Jul–Sep 2026)); → Rückstand 386,25 € bis 09/2026. 01–03/2026 882,75 €, seit 04/2026 1.011,50 € (07/2026 in zwei Teilen: 11,50 € + 1.000 €). NK-Nachzahlungen 139,71 € (16.01.) und 1.570,66 € (30.03.2026) zusätzlich eingegangen. Immocloud-Saldo −726,65 € – Herkunft prüfen; aus den Auszügen ergeben sich nur 3 × 128,75 € = 386,25 €, falls das Soll 1.011,50 € schon ab 01/2026 galt.",
+       "bank_rest": 386.25
+      },
+      {
+       "einheit": "WS OG hinten",
+       "mieter": "Simon Pleus",
+       "status": "Vermietet",
+       "saldo": -345.1,
+       "soll": 505.75,
+       "nov_status": "Teilbezahlt",
+       "nov_offen": 41.65,
+       "nov_faellig": true,
+       "hinweis": "Gewerbe. Zahlt seit 03/2026 464,10 € statt 505,75 € (295 € KM + 130 € NK + USt), 41,65 €/Monat offen",
+       "bank": "Auszüge 01–09/2026: Ist 4.165,00 € (Monat: 01–02: 458,15; 03–09: 464,10); Soll 9 × 505,75 = 4.551,75 € (Immocloud 11/2026 (zahlt 464,10)); → Rückstand 386,75 € bis 09/2026. 01–02/2026 458,15 €, seit 03/2026 464,10 € statt Soll 505,75 €.",
+       "bank_rest": 386.75
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "bank_hinweise": []
 }

@@ -25,14 +25,37 @@ Die Excel-Datei danach einmal in Excel oder LibreOffice öffnen und speichern, d
 
 Lesart und Vorbehalte stehen im Blatt `Hinweise` der Arbeitsmappe und auf Seite 1 der PDFs.
 
-## Zahlungsabgleich (Pilot, 12.11.2026)
+## Zahlungsabgleich mit Bankkonten (12.11.2026)
 
-`Zahlungsabgleich_Pilot_Adenau_Velbert_2026-11-12.xlsx` gleicht die tatsächlichen Mieteingänge mit dem Soll ab:
+`Zahlungsabgleich_2026_2026-11-12.xlsx` stellt die tatsächlichen Mieteingänge je Mieter und Monat (Januar bis
+September 2026) dem Soll gegenüber. Die Ergebnisse stehen auch in den OP-Listen (Excel-Spalten
+`Bankbefund` und `Rückstand lt. Bank`, in den PDFs unter `Bank:` in der Spalte Hinweis).
 
-- Adenau (Konto …4404): aus dem Kassenbuch `NAS/alle/Kassenbuch GbR BH neu.xlsx`, Blatt Adenau (vollständig bis 10.11.2026).
-- Velbert (Konto …4401): aus den Volksbank-Kontoauszügen 12/2025 und 02–09/2026 (`NAS/alle/Rechnungen/Käshammer und Penkhues Immobilien GbR/Umsätze VB`).
+| Haus (Konto) | Quelle | Zeitraum |
+|---|---|---|
+| Adenau Haus 17 + 19 (…4404) | Kassenbuch `NAS/alle/Kassenbuch GbR BH neu.xlsx`, Blatt Adenau | bis 10.11.2026 |
+| Velbert Haus 17 + 19 (…4401) | Volksbank-Kontoauszüge (`NAS/alle/Rechnungen/Käshammer und Penkhues Immobilien GbR/Umsätze VB`) | 12/2025–09/2026 |
+| Krefeld Ritterstr 295 (…5000) | Volksbank-Kontoauszüge PK Immo Verwaltungs GmbH (NAS/alle) | 12/2025–09/2026 |
+| Gelsenkirchen Bickernstr 102 (…5001) | Volksbank-Kontoauszüge PK Immo Verwaltungs GmbH (NAS/alle) | 12/2025–09/2026 |
+| Breilstr, Gymnich 2/3, Duisburg, Lenaustr | nur Zahlerübersicht Juli–September 2026 aus dem Projekt „Vermietung“ | 07–09/2026 |
 
-Die übrigen sieben Konten konnten noch nicht ausgewertet werden: Die Kassenbuch-Blätter sind über die
-Microsoft-365-Schnittstelle nur bis ca. Zeile 1.000 lesbar (Krefeld bis 05/2023, Bickernstr bis 04/2023,
-Wilhelmstr bis 08/2024, Lenaustr bis 01/2026, Gelsenkirchen Breilstr bis 12/2024, Gymnich bis 2022/2025),
-und Kontoauszüge liegen auf der NAS nur für Velbert vor. Datenbasis und Skript: `tools/zahlungsabgleich/`.
+Jeder Kontoauszug wurde beim Einlesen über die Saldenprüfung (alter Kontostand + Buchungen = neuer Kontostand)
+kontrolliert; alle 30 Auszüge stimmen. `Rückstand lt. Bank` = Soll Januar–September 2026 (9 Monate, Immocloud-Soll
+bzw. Dauerzahlung) minus Mieteingänge für diese Monate; negativ = Guthaben. Oktober und November 2026 sind nicht
+enthalten, weil die Auszüge dafür noch nicht auf der NAS liegen. Für Breilstr, Gymnich, Duisburg und Lenaustr fehlen die
+Auszüge ganz (NAS-Freigabe `intern`, noch nicht in OneDrive kopiert).
+
+Ablauf (Skripte in `tools/zahlungsabgleich/`):
+
+1. `parse_vb.py` liest die Kontoauszug-Texte (Volksbank-PDF als Text) in eine Buchungsliste je Konto
+   (`<Konto>_buchungen.json`, nicht im Repository, enthält Bankdaten Dritter).
+2. `mapping.json` ordnet Zahler (Muster auf den Verwendungszweck) den Einheiten und dem Soll zu.
+3. `bankregeln.py` enthält die gemeinsamen Regeln: Leistungsmonat (Nennung im Verwendungszweck, sonst Buchungstag,
+   ab dem 25. = Folgemonat), Erkennung von Mietzahlungen (keine Umbuchungen, Kautionen, Versicherungen,
+   Nebenkosten-Nachzahlungen) und die Auffüll-Zuordnung für unregelmäßige Zahler.
+4. `konsolidieren.py <op-verzeichnis> <ausgabe.xlsx>` erzeugt die Arbeitsmappe; `befunde.py <op-verzeichnis>` schreibt
+   die Befunde je Einheit (`konsolidiert_befunde.json`); `../bankbefund.py <op-verzeichnis>` überträgt sie in `daten.json`.
+5. Danach `build_xlsx.py` und `build_pdf.py` wie oben.
+
+Der frühere Pilot (`Zahlungsabgleich_Pilot_Adenau_Velbert_2026-11-12.xlsx`, `tools/zahlungsabgleich/build_pilot.py`) bleibt
+als Quelle für das Adenau-Blatt erhalten.

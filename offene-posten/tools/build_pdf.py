@@ -45,12 +45,14 @@ def header_footer(canvas, doc):
 
 def house_table(o):
     cols = ["Einheit", "Mieter", "Status", "Soll-Miete\n11/2026", "Nov 2026 offen,\nüberfällig", "Nov 2026\nnoch nicht fällig", "Rückstand\nVormonate", "Guthaben\nVormonate", "Rückstand\ngesamt, fällig", "Hinweis"]
-    W = [34*mm, 44*mm, 17*mm, 19*mm, 21*mm, 21*mm, 21*mm, 19*mm, 22*mm, 55*mm]
+    W = [30*mm, 40*mm, 17*mm, 18*mm, 20*mm, 20*mm, 20*mm, 18*mm, 21*mm, 69*mm]
     data = [[Paragraph(c.replace("\n", "<br/>"), st_head) for c in cols]]
     sums = dict(j=0, k=0, vor=0, gut=0, ges=0); n_r = 0
     for e in o["einheiten"]:
         c = calc(e)
         hint = e.get("hinweis", "")
+        if e.get("bank"):
+            hint = (hint + " | " if hint else "") + "<b>Bank:</b> " + e["bank"] + ((f" <b>Guthaben lt. Bank {eur(-e['bank_rest'])}</b>" if e["bank_rest"] < 0 else f" <b>Rückstand lt. Bank {eur(e['bank_rest'])}</b>") if e.get("bank_rest") is not None else "")
         if c["saldo"] is not None and c["j"] and (c["saldo"] + c["j"]) > 0:
             hint = (hint + ". " if hint else "") + f"Guthaben aus Vormonaten {eur(c['saldo']+c['j'])}, Novembermiete noch offen – Verrechnung prüfen"
         stl = st_cellb if c["ges"] > 0 else st_cell
@@ -114,7 +116,7 @@ def summary_table(gs):
     return t, G
 
 NOTES = [
- f"<b>Quelle und Stichtag:</b> Immocloud (Konto J. Penkhues), gelesen am {STAND}. Zahlungseingänge nach dem {STAND} sind nicht enthalten. Vor einer Mahnung den aktuellen Stand in Immocloud bzw. auf dem Bankkonto prüfen.",
+ f"<b>Quelle und Stichtag:</b> Immocloud (Konto J. Penkhues), gelesen am {STAND}. Zahlungseingänge nach dem {STAND} sind nicht enthalten. Vor einer Mahnung den aktuellen Stand in Immocloud bzw. auf dem Bankkonto prüfen. <b>Bankbefund (12.11.2026):</b> Für Velbert, Krefeld und Bickernstraße wurden die Mieteingänge Januar–September 2026 aus den Volksbank-Kontoauszügen, für Adenau aus dem Kassenbuch (bis 10.11.2026) abgeglichen (Spalte Hinweis, ‚Bank:‘). ‚Rückstand lt. Bank‘ = Soll Januar–September 2026 minus Eingänge für diese Monate; Oktober/November 2026 sind nicht enthalten, weil die Auszüge noch fehlen. Für Breilstr, Gymnich, Duisburg und Lenaustr liegt nur die Zahlerübersicht Juli–September 2026 aus dem Projekt vor.",
  "<b>Lesart:</b> Saldo lt. Immocloud negativ = Rückstand, positiv = Guthaben. ‚Nov 2026 offen, überfällig‘ ist der offene Betrag der Novembermiete (bei Teilzahlung der Fehlbetrag). ‚Noch nicht fällig‘ = Immocloud-Status ‚Erwartet‘, nicht im Saldo enthalten. Rückstand Vormonate = Saldo zuzüglich offener Novembermiete, wenn daraus ein Rückstand verbleibt; andernfalls Guthaben aus Vormonaten. Rückstand gesamt = Novembermiete + Vormonate − Guthaben.",
  "<b>Vorbehalt:</b> In Immocloud waren am 07.11.2026 insgesamt 1.130 Bankumsätze nicht zugeordnet (387 aus dem Zeitraum 07.05.–07.11.2026). Mieterzahlungen darunter würden die Rückstände verringern. Objektsummen weichen bei Duisburg Wilhelmstr 4 (−20 €) und Bickernstr 102 (−53 €) von der Immocloud-Objektliste ab.",
  "<b>Nicht enthalten:</b> Kautionsrückstände, Nebenkostenabrechnungs-Salden, Mahngebühren und Verzugszinsen (nur als Hinweis). Hilden, Ginsterweg 1 (privat) und Kohlstraße 4 (verkauft) sind nicht Teil der Liste.",
