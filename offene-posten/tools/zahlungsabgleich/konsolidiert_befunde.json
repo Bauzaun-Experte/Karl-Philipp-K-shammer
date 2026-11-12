@@ -1,10 +1,10 @@
 {
  "MFH Krefeld Ritterstr 295||1.OG hinten": {
-  "text": "Auszüge 01–09/2026: Ist 4.500,00 € (Monat: 01–09: 500,00); Soll 9 × 460,00 = 4.140,00 € (Immocloud 11/2026 (zahlt 500 lt. Projekt)); → Guthaben 360,00 € bis 09/2026. Zahlt 500 € (Dauerauftrag ‚Miete und Nebenkosten‘) statt Immocloud-Soll 460 €; Immocloud führt 11/2026 als offen, obwohl die Zahlungen regelmäßig eingehen – Soll und Zuordnung prüfen.",
-  "rest": -360.0
+  "text": "Auszüge 01–09/2026: Ist 4.410,00 € (Monat: 01–09: 490,00); Soll 9 × 460,00 = 4.140,00 € (Immocloud 11/2026 (zahlt 500 inkl. 10 € Stellplatz-Anteil)); → Guthaben 270,00 € bis 09/2026. Zahlt 500 € per Dauerauftrag ‚Miete und Nebenkosten‘; darin 10 € Anteil am Hof-Stellplatz (Zusatzvereinbarung 28.09.2020), bleiben 490 € für die Wohnung gegenüber Immocloud-Soll 460 € (ob die 10 € dort enthalten sind, ist nicht erkennbar – Mietvertrag nur als Scan). Immocloud führt 11/2026 als offen, obwohl die Zahlungen regelmäßig eingehen – Soll und Zuordnung prüfen.",
+  "rest": -270.0
  },
  "MFH Krefeld Ritterstr 295||1.OG mitte": {
-  "text": "Auszüge 01–09/2026: Ist 3.690,00 € (Monat: 01–09: 410,00); Soll 9 × 380,00 = 3.420,00 € (Immocloud 11/2026 (zahlt 410)); → Guthaben 270,00 € bis 09/2026. Zahlt 410 € statt Immocloud-Soll 380 €; NKA-Guthaben 2024/25 von 226,49 € am 30.03.2026 ausgezahlt. Immocloud-Saldo −190 € passt nicht zu den Eingängen – Soll und Zuordnung prüfen.",
+  "text": "Auszüge 01–09/2026: Ist 3.690,00 € (Monat: 01–09: 410,00); Soll 9 × 380,00 = 3.420,00 € (Immocloud 11/2026 (zahlt 410)); → Guthaben 270,00 € bis 09/2026. Mietvertrag vom 22.05.2020: 360 € warm (270 + 55 + 35), kein Stellplatz. Zahlt 410 € statt Immocloud-Soll 380 €; NKA-Guthaben 2024/25 von 226,49 € am 30.03.2026 ausgezahlt. Immocloud-Saldo −190 € passt nicht zu den Eingängen – Soll und Zuordnung prüfen.",
   "rest": -270.0
  },
  "MFH Krefeld Ritterstr 295||1.OG vorne": {
@@ -28,7 +28,7 @@
   "rest": 2731.05
  },
  "MFH Krefeld Ritterstr 295||EG vorne": {
-  "text": "Auszüge 01–09/2026: Ist 3.420,00 € (Monat: 01–09: 380,00); Soll 9 × 380,00 = 3.420,00 € (Dauerzahlung 380 inkl. Stellplatz (Projekt Jul–Sep 2026)); → ausgeglichen bis 09/2026.",
+  "text": "Auszüge 01–09/2026: Ist 3.330,00 € (Monat: 01–09: 370,00); Soll 9 × 370,00 = 3.330,00 € (Dauerzahlung 380 = 370 Wohnung + 10 € Stellplatz-Anteil (Projekt Jul–Sep 2026)); → ausgeglichen bis 09/2026. 380 € per Dauerauftrag ‚Miete und Stellplatz‘ = 370 € Wohnung + 10 € Anteil am Hof-Stellplatz (Zusatzvereinbarung 28.09.2020).",
   "rest": 0.0
  },
  "MFH Krefeld Ritterstr 295||Glas WS": {
@@ -42,6 +42,10 @@
  "MFH Krefeld Ritterstr 295||WS OG hinten": {
   "text": "Auszüge 01–09/2026: Ist 4.165,00 € (Monat: 01–02: 458,15; 03–09: 464,10); Soll 9 × 505,75 = 4.551,75 € (Immocloud 11/2026 (zahlt 464,10)); → Rückstand 386,75 € bis 09/2026. 01–02/2026 458,15 €, seit 03/2026 464,10 € statt Soll 505,75 €.",
   "rest": 386.75
+ },
+ "MFH Krefeld Ritterstr 295||Stellplatz Hof": {
+  "text": "Auszüge 01–09/2026: Ist 180,00 € (Monat: 01–09: 20,00); Soll 9 × 30,00 = 270,00 € (Zusatzvereinbarung 28.09.2020, 3 × 10 €; Ist = Anteile aus den Zahlungen Lenz und Francki); → Rückstand 90,00 € bis 09/2026. Zusatzvereinbarung vom 28.09.2020: PKW-Stellplatz im Hof, 30 €/Monat ab 01.10.2020, je 1/3 (10 €) für Olaf Schlieper, Ramona Lenz und Ralf Francki. Lenz und Francki zahlen ihren Anteil mit der Miete (in 380 € bzw. 500 € enthalten). Schlieper ist in Immocloud nicht mehr als Mieter geführt und zahlt 2026 nichts – sein Drittel (10 €/Monat) ist unbesetzt; laut Vereinbarung können die übrigen Mieter den Anteil übernehmen, sonst Kündigungsrecht des Vermieters. Der Stellplatz ist in Immocloud nicht angelegt (keine Sollstellung).",
+  "rest": 90.0
  },
  "MFH Gelsenkirchen Bickernstr 102||1.OG": {
   "text": "Auszüge 01–09/2026: Ist 13.005,00 € (Monat: 01–06: 1.415,00; 07–09: 1.505,00); Soll 9 × 1.605,00 = 14.445,00 € (Immocloud 11/2026 (Stadt zahlt 1.290 + 215 = 1.505)); → Rückstand 1.440,00 € bis 09/2026. Stadt Gelsenkirchen zahlt für 01–06/2026 1.415 € (1.212,86 + 202,14), seit 07/2026 1.505 € (1.290 + 215); gegenüber Immocloud-Soll 1.605 € fehlen 190 bzw. 100 €/Monat (Eigenanteil). Oktober (1.505 €) bereits am 30.09. eingegangen. Zusätzlich BKA 2024/2025 und NK-Nachzahlungen der Stadtkasse 4.645,17 € am 15./17.06.2026 (keine Miete).",

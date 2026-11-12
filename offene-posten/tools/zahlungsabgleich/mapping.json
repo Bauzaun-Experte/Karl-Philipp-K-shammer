@@ -8,7 +8,11 @@
     "einheit": "1.OG hinten",
     "mieter": "Ralf Francki",
     "soll": 460.0,
-    "soll_quelle": "Immocloud 11/2026 (zahlt 500 lt. Projekt)"
+    "soll_quelle": "Immocloud 11/2026 (zahlt 500 inkl. 10 € Stellplatz-Anteil)",
+    "anteil": {
+     "einheit": "Stellplatz Hof",
+     "betrag": 10.0
+    }
    },
    {
     "muster": "Sideritaki|Loulla",
@@ -56,8 +60,12 @@
     "muster": "Lenz",
     "einheit": "EG vorne",
     "mieter": "Ramona Lenz",
-    "soll": 380.0,
-    "soll_quelle": "Dauerzahlung 380 inkl. Stellplatz (Projekt Jul–Sep 2026)"
+    "soll": 370.0,
+    "soll_quelle": "Dauerzahlung 380 = 370 Wohnung + 10 € Stellplatz-Anteil (Projekt Jul–Sep 2026)",
+    "anteil": {
+     "einheit": "Stellplatz Hof",
+     "betrag": 10.0
+    }
    },
    {
     "muster": "Scheller",
@@ -79,6 +87,13 @@
     "mieter": "Simon Pleus",
     "soll": 505.75,
     "soll_quelle": "Immocloud 11/2026 (zahlt 464,10)"
+   },
+   {
+    "muster": "(?!x)x",
+    "einheit": "Stellplatz Hof",
+    "mieter": "Lenz / Francki / Schlieper (je 1/3)",
+    "soll": 30.0,
+    "soll_quelle": "Zusatzvereinbarung 28.09.2020, 3 × 10 €; Ist = Anteile aus den Zahlungen Lenz und Francki"
    }
   ]
  },

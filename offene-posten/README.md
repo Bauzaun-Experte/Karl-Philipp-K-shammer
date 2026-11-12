@@ -57,5 +57,9 @@ Ablauf (Skripte in `tools/zahlungsabgleich/`):
    die Befunde je Einheit (`konsolidiert_befunde.json`); `../bankbefund.py <op-verzeichnis>` überträgt sie in `daten.json`.
 5. Danach `build_xlsx.py` und `build_pdf.py` wie oben.
 
+Besonderheit Krefeld: Der Hof-Stellplatz (Zusatzvereinbarung 28.09.2020, 30 €/Monat) wird zu je 1/3 von Lenz, Francki und
+Schlieper getragen; die Anteile von Lenz und Francki stecken in deren Mietzahlungen und werden im Abgleich auf die Einheit
+„Stellplatz Hof“ umgelegt (`anteil` in `mapping.json`). Schlieper zahlt 2026 nichts, sein Drittel ist unbesetzt.
+
 Der frühere Pilot (`Zahlungsabgleich_Pilot_Adenau_Velbert_2026-11-12.xlsx`, `tools/zahlungsabgleich/build_pilot.py`) bleibt
 als Quelle für das Adenau-Blatt erhalten.

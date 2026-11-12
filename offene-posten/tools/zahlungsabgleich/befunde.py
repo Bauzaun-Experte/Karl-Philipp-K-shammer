@@ -4,7 +4,7 @@ Schreibt konsolidiert_befunde.json mit Schlüssel 'Objekt||Einheit' (wie daten.j
 Aufruf: befunde.py <scratch-op-dir>"""
 import sys, json, re, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from bankregeln import is_rent_credit, zuordnen, nk_zahlung
+from bankregeln import is_rent_credit, zuordnen, nk_zahlung, anteile_umlegen
 S = sys.argv[1]
 KONTEN = ["18375000", "18375001"]
 MONTHS = [f"2026-{m:02d}" for m in range(1, 10)]
@@ -12,8 +12,10 @@ def fmt(x): return f"{x:,.2f}".replace(",", "X").replace(".", ",").replace("X", 
 def dd(datum): return datum[:6]  # dd.mm.
 # Ergänzende Hinweise je Einheit (Erkenntnisse aus den Auszügen und Abgleich mit Immocloud)
 NOTES = {
- ("MFH Krefeld Ritterstr 295", "1.OG hinten"): "Zahlt 500 € (Dauerauftrag ‚Miete und Nebenkosten‘) statt Immocloud-Soll 460 €; Immocloud führt 11/2026 als offen, obwohl die Zahlungen regelmäßig eingehen – Soll und Zuordnung prüfen.",
- ("MFH Krefeld Ritterstr 295", "1.OG mitte"): "Zahlt 410 € statt Immocloud-Soll 380 €; NKA-Guthaben 2024/25 von 226,49 € am 30.03.2026 ausgezahlt. Immocloud-Saldo −190 € passt nicht zu den Eingängen – Soll und Zuordnung prüfen.",
+ ("MFH Krefeld Ritterstr 295", "1.OG hinten"): "Zahlt 500 € per Dauerauftrag ‚Miete und Nebenkosten‘; darin 10 € Anteil am Hof-Stellplatz (Zusatzvereinbarung 28.09.2020), bleiben 490 € für die Wohnung gegenüber Immocloud-Soll 460 € (ob die 10 € dort enthalten sind, ist nicht erkennbar – Mietvertrag nur als Scan). Immocloud führt 11/2026 als offen, obwohl die Zahlungen regelmäßig eingehen – Soll und Zuordnung prüfen.",
+ ("MFH Krefeld Ritterstr 295", "EG vorne"): "380 € per Dauerauftrag ‚Miete und Stellplatz‘ = 370 € Wohnung + 10 € Anteil am Hof-Stellplatz (Zusatzvereinbarung 28.09.2020).",
+ ("MFH Krefeld Ritterstr 295", "Stellplatz Hof"): "Zusatzvereinbarung vom 28.09.2020: PKW-Stellplatz im Hof, 30 €/Monat ab 01.10.2020, je 1/3 (10 €) für Olaf Schlieper, Ramona Lenz und Ralf Francki. Lenz und Francki zahlen ihren Anteil mit der Miete (in 380 € bzw. 500 € enthalten). Schlieper ist in Immocloud nicht mehr als Mieter geführt und zahlt 2026 nichts – sein Drittel (10 €/Monat) ist unbesetzt; laut Vereinbarung können die übrigen Mieter den Anteil übernehmen, sonst Kündigungsrecht des Vermieters. Der Stellplatz ist in Immocloud nicht angelegt (keine Sollstellung).",
+ ("MFH Krefeld Ritterstr 295", "1.OG mitte"): "Mietvertrag vom 22.05.2020: 360 € warm (270 + 55 + 35), kein Stellplatz. Zahlt 410 € statt Immocloud-Soll 380 €; NKA-Guthaben 2024/25 von 226,49 € am 30.03.2026 ausgezahlt. Immocloud-Saldo −190 € passt nicht zu den Eingängen – Soll und Zuordnung prüfen.",
  ("MFH Krefeld Ritterstr 295", "1.OG vorne"): "Jobcenter zahlte die Miete (735 €) nur für 01–04/2026 (zuletzt 31.03.2026); daneben ‚Tilgung Mietschulden‘ 110 €/Monat für 01–06/2026 und 105 € am 17.07.2026 (Altschulden, im Ist enthalten). Seit 08/2026 kein Eingang. Mietende/Auszug lt. NAS-Fotos (‚Wohnung ehemals Hilgers‘) in Immocloud nachtragen und Soll ab Auszug stornieren.",
  ("MFH Krefeld Ritterstr 295", "2.OG mitte"): "Jobcenter zahlte 01–04/2026 875 €, seit 05/2026 840 €.",
  ("MFH Krefeld Ritterstr 295", "2.OG vorne"): "Zahlungen 700 € (29.12., 30.01., 27.02., 29.04., 28.05.), 1.400 € (19.06.) und 750 € (02.07., 31.07., 31.08., 30.09.); für 04/2026 keine eigene Zahlung, 06/2026 Doppelzahlung. Immocloud-Soll 665 € liegt unter den gezahlten 700/750 € und Immocloud zeigt −290 € – Soll und Zuordnung prüfen.",
@@ -48,11 +50,13 @@ out = {}
 for konto in KONTEN:
     cfg = mapping[konto]; obj = cfg["objekt"]
     bk = json.load(open(f"{S}/bank/{konto}_buchungen.json", encoding="utf-8"))
+    PER = {}
     for r in cfg["regeln"]:
         hits = [b for b in bk if b["betrag"] > 0 and re.search(r["muster"], b["text"], re.I)]
-        miete = [b for b in hits if is_rent_credit(b)]
-        nk = [b for b in hits if not is_rent_credit(b) and nk_zahlung(b["text"])]
-        per = zuordnen(miete, r["soll"], r.get("verteilung"))
+        PER[r["einheit"]] = zuordnen([b for b in hits if is_rent_credit(b)], r["soll"], r.get("verteilung"))
+    anteile_umlegen(PER, cfg["regeln"])
+    for r in cfg["regeln"]:
+        per = PER[r["einheit"]]
         inwin = [(d, a) for m in MONTHS for d, a, _, _ in per.get(m, [])]
         ist = round(sum(a for _, a in inwin), 2)
         # Monatsbeträge als Läufe zusammenfassen: "01–04: 875,00; 05–09: 840,00; 04: –"

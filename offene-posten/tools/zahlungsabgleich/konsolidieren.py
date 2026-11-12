@@ -12,7 +12,7 @@ immo = json.load(open(f"{S}/daten.json", encoding="utf-8"))
 projekt_zahler = json.load(open(f"{S}/dashboard/assets/fcd7d1cac4c33db5f0691d163778a7c2.json", encoding="utf-8"))
 MONTHS = [f"2026-{m:02d}" for m in range(1, 12)]
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from bankregeln import leistungsmonat, is_rent_credit, zuordnen
+from bankregeln import leistungsmonat, is_rent_credit, zuordnen, anteile_umlegen
 F = "Arial"; f_n=Font(name=F,size=9); f_b=Font(name=F,size=9,bold=True); f_t=Font(name=F,size=14,bold=True); f_s=Font(name=F,size=9,italic=True,color="555555")
 f_h=Font(name=F,size=9,bold=True,color="FFFFFF"); fill_h=PatternFill("solid",fgColor="1F3864"); fill_sub=PatternFill("solid",fgColor="F2F2F2"); fill_warn=PatternFill("solid",fgColor="FCE4D6")
 EUR='#,##0.00 "€";[Red]-#,##0.00 "€";"–"'; wrap=Alignment(wrap_text=True,vertical="top"); thin=Side(style="thin",color="999999")
@@ -42,6 +42,8 @@ for konto, cfg in mapping.items():
     per = {}
     for r_ in rules:
         per[r_["einheit"]] = zuordnen(treffer[r_["einheit"]], r_["soll"], r_.get("verteilung"))
+    anteile_umlegen(per, rules)
+    for r_ in rules:
         for lm, lst in per[r_["einheit"]].items():
             for d_, a_, t_, how in lst:
                 raw_rows.append([konto, cfg["objekt"], d_, "Gutschrift", a_, r_["mieter"], r_["einheit"], lm, how, t_])

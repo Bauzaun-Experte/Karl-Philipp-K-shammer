@@ -54,3 +54,16 @@ def zuordnen(buchungen, soll, modus=None):
                 if m == 13: m, y = 1, y + 1
         per[lm].append((b["datum"], b["betrag"], b["text"][:90], how))
     return per
+def anteile_umlegen(per, rules):
+    """Feste Anteile (z. B. 10 € Hof-Stellplatz) aus den Monatszahlungen eines Mieters auf eine Sammel-Einheit umlegen.
+    Regel: {"anteil": {"einheit": "Stellplatz Hof", "betrag": 10.0}}; per: Einheit -> Monat -> [(datum, betrag, text, wie)]."""
+    from collections import defaultdict
+    for r in rules:
+        a = r.get("anteil")
+        if not a: continue
+        ziel = per.setdefault(a["einheit"], defaultdict(list))
+        for monat, lst in list(per[r["einheit"]].items()):
+            if sum(x[1] for x in lst) >= a["betrag"]:
+                d = lst[-1][0]
+                lst.append((d, -a["betrag"], f"davon Anteil {a['einheit']}", "Umlage"))
+                ziel[monat].append((d, a["betrag"], f"Anteil aus Zahlung {r['mieter']}", "Umlage"))
